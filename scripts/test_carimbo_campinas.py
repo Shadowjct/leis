@@ -107,6 +107,31 @@ class CabecalhoDePagina(unittest.TestCase):
         self.assertEqual(corpo, LEI)
 
 
+class EmendaSemClausulaDeVigencia(unittest.TestCase):
+    PROMULGA = ("A Mesa da Câmara Municipal de Campinas, nos termos do § 2º do Artigo 40 da Lei Orgânica, promulga a seguinte emenda "
+                "ao seu texto: Fica acrescentado ao artigo 241 o parágrafo único, com a seguinte redação: " + "texto da emenda. " * 40)
+
+    def test_assinatura_de_encerramento_vale_como_fim_do_ato(self):
+        corpo = self.PROMULGA + "Campinas, 05 de dezembro de 1996 Romeu Santini Presidente Biléo Soares 1º Secretário"
+        self.assertTrue(corpo_integral_reconhecivel(corpo, emenda=True))
+
+    def test_ano_com_ponto_de_milhar(self):
+        corpo = self.PROMULGA + "Campinas 27 de dezembro de 1.994. MARCO ABI CHEDID Presidente FRANCISCO SELLIN 1º Secretário"
+        self.assertTrue(corpo_integral_reconhecivel(corpo, emenda=True))
+
+    def test_mencao_a_presidente_no_texto_nao_basta(self):
+        corpo = self.PROMULGA + "O Presidente da Câmara será eleito entre os vereadores na forma do regimento."
+        self.assertFalse(corpo_integral_reconhecivel(corpo, emenda=True))
+
+    def test_so_vale_para_emenda(self):
+        corpo = self.PROMULGA + "Campinas, 05 de dezembro de 1996 Romeu Santini Presidente"
+        self.assertFalse(corpo_integral_reconhecivel(corpo, emenda=False))
+
+    def test_assinatura_antes_da_promulgacao_nao_vale(self):
+        corpo = "Campinas, 05 de dezembro de 1996 Romeu Santini Presidente. " + self.PROMULGA
+        self.assertFalse(corpo_integral_reconhecivel(corpo, emenda=True))
+
+
 class ArtigoUnico(unittest.TestCase):
     def test_artigo_unico_e_reconhecido(self):
         self.assertTrue(corpo_integral_reconhecivel("Artigo único. Acrescentem-se os incisos."))

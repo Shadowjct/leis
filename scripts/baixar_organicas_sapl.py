@@ -92,9 +92,14 @@ def corpo_integral_reconhecivel(corpo, emenda=False):
     # Algumas emendas transcrevem primeiro o artigo que alteram; o próprio ato
     # usa PROMULGA/PROMULGAM e traz sua cláusula de vigência, sem um Art. 1º.
     # Não corrige nem adivinha numeração eventualmente reconhecida por OCR.
-    return bool(emenda and len(corpo) > 500
-                and re.search(r"\bpromulg(?:o|a|am|amos)\b", corpo, re.I)
-                and re.search(r"vigorar|vigor", corpo, re.I))
+    promulga = re.search(r"\bpromulg(?:o|a|am|amos)\b", corpo, re.I) if emenda and len(corpo) > 500 else None
+    if not promulga:
+        return False
+    # Sem cláusula de vigência, vale a assinatura de encerramento depois da promulgação
+    # (data seguida de Presidente da Mesa): o texto chega ao fim do ato. Citar o
+    # Presidente no texto transcrito não basta.
+    assinatura = re.search(r"\d{1,2}º?\.? de \w+ de \d[\d.]*\W.{0,120}?\bPresidente\b", corpo[promulga.end():], re.I | re.S)
+    return bool(re.search(r"vigorar|vigor", corpo, re.I) or assinatura)
 
 
 def motivo_retencao(cache, identificador, bruto):
