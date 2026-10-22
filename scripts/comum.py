@@ -278,7 +278,8 @@ def extrair_texto(bruto, url="", content_type=""):
 
 
 # Preposições e artigos nunca fecham um dispositivo; "e"/"ou" ficam de fora porque terminam incisos.
-FIM_CONECTIVO = re.compile(r"\s(?:a|à|ao|o|as|os|da|de|do|das|dos|na|no|nas|nos|em|com|pela|pelo)$")
+# Letra isolada só em minúscula: "ANEXO A" seguido de "ANEXO B" não é uma frase partida.
+FIM_CONECTIVO = re.compile(r"\s(?:a|à|o)$|\s(?i:ao|as|os|da|de|do|das|dos|na|no|nas|nos|em|com|pela|pelo)$")
 
 
 def texto_pdf_para_md(texto):
