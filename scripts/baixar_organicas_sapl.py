@@ -125,8 +125,11 @@ AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS = re.compile(
 AVISO_REPRODUZIDO_CAMPINAS = re.compile(
     r"Texto para consulta, reproduzido conforme (?:a )?publicação(?: extra)? (?:no|do) Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(r"Texto somente para consulta, sem valor legal\.?")
-# cabeçalho de cada folha dos PDFs antigos; o total some em alguns ("CÂMARA MUNICIPAL DE CAMPINAS 10/") e há folhas sem contador
-PAGINA_CAMPINAS = re.compile(r"CÂMARA MUNICIPAL DE CAMPINAS(?: \d+/\d*)?")
+# cabeçalho de cada folha dos PDFs antigos; o total some em alguns ("CÂMARA MUNICIPAL DE CAMPINAS 10/") e há folhas sem contador.
+# Anexos copiados de suplementos do Diário Oficial trazem o cabeçalho corrente dele, com número de folha e às vezes a data.
+PAGINA_CAMPINAS = re.compile(
+    r"CÂMARA MUNICIPAL DE CAMPINAS(?: \d+/\d*)?"
+    r"|(?:\d+ )?Diário Oficial do Município de Campinas(?: Campinas, \w+-feira, \d{1,2} de \w+ de \d{4})?(?: \d+)?(?: PREF[EI]TURA MUNICIPAL DE CAMPINAS)?")
 SUPLEMENTO_CAMPINAS = re.compile(r"TABELAS? [^.\n]{0,80}PUBLICADAS? EM SUPLEMENTO", re.I)
 
 
@@ -145,9 +148,15 @@ def limpar_carimbo_campinas(corpo):
     """
     mantidos, notas = [], []
     quebra_de_pagina = False
-    # espaço de largura zero é artefato de cópia do Word ("\u200bcaput"): invisível, mas quebra a busca
-    for par in corpo.replace("\u200b", "").split("\n\n"):
+    # espaço de largura zero é artefato de cópia do Word ("\u200bcaput"): invisível, mas quebra a busca.
+    # Retorno de carro solto não tem função em Markdown e faz a auditoria em disco (read_text) recalcular outro hash.
+    for par in corpo.replace("\u200b", "").replace("\r\n", "\n").replace("\r", "\n").split("\n\n"):
         plano = re.sub(r"\s+", " ", par).strip()
+        capa = CARIMBO_CAMPINAS[0].match(plano)
+        if capa:  # a capa pode vir fundida com o aviso no mesmo parágrafo
+            plano = par = plano[capa.end():].strip()
+            if not plano:
+                continue
         if PAGINA_CAMPINAS.fullmatch(plano):
             quebra_de_pagina = True
             continue

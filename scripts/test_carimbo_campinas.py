@@ -68,6 +68,35 @@ class CabecalhoDePagina(unittest.TestCase):
         corpo, _ = limpar_carimbo_campinas("\n\n".join(["ficam sujeitos ao", self.CONTADOR, "**Art. 6º** Outro artigo."]))
         self.assertEqual(corpo.count("\n\n"), 1)
 
+    def test_retorno_de_carro_solto_vira_quebra_de_linha(self):
+        corpo, _ = limpar_carimbo_campinas("sanciono e promulgo a seguinte lei:\r]\r\nArt. 1º Texto.")
+        self.assertNotIn("\r", corpo)
+        self.assertEqual(corpo, "sanciono e promulgo a seguinte lei:\n]\nArt. 1º Texto.")
+
+    def test_capa_fundida_com_o_aviso_no_mesmo_paragrafo(self):
+        fundido = CAPA_2022 + " Texto para consulta, reproduzido conforme a publicação no Diário Oficial do Município em 13 de novembro de 2018"
+        corpo, notas = limpar_carimbo_campinas("\n\n".join([fundido, LEI]))
+        self.assertEqual(corpo, LEI)
+        self.assertEqual(notas, ["cópia de consulta da Câmara, reproduzida conforme a publicação no Diário Oficial do Município"])
+
+    def test_capa_seguida_de_texto_que_nao_e_aviso_preserva_o_texto(self):
+        corpo, notas = limpar_carimbo_campinas(CAPA_2022 + " Art. 1º Texto da lei.")
+        self.assertEqual(corpo, "Art. 1º Texto da lei.")
+        self.assertEqual(notas, [])
+
+    def test_cabecalho_corrente_do_diario_oficial_sai_e_a_frase_se_reune(self):
+        for cabecalho in ("Diário Oficial do Município de Campinas 183",
+                          "2 Diário Oficial do Município de Campinas Campinas, quinta-feira, 08 de outubro de 2020",
+                          "24 Diário Oficial do Município de Campinas PREFETURA MUNICIPAL DE CAMPINAS",
+                          "Diário Oficial do Município de Campinas"):
+            corpo, _ = limpar_carimbo_campinas("\n\n".join(["Disponível em https://exemplo.org e acessado em", cabecalho, "março de 2017."]))
+            self.assertEqual(corpo, "Disponível em https://exemplo.org e acessado em março de 2017.", cabecalho)
+
+    def test_citacao_do_diario_oficial_no_texto_nao_e_cabecalho(self):
+        par = "Publicada no Diário Oficial do Município de Campinas em 12/05/2021"
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, par]))
+        self.assertIn(par, corpo)
+
     def test_contador_so_conta_com_o_paragrafo_inteiro(self):
         par = "A CÂMARA MUNICIPAL DE CAMPINAS 2/4 votou a matéria."
         corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, par]))
