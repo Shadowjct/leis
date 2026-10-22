@@ -43,6 +43,70 @@ class LimparCarimbo(unittest.TestCase):
         self.assertEqual(notas, [])
 
 
+class CabecalhoDePagina(unittest.TestCase):
+    CONTADOR = "CÂMARA MUNICIPAL DE CAMPINAS 2/4"
+
+    def test_contador_removido_e_frase_partida_pela_pagina_reunida(self):
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([
+            "**Art. 3º** A incidência exigirá a cessão de uso da faixa viária para o", self.CONTADOR,
+            "Município e a implantação das ruas."]))
+        self.assertEqual(corpo, "**Art. 3º** A incidência exigirá a cessão de uso da faixa viária para o Município e a implantação das ruas.")
+
+    def test_contador_com_total_truncado(self):
+        corpo, _ = limpar_carimbo_campinas("\n\n".join(["Texto que segue ao", "CÂMARA MUNICIPAL DE CAMPINAS 10/", "texto da página seguinte."]))
+        self.assertEqual(corpo, "Texto que segue ao texto da página seguinte.")
+
+    def test_pagina_que_termina_em_frase_completa_nao_junta(self):
+        corpo, _ = limpar_carimbo_campinas("\n\n".join(["Fim da página.", self.CONTADOR, "Início da outra."]))
+        self.assertEqual(corpo, "Fim da página.\n\nInício da outra.")
+
+    def test_titulo_sem_pontuacao_no_fim_da_pagina_nao_junta(self):
+        corpo, _ = limpar_carimbo_campinas("\n\n".join(["SEÇÃO I Das Disposições Gerais", self.CONTADOR, "o texto seguinte"]))
+        self.assertEqual(corpo.count("\n\n"), 1)
+
+    def test_proximo_dispositivo_nunca_e_unido(self):
+        corpo, _ = limpar_carimbo_campinas("\n\n".join(["ficam sujeitos ao", self.CONTADOR, "**Art. 6º** Outro artigo."]))
+        self.assertEqual(corpo.count("\n\n"), 1)
+
+    def test_contador_so_conta_com_o_paragrafo_inteiro(self):
+        par = "A CÂMARA MUNICIPAL DE CAMPINAS 2/4 votou a matéria."
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, par]))
+        self.assertIn(par, corpo)
+
+    def test_aviso_sem_valor_legal_vira_nota(self):
+        corpo, notas = limpar_carimbo_campinas("\n\n".join([LEI, "Texto somente para consulta, sem valor legal."]))
+        self.assertEqual(corpo, LEI)
+        self.assertEqual(notas, ["cópia de consulta da Câmara, sem valor legal"])
+
+    def test_variantes_do_aviso_de_reproducao(self):
+        for aviso in ("Texto para consulta, reproduzido conforme a publicação extra do Diário Oficial do Município em 12 de maio de 2021",
+                      "Texto para consulta, reproduzido conforme a publicação do Diário Oficial do Município em 8 de janeiro de 2021",
+                      "\u200bTexto para consulta, reproduzido conforme publicação no Diário Oficial do Município em 29 de julho de 2020"):
+            corpo, notas = limpar_carimbo_campinas("\n\n".join([aviso, LEI]))
+            self.assertEqual(corpo, LEI, aviso)
+            self.assertEqual(notas, ["cópia de consulta da Câmara, reproduzida conforme a publicação no Diário Oficial do Município"])
+
+    def test_aviso_do_diario_oficial_da_camara(self):
+        corpo, notas = limpar_carimbo_campinas("\n\n".join([
+            "Texto somente para consulta. Não substitui o publicado no Diário Oficial da Câmara Municipal de Campinas em 7 de maio de 2025", LEI]))
+        self.assertEqual(corpo, LEI)
+        self.assertEqual(notas, ["cópia de consulta da Câmara, não substitui o Diário Oficial da Câmara Municipal"])
+
+    def test_cabecalho_sem_contador_e_aviso_sem_ponto_final(self):
+        corpo, notas = limpar_carimbo_campinas("\n\n".join(["CÂMARA MUNICIPAL DE CAMPINAS", LEI, "Texto somente para consulta, sem valor legal"]))
+        self.assertEqual(corpo, LEI)
+        self.assertEqual(notas, ["cópia de consulta da Câmara, sem valor legal"])
+
+    def test_espaco_de_largura_zero_no_corpo_sai(self):
+        corpo, _ = limpar_carimbo_campinas("Art. 1º O \u200bcaput\u200b deste artigo vale.")
+        self.assertEqual(corpo, "Art. 1º O caput deste artigo vale.")
+
+    def test_capa_com_caracteres_de_largura_zero(self):
+        capa = "​CÂMARA MUNICIPAL DE CAMPINAS ​Estado de São Paulo Diretoria de Gestão Documental Coordenadoria de Biblioteca cbib@campinas.sp.leg.br – Ramal 1603"
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([capa, LEI]))
+        self.assertEqual(corpo, LEI)
+
+
 class ArtigoUnico(unittest.TestCase):
     def test_artigo_unico_e_reconhecido(self):
         self.assertTrue(corpo_integral_reconhecivel("Artigo único. Acrescentem-se os incisos."))

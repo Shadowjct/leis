@@ -115,25 +115,51 @@ CARIMBO_CAMPINAS = [
 # a fonte tem erros de grafia nesta linha ("Municipio", "Municípo", "Campina"); a data também varia ("1º de outubro", "novembrode")
 AVISO_NAO_SUBSTITUI_CAMPINAS = re.compile(
     r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial do Munic\w+(?: de Campinas?)? em \d{1,2}º? de \w+ ?de \d{4}")
+AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS = re.compile(
+    r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial da Câmara Municipal de Campinas em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_REPRODUZIDO_CAMPINAS = re.compile(
-    r"Texto para consulta, reproduzido conforme a publicação no Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
+    r"Texto para consulta, reproduzido conforme (?:a )?publicação(?: extra)? (?:no|do) Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
+AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(r"Texto somente para consulta, sem valor legal\.?")
+# cabeçalho de cada folha dos PDFs antigos; o total some em alguns ("CÂMARA MUNICIPAL DE CAMPINAS 10/") e há folhas sem contador
+PAGINA_CAMPINAS = re.compile(r"CÂMARA MUNICIPAL DE CAMPINAS(?: \d+/\d*)?")
 SUPLEMENTO_CAMPINAS = re.compile(r"TABELAS? [^.\n]{0,80}PUBLICADAS? EM SUPLEMENTO", re.I)
 
 
+def frase_continua_na_pagina_seguinte(anterior, proximo):
+    """A folha terminou no meio da frase: último termo em minúscula, sem pontuação final, e o próximo não abre dispositivo."""
+    termos = anterior.split()
+    return bool(termos and re.match(r"[a-zà-ú]", termos[-1]) and not anterior.rstrip().endswith(tuple('.;:!?"”)'))
+                and not proximo.startswith(("**", "#")))
+
+
 def limpar_carimbo_campinas(corpo):
-    """Remove só a capa e o rodapé da biblioteca da Câmara (parágrafo inteiro, correspondência exata).
+    """Remove só os carimbos da biblioteca da Câmara (parágrafo inteiro, correspondência exata).
 
     Retorna (corpo, notas): o aviso da cópia de consulta e os anexos em suplemento vão para `versao_texto`.
+    Onde o cabeçalho de folha cai no meio de uma frase, ele sai e a frase é reunida.
     """
     mantidos, notas = [], []
-    for par in corpo.split("\n\n"):
+    quebra_de_pagina = False
+    # espaço de largura zero é artefato de cópia do Word ("\u200bcaput"): invisível, mas quebra a busca
+    for par in corpo.replace("\u200b", "").split("\n\n"):
         plano = re.sub(r"\s+", " ", par).strip()
+        if PAGINA_CAMPINAS.fullmatch(plano):
+            quebra_de_pagina = True
+            continue
         if AVISO_NAO_SUBSTITUI_CAMPINAS.fullmatch(plano):
             notas.append("cópia de consulta da Câmara, não substitui o Diário Oficial do Município")
+        elif AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS.fullmatch(plano):
+            notas.append("cópia de consulta da Câmara, não substitui o Diário Oficial da Câmara Municipal")
         elif AVISO_REPRODUZIDO_CAMPINAS.fullmatch(plano):
             notas.append("cópia de consulta da Câmara, reproduzida conforme a publicação no Diário Oficial do Município")
+        elif AVISO_SEM_VALOR_LEGAL_CAMPINAS.fullmatch(plano):
+            notas.append("cópia de consulta da Câmara, sem valor legal")
         elif not any(r.fullmatch(plano) for r in CARIMBO_CAMPINAS):
-            mantidos.append(par)
+            if quebra_de_pagina and mantidos and frase_continua_na_pagina_seguinte(mantidos[-1], par):
+                mantidos[-1] = mantidos[-1] + " " + par
+            else:
+                mantidos.append(par)
+            quebra_de_pagina = False
     corpo = "\n\n".join(mantidos)
     if SUPLEMENTO_CAMPINAS.search(corpo):
         notas.append("tabelas e anexos publicados em suplemento, ausentes do texto integral")
