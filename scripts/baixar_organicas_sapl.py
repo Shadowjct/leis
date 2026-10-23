@@ -120,7 +120,7 @@ CARIMBO_CAMPINAS = [
 ]
 # a fonte tem erros de grafia nesta linha ("Municipio", "Municípo", "Campina"); a data também varia ("1º de outubro", "novembrode")
 AVISO_NAO_SUBSTITUI_CAMPINAS = re.compile(
-    r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial do Munic\w+(?: de Campinas?)? em \d{1,2}º? de \w+ ?de \d{4}")
+    r"Texto somente para consulta\. Não substitui o publicado (?:no|na Edição Extra do) Diário Oficial do Munic\w+(?: de Campinas?)? em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS = re.compile(
     r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial da Câmara Municipal de Campinas em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_REPRODUZIDO_CAMPINAS = re.compile(

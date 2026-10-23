@@ -27,6 +27,10 @@ class LimparCarimbo(unittest.TestCase):
         self.verificar("Texto somente para consulta. Não substitui o publicado no Diário Oficial do Município de Campinas em 8 de novembrode 2024",
                    "cópia de consulta da Câmara, não substitui o Diário Oficial do Município")
 
+    def test_nao_substitui_a_edicao_extra(self):
+        self.verificar("Texto somente para consulta. Não substitui o publicado na Edição Extra do Diário Oficial do Município de Campinas em 5 de julho de 2025",
+                   "cópia de consulta da Câmara, não substitui o Diário Oficial do Município")
+
     def test_reproduzido_conforme_publicacao(self):
         self.verificar("Texto para consulta, reproduzido conforme a publicação no Diário Oficial do Município em 17 de março de 2022",
                    "cópia de consulta da Câmara, reproduzida conforme a publicação no Diário Oficial do Município")
