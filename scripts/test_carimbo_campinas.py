@@ -170,6 +170,30 @@ class CabecalhoDePagina(unittest.TestCase):
         self.assertEqual(corpo, LEI)
         self.assertEqual(notas, ["cópia de consulta da Câmara, sem valor legal"])
 
+    def test_cabecalho_com_contador_colado_ao_paragrafo_seguinte(self):
+        # Lei 11.322/2002
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([
+            "CÂMARA MUNICIPAL DE CAMPINAS 1/18 Publicada no Diário Oficial do Município de Campinas em 30/07/2002", LEI]))
+        self.assertEqual(corpo, "\n\n".join(["Publicada no Diário Oficial do Município de Campinas em 30/07/2002", LEI]))
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([
+            "**Art. 3º** A incidência exigirá a cessão de uso da faixa viária para o",
+            "CÂMARA MUNICIPAL DE CAMPINAS 2/4 Município e a implantação das ruas."]))
+        self.assertEqual(corpo, "**Art. 3º** A incidência exigirá a cessão de uso da faixa viária para o Município e a implantação das ruas.")
+
+    def test_camara_no_inicio_do_paragrafo_sem_contador_fica(self):
+        par = "CÂMARA MUNICIPAL DE CAMPINAS 2 votos contrários."
+        for texto in (par, "CÂMARA MUNICIPAL DE CAMPINAS aprovou a matéria."):
+            corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, texto]))
+            self.assertEqual(corpo, "\n\n".join([LEI, texto]))
+
+    def test_capa_antiga_so_com_a_coordenadoria(self):
+        # Lei 11.292/2002, com o aviso na redação longa
+        corpo, notas = limpar_carimbo_campinas("\n\n".join([
+            "CÂMARA MUNICIPAL DE CAMPINAS Coordenadoria de Biblioteca cbib@campinas.sp.leg.br", LEI,
+            "Texto somente para consulta, sem valor legal, reproduzido de acordo com a publicação oficial.\n"]))
+        self.assertEqual(corpo, LEI)
+        self.assertEqual(notas, ["cópia de consulta da Câmara, sem valor legal"])
+
     def test_rodape_com_hifen_no_lugar_do_travessao(self):
         # assim sai do OCR (LC 515/2025)
         corpo, _ = limpar_carimbo_campinas("\n\n".join([

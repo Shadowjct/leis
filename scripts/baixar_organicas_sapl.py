@@ -113,7 +113,8 @@ def motivo_retencao(cache, identificador, bruto):
 
 
 CARIMBO_CAMPINAS = [
-    re.compile(r"(?:CÂMARA MUNICIPAL DE CAMPINAS Estado de São Paulo )?Diretoria de Gestão Documental Coordenadoria de Biblioteca "
+    # nas leis de 2002 a capa ainda não tinha a Diretoria de Gestão Documental
+    re.compile(r"(?:CÂMARA MUNICIPAL DE CAMPINAS (?:Estado de São Paulo )?)?(?:Diretoria de Gestão Documental )?Coordenadoria de Biblioteca "
                r"\S+@campinas\.sp\.leg\.br(?: –| -)? ?(?:Ramal:? ?\d+)?"),
     # o OCR lê os travessões como hífen
     re.compile(r"Avenida da Saudade, nº 1\.004 [–-] Ponte Preta [–-] CEP: 13041-670 [–-] Campinas [–-] SP [–-] PABX: \(19\) 3736-1300\.?(?: www\.campinas\.sp\.leg\.br)?"),
@@ -126,12 +127,16 @@ AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS = re.compile(
 AVISO_REPRODUZIDO_CAMPINAS = re.compile(
     r"Texto para consulta, reproduzido conforme (?:a )?publicação(?: extra)? (?:no|do) Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
 # às vezes sob um fio de sublinhados, que o conversor escapa como "\_"
-AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(r"(?:(?:\\_)+ )?Texto somente para consulta, sem valor legal\.?")
+AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(
+    r"(?:(?:\\_)+ )?Texto somente para consulta, sem valor legal(?:, reproduzido de acordo com a publicação oficial)?\.?")
 # cabeçalho de cada folha dos PDFs antigos; o total some em alguns ("CÂMARA MUNICIPAL DE CAMPINAS 10/") e há folhas sem contador.
 # Anexos copiados de suplementos do Diário Oficial trazem o cabeçalho corrente dele, com número de folha e às vezes a data.
 PAGINA_CAMPINAS = re.compile(
     r"CÂMARA MUNICIPAL DE CAMPINAS(?: \d+/\d*)?"
     r"|(?:\d+ )?Diário Oficial do Município de Campinas(?: Campinas, \w+-feira, \d{1,2} de \w+ de \d{4})?(?: \d+)?(?: PREF[EI]TURA MUNICIPAL DE CAMPINAS)?")
+# com o rodapé tirado como linha repetida, o cabeçalho com contador se cola ao que vem depois na mesma folha
+# ("CÂMARA MUNICIPAL DE CAMPINAS 1/18 Publicada no Diário Oficial..."); sem o contador, não há como distinguir do texto
+PAGINA_NO_INICIO_CAMPINAS = re.compile(r"CÂMARA MUNICIPAL DE CAMPINAS \d+/\d* (?=\S)")
 SUPLEMENTO_CAMPINAS = re.compile(r"TABELAS? [^.\n]{0,80}PUBLICADAS? EM SUPLEMENTO", re.I)
 CONTADOR_FOLHA = re.compile(r"(\d+)/(\d+)")
 
@@ -183,6 +188,10 @@ def limpar_carimbo_campinas(corpo):
             plano = par = plano[capa.end():].strip()
             if not plano:
                 continue
+        cabecalho = PAGINA_NO_INICIO_CAMPINAS.match(plano)
+        if cabecalho:
+            plano = par = plano[cabecalho.end():]
+            quebra_de_pagina = True
         if PAGINA_CAMPINAS.fullmatch(plano) or i in contadores:
             quebra_de_pagina = True
             continue
