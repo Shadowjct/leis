@@ -151,6 +151,17 @@ class CabecalhoDePagina(unittest.TestCase):
             corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, *fracoes]))
             self.assertEqual(corpo, "\n\n".join([LEI, *fracoes]), fracoes)
 
+    def test_aviso_sem_valor_legal_sob_fio_de_sublinhados(self):
+        corpo, notas = limpar_carimbo_campinas("\n\n".join([LEI, "\\_\\_\\_\\_ Texto somente para consulta, sem valor legal."]))
+        self.assertEqual(corpo, LEI)
+        self.assertEqual(notas, ["cópia de consulta da Câmara, sem valor legal"])
+
+    def test_rodape_com_hifen_no_lugar_do_travessao(self):
+        # assim sai do OCR (LC 515/2025)
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([
+            LEI, "Avenida da Saudade, nº 1.004 - Ponte Preta - CEP: 13041-670 - Campinas - SP - PABX: (19) 3736-1300"]))
+        self.assertEqual(corpo, LEI)
+
 
 class EmendaSemClausulaDeVigencia(unittest.TestCase):
     PROMULGA = ("A Mesa da Câmara Municipal de Campinas, nos termos do § 2º do Artigo 40 da Lei Orgânica, promulga a seguinte emenda "

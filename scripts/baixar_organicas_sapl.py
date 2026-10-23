@@ -115,7 +115,8 @@ def motivo_retencao(cache, identificador, bruto):
 CARIMBO_CAMPINAS = [
     re.compile(r"(?:CÂMARA MUNICIPAL DE CAMPINAS Estado de São Paulo )?Diretoria de Gestão Documental Coordenadoria de Biblioteca "
                r"\S+@campinas\.sp\.leg\.br(?: –| -)? ?(?:Ramal:? ?\d+)?"),
-    re.compile(r"Avenida da Saudade, nº 1\.004 – Ponte Preta – CEP: 13041-670 – Campinas – SP – PABX: \(19\) 3736-1300\.?(?: www\.campinas\.sp\.leg\.br)?"),
+    # o OCR lê os travessões como hífen
+    re.compile(r"Avenida da Saudade, nº 1\.004 [–-] Ponte Preta [–-] CEP: 13041-670 [–-] Campinas [–-] SP [–-] PABX: \(19\) 3736-1300\.?(?: www\.campinas\.sp\.leg\.br)?"),
 ]
 # a fonte tem erros de grafia nesta linha ("Municipio", "Municípo", "Campina"); a data também varia ("1º de outubro", "novembrode")
 AVISO_NAO_SUBSTITUI_CAMPINAS = re.compile(
@@ -124,7 +125,8 @@ AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS = re.compile(
     r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial da Câmara Municipal de Campinas em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_REPRODUZIDO_CAMPINAS = re.compile(
     r"Texto para consulta, reproduzido conforme (?:a )?publicação(?: extra)? (?:no|do) Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
-AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(r"Texto somente para consulta, sem valor legal\.?")
+# às vezes sob um fio de sublinhados, que o conversor escapa como "\_"
+AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(r"(?:(?:\\_)+ )?Texto somente para consulta, sem valor legal\.?")
 # cabeçalho de cada folha dos PDFs antigos; o total some em alguns ("CÂMARA MUNICIPAL DE CAMPINAS 10/") e há folhas sem contador.
 # Anexos copiados de suplementos do Diário Oficial trazem o cabeçalho corrente dele, com número de folha e às vezes a data.
 PAGINA_CAMPINAS = re.compile(
