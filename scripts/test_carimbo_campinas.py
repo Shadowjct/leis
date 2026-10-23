@@ -135,6 +135,22 @@ class CabecalhoDePagina(unittest.TestCase):
         corpo, _ = limpar_carimbo_campinas("\n\n".join([capa, LEI]))
         self.assertEqual(corpo, LEI)
 
+    def test_contador_solto_em_sequencia_sai_e_a_frase_se_reune(self):
+        # o cabeçalho "CÂMARAMUNICIPAL DE CAMPINAS" saiu como linha repetida e o contador ficou sozinho (LC 80/2014)
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([
+            "1/3", LEI, "IV - o estabelecimento será lacrado;", "2/3", "V - multa equivalente a", "3/3", "5.000 UFIC's."]))
+        self.assertEqual(corpo, "\n\n".join([LEI, "IV - o estabelecimento será lacrado;", "V - multa equivalente a 5.000 UFIC's."]))
+
+    def test_contador_solto_com_folhas_sem_cabecalho(self):
+        # LC 76/2014: algumas folhas não trazem o cabeçalho; a sequência segue crescente e com o mesmo total
+        corpo, _ = limpar_carimbo_campinas("\n\n".join(["1/19", LEI, "2/19", "Anexo I.", "4/19", "Anexo II."]))
+        self.assertEqual(corpo, "\n\n".join([LEI, "Anexo I.", "Anexo II."]))
+
+    def test_fracao_solta_no_texto_nao_e_contador(self):
+        for fracoes in (["1/2"], ["1/2", "1/2"], ["2/3", "3/3"], ["1/3", "2/4"], ["1/2", "3/2"]):
+            corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, *fracoes]))
+            self.assertEqual(corpo, "\n\n".join([LEI, *fracoes]), fracoes)
+
 
 class EmendaSemClausulaDeVigencia(unittest.TestCase):
     PROMULGA = ("A Mesa da Câmara Municipal de Campinas, nos termos do § 2º do Artigo 40 da Lei Orgânica, promulga a seguinte emenda "

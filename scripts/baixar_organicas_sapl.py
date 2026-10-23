@@ -131,6 +131,24 @@ PAGINA_CAMPINAS = re.compile(
     r"CÂMARA MUNICIPAL DE CAMPINAS(?: \d+/\d*)?"
     r"|(?:\d+ )?Diário Oficial do Município de Campinas(?: Campinas, \w+-feira, \d{1,2} de \w+ de \d{4})?(?: \d+)?(?: PREF[EI]TURA MUNICIPAL DE CAMPINAS)?")
 SUPLEMENTO_CAMPINAS = re.compile(r"TABELAS? [^.\n]{0,80}PUBLICADAS? EM SUPLEMENTO", re.I)
+CONTADOR_FOLHA = re.compile(r"(\d+)/(\d+)")
+
+
+def contadores_de_folha(paragrafos):
+    """Parágrafos que são só o contador de folha ("2/19").
+
+    Em PDFs de 2014 a 2017 o cabeçalho vem como "CÂMARAMUNICIPAL DE CAMPINAS" e o contador na linha de baixo;
+    o conversor tira o cabeçalho como linha repetida e o contador fica sozinho. Só conta como contador a
+    sequência: dois ou mais, começando em 1, crescentes e com o mesmo total (uma fração solta no texto fica).
+    """
+    achados = [(i, CONTADOR_FOLHA.fullmatch(p.strip())) for i, p in enumerate(paragrafos)]
+    achados = [(i, int(m[1]), int(m[2])) for i, m in achados if m]
+    folhas = [k for _, k, _ in achados]
+    totais = {t for _, _, t in achados}
+    if (len(achados) >= 2 and folhas[0] == 1 and len(totais) == 1 and folhas[-1] <= min(totais)
+            and all(a < b for a, b in zip(folhas, folhas[1:]))):
+        return {i for i, _, _ in achados}
+    return set()
 
 
 def frase_continua_na_pagina_seguinte(anterior, proximo):
@@ -150,14 +168,16 @@ def limpar_carimbo_campinas(corpo):
     quebra_de_pagina = False
     # espaço de largura zero é artefato de cópia do Word ("\u200bcaput"): invisível, mas quebra a busca.
     # Retorno de carro solto não tem função em Markdown e faz a auditoria em disco (read_text) recalcular outro hash.
-    for par in corpo.replace("\u200b", "").replace("\r\n", "\n").replace("\r", "\n").split("\n\n"):
+    paragrafos = corpo.replace("\u200b", "").replace("\r\n", "\n").replace("\r", "\n").split("\n\n")
+    contadores = contadores_de_folha(paragrafos)
+    for i, par in enumerate(paragrafos):
         plano = re.sub(r"\s+", " ", par).strip()
         capa = CARIMBO_CAMPINAS[0].match(plano)
         if capa:  # a capa pode vir fundida com o aviso no mesmo parágrafo
             plano = par = plano[capa.end():].strip()
             if not plano:
                 continue
-        if PAGINA_CAMPINAS.fullmatch(plano):
+        if PAGINA_CAMPINAS.fullmatch(plano) or i in contadores:
             quebra_de_pagina = True
             continue
         if AVISO_NAO_SUBSTITUI_CAMPINAS.fullmatch(plano):
