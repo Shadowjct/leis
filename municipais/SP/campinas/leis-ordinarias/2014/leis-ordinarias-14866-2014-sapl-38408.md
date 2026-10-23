@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: EXECUTIVO MUNI
 fonte: "https://sapl.campinas.sp.leg.br/norma/38408"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2014/38408/38408_texto_integral.pdf"
 sha256_fonte: "2879e0dedc276a7e46d176649d06f198a70a18988c76f35c432d9f4f98b28295"
-sha256_texto: "679b547b60b031edcdbc94776e05139458eea456b0f5b313e9bc4fa2db156a9e"
+sha256_texto: "74497b02ee46679ca15dc20a78ff764db7da291f693fd7c00db52335e7c8ca73"
 baixado_em: "2026-10-21"
 ---
 
 # Lei nº 14.866, de 29 de agosto de 2014
-
-1/10
 
 LEI Nº 14.866 DE 29 DE AGOSTO DE 2014
 
@@ -45,11 +43,7 @@ IV - devidas à Sociedade de Abastecimento de Água e Saneamento S/A – SANASA 
 
 **§ 2º** A adesão ao programa REFIS CAMPINAS/2014 poderá ser efetuada até o dia 31 de outubro de 2014.
 
-**Art. 2º** A Secretaria Municipal de Finanças da Prefeitura Municipal de Campinas poderá disponibilizar em sua página na Internet, no endereço: www.campinas.sp.gov.br/governo/financas/, aplicativo para que o sujeito passivo possa se credenciar e aderir ao REFIS CAMPINAS/2014 para pagamento à vista ou em parcelas de suas dívidas tributárias ou não tributárias, conforme disposto em normas
-
-2/10
-
-regulamentadoras.
+**Art. 2º** A Secretaria Municipal de Finanças da Prefeitura Municipal de Campinas poderá disponibilizar em sua página na Internet, no endereço: www.campinas.sp.gov.br/governo/financas/, aplicativo para que o sujeito passivo possa se credenciar e aderir ao REFIS CAMPINAS/2014 para pagamento à vista ou em parcelas de suas dívidas tributárias ou não tributárias, conforme disposto em normas regulamentadoras.
 
 DOS BENEFÍCIOS
 
@@ -89,11 +83,7 @@ III - de 4 (quatro) a 6 (seis) parcelas: 70% (setenta por cento);
 
 IV - de 7 (sete) a 12 (doze) parcelas: 50% (cinquenta por cento);
 
-V - de 13 (treze) a 24 (vinte e quatro) parcelas: 30% (trinta por cento), acrescidos de juros
-
-3/10
-
-compensatórios de 5% (cinco por cento) ao ano;
+V - de 13 (treze) a 24 (vinte e quatro) parcelas: 30% (trinta por cento), acrescidos de juros compensatórios de 5% (cinco por cento) ao ano;
 
 VI - de 25 (vinte e cinco) a 60 (sessenta) parcelas: 15% (quinze por cento), acrescidos de juros compensatórios de 5% (cinco por cento) ao ano.
 
@@ -116,8 +106,6 @@ I - IPTU e Taxas Imobiliárias: no caso de processo judicial, quando houver laud
 II - IPTU lançado até o exercício de 2001: redução equivalente à exclusão da incidência do fator da progressividade do IPTU;
 
 III - Contribuição de Melhoria - Pavimentação: redução do valor da contribuição para 15% (quinze por cento) do valor venal do imóvel no exercício de 1999;
-
-4/10
 
 IV - Imposto Sobre Serviços de Qualquer Natureza - ISSQN por responsabilidade tributária ou solidária incidente sobre serviços de construção civil para lançamentos ocorridos até o dia 21 de outubro de 2008:
 
@@ -145,11 +133,7 @@ II - para os demais créditos:
 
 a) extinção do crédito: se dá no caso de pagamento à vista com a confirmação do pagamento da parcela única, junto ao sistema informatizado da Prefeitura Municipal de Campinas;
 
-b) suspensão da exigibilidade do crédito: se dá nos casos de parcelamento, após a assinatura do termo de acordo e confirmação do pagamento da primeira parcela junto ao
-
-5/10
-
-sistema informatizado da Prefeitura Municipal de Campinas.
+b) suspensão da exigibilidade do crédito: se dá nos casos de parcelamento, após a assinatura do termo de acordo e confirmação do pagamento da primeira parcela junto ao sistema informatizado da Prefeitura Municipal de Campinas.
 
 **§ 1º** Para todos os créditos, nos casos de parcelamento, fica interrompida a prescrição nos termos do art. 174, parágrafo único, inciso IV, da Lei nº 5.172/1966 – Código Tributário Nacional.
 
@@ -175,11 +159,7 @@ DAS DISPOSIÇÕES COMPLEMENTARES
 
 **Art. 10.** A adesão ao REFIS CAMPINAS/2014 não acarreta:
 
-I - homologação pela Administração Municipal dos valores declarados pelo sujeito
-
-6/10
-
-passivo;
+I - homologação pela Administração Municipal dos valores declarados pelo sujeito passivo;
 
 II - renúncia pela Administração Municipal ao direito de apurar a exatidão dos créditos;
 
@@ -213,8 +193,6 @@ IV - pela falência decretada ou a insolvência civil do sujeito passivo.
 
 I - perda do direito de reingressar no programa;
 
-7/10
-
 II - perda de todos os benefícios concedidos por esta Lei;
 
 III - exigibilidade imediata do saldo remanescente, correspondente à diferença entre o valor pago e o valor total consolidado;
@@ -245,8 +223,6 @@ II - nos casos de créditos tributários relativos ao Imposto Sobre Serviços de
 
 III - nos demais casos, por código do sujeito passivo.
 
-8/10
-
 **Art. 16.** Não serão inscritos em Dívida Ativa do Município, nem cobrados administrativamente, os créditos tributários e não tributários com a Fazenda Pública Municipal de valor consolidado igual ou inferior a 2 (duas) UFICs.
 
 **§ 1º** Serão objeto de extinção por remissão:
@@ -274,8 +250,6 @@ V - não será obstáculo para emissão de Certidão Negativa de Débitos.
 **Art. 17.** Não serão objeto de ação de execução fiscal os créditos tributários ou não tributários com valores consolidados iguais ou inferiores a 100 (cem) UFICs.
 
 **§ 1º** Fica autorizada a desistência das ações de execução fiscal em curso relativas a créditos com valores consolidados iguais ou inferiores ao disposto no caput deste artigo.
-
-9/10
 
 **§ 2º** Para os casos de créditos tributários e não tributários ajuizados relativos ao mesmo devedor, que somados superarem o limite fixado no caput deste artigo, poderá ser requerida pela Procuradoria Municipal a reunião dos processos nos termos do Código de Processo Civil.
 
@@ -306,8 +280,6 @@ IV - objeto de decisões judiciais transitadas em julgado.
 **Art. 19.** Os casos omissos serão decididos pelo Secretário Municipal de Finanças.
 
 **Art. 20.** Normas regulamentadoras poderão dispor sobre esta Lei.
-
-10/10
 
 **Art. 21.** As disposições relativas ao Programa REFIS CAMPINAS/2014, previstas do art. 1º ao 14 desta Lei, possuem vigência até o dia 31 de outubro de 2014, podendo ser prorrogadas por decreto.
 

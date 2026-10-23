@@ -11,7 +11,7 @@ versao_texto: "texto integral anexado no SAPL municipal; "
 fonte: "https://sapl.campinas.sp.leg.br/norma/55903"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2025/55903/lei_complementar_no_515_-_2024.pdf"
 sha256_fonte: "0dea1c651d474d1627560437be5d2f68388689035db0cca56de7e915e0bce1fb"
-sha256_texto: "ce26c20377126069faace9eb4eb4635c1069105777c300624562b240e69734c1"
+sha256_texto: "b5af909877f846ff9f50dce56636aba7cead5abe265c5082e47861de9ae8d9b8"
 baixado_em: "2026-10-21"
 ---
 
@@ -762,8 +762,6 @@ EMPREGO: Analista de Fiscalização e Regulação - Área de Engenhario Civil / 
 8.243,08 2.512,35
 
 27.586,77 8.407,97 2.562,59
-
-Avenida da Saudade, nº 1.004 - Ponte Preta - CEP: 13041-670 - Campinas - SP - PABX: (19) 3736-1300
 
 Texto somente para consulta. Não substitui o publicado n iário Oficial do Município de Campinas em 6 de janeiro de 202: 28.138,52 2.613,85
 

@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: EXECUTIVO MUNI
 fonte: "https://sapl.campinas.sp.leg.br/norma/38322"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2014/38322/38322_texto_integral.pdf"
 sha256_fonte: "2ce51d42fac35455bb242456378e0dd3b5a9de788e06f01e59c09f5d5c70483d"
-sha256_texto: "36da7b19d68335dea2cb54c83cab74d742383bc6de0481c212061cfd85ef00cb"
+sha256_texto: "fcde651f7ca08054e2c0ae65e058e3f64c7c35395ac932786157586b60378f85"
 baixado_em: "2026-10-21"
 ---
 
 # Lei Complementar nº 76, de 18 de julho de 2014
-
-1/19
 
 LEI COMPLEMENTAR Nº 76 DE 18 DE JULHO DE 2014
 
@@ -43,11 +41,7 @@ A Câmara Municipal aprovou e eu, Prefeito do Município de Campinas, sanciono e
 
 **Parágrafo único.** Nos termos do caput deste artigo, as APs 5 e 26 passam a ser denominadas, respectivamente, 9. A - Região dos Amarais e 9.B - Região de Aparecidinha/Sta. Bárbara/Pq. Via Norte.
 
-**Art. 4** º A identificação das Unidades Territoriais Básicas passa a ser constituída pela sigla UTB, seguida pelo número da macrozona, da letra da AP a que pertence e do número
-
-2/19
-
-correspondente à UTB, conforme demonstrado no mapa APs e UTBs - Anexo I.
+**Art. 4** º A identificação das Unidades Territoriais Básicas passa a ser constituída pela sigla UTB, seguida pelo número da macrozona, da letra da AP a que pertence e do número correspondente à UTB, conforme demonstrado no mapa APs e UTBs - Anexo I.
 
 **Art. 5** ° Nos termos do art. 4° desta Lei Complementar, as UTBs 9, 10, 11, 12 e 13 passam a ser denominadas, respectivamente, UTB 9. A.1 - San Martin, UTB 9.A.2 - São Marcos/Amarais, UTB 9.B.1 - Nova Aparecida/Padre Anchieta, UTB 9.B.2 – Vila Lunardi/V. Réggio, UTB 9.B.3 - Pq. Via Norte e criada a UTB 9. B.4 -Fazendinha/ Santa Bárbara, que passa a integrar a AP 9.B, conforme o quadro seguinte:
 
@@ -78,8 +72,6 @@ VIII - promover a remoção de famílias que ocupem áreas de risco e Áreas de 
 IX - estimular o desenvolvimento econômico sustentável e fomentar a criação e/ou a consolidação de subcentros;
 
 X - propiciar a integração com as regiões conurbadas de Sumaré e Hortolândia;
-
-3/19
 
 XI - promover a integração da Macrozona 9 com as Macrozonas 3, 4 e 5;
 
@@ -119,8 +111,6 @@ XIII - coibir o descarte clandestino de resíduos sólidos de construção civil
 
 XIV - acompanhar e monitorar os processos de remediação das áreas contaminadas;
 
-4/19
-
 XV - exigir a construção de caixas de contenção para controle da poluição difusa oriunda das rodovias.
 
 #### CAPÍTULO II DAS DIRETRIZES ESPECÍFICAS PARA A MACROZONA 9
@@ -153,11 +143,7 @@ II - viabilizar a implantação dos seguintes parques e corredores ecológicos, 
 
 III - identificar e incentivar os proprietários de terras inseridas no Sistema de Áreas Verdes a inscreverem-se no Banco de Áreas Verdes do Município;
 
-IV - condicionar a ocupação dos lotes do CIATEC I ao licenciamento ambiental, com base
-
-5/19
-
-na Lei nº 13.550, de 2 de Junho de 2009 e à regulamentação aplicável;
+IV - condicionar a ocupação dos lotes do CIATEC I ao licenciamento ambiental, com base na Lei nº 13.550, de 2 de Junho de 2009 e à regulamentação aplicável;
 
 V - condicionar a ocupação da gleba onde está situado o bosque Maria Helena à preservação de, no mínimo, 50% (cinquenta por cento) da área da vegetação em sua porção norte, conforme Anexo III desta Lei Complementar, permitindo-se a utilização do potencial construtivo da gleba original na área remanescente, respeitadas as demais restrições edilícias e aeroportuárias, no caso de transferência gratuita da área verde ao Município;
 
@@ -191,11 +177,7 @@ XIV - identificar e articular os horticultores e demais produtores e difusores d
 
 XV - fornecer apoio técnico, em conjunto com as instituições de pesquisa e extensão rural, incentivar e capacitar os produtores hortícolas para o uso de práticas agroecológicas;
 
-XVI - monitorar a qualidade da água utilizada na irrigação, bem como o uso de
-
-6/19
-
-agrotóxicos que possam causar a contaminação ambiental;
+XVI - monitorar a qualidade da água utilizada na irrigação, bem como o uso de agrotóxicos que possam causar a contaminação ambiental;
 
 XVII - remover os resíduos dos pontos de descarte clandestino e posterior recuperação, requalificação e fiscalização destas áreas.
 
@@ -233,11 +215,7 @@ VII - Zona 3 para a área atualmente não parcelada, localizada ao sul do Ribeir
 
 VIII - Zona 11 para uma faixa de 100,00m ao longo da Av. Comendador Aladino Selmi, em área referida no inciso VII, entre a linha férrea (Ferrovia Paulínia-Mairinque) e o Córrego Boa Vista, e para gleba de código cartográfico nº. 5266 da PRC 3162 - UTB 9.A.1;
 
-IX - Zona 1 para as quadras pertencentes ao loteamento Jardim Mirassol, com exceção
-
-7/19
-
-dos lotes referidos no inciso X - UTB 9.A.1;
+IX - Zona 1 para as quadras pertencentes ao loteamento Jardim Mirassol, com exceção dos lotes referidos no inciso X - UTB 9.A.1;
 
 X - Zona 11 para todos os lotes com frente para Rua 1 do Jd. Mirassol, nos quarteirões de código cartográfico nºs. 5228 e 5238 da PRC 3162 - UTB 9.A.1;
 
@@ -267,11 +245,7 @@ XXII - Zona 1 para a área delimitada pelo Conjunto Residencial CDHU Campinas F,
 
 XXIII - Zona 1 para as glebas situadas entre a linha férrea (Ferrovia Paulínia-Mairinque), a Vila Padre Anchieta e a gleba 18 do quarteirão de código cartográfico nº 4354 da PRC 3164 - UTB 9.B.1;
 
-XXIV- Zona 1 para as glebas onde estão situadas as ocupações irregulares denominadas Núcleo Residencial Vila Francisca e Núcleo Residencial Chácaras Anhanguera, delimitadas pela linha férrea (Ferrovia Paulínia-Mairinque), Rodovia Anhanguera, área não
-
-8/19
-
-parcelada e Rua José Mendonça - UTB 9.B.1;
+XXIV- Zona 1 para as glebas onde estão situadas as ocupações irregulares denominadas Núcleo Residencial Vila Francisca e Núcleo Residencial Chácaras Anhanguera, delimitadas pela linha férrea (Ferrovia Paulínia-Mairinque), Rodovia Anhanguera, área não parcelada e Rua José Mendonça - UTB 9.B.1;
 
 XXV - Zona 03 para as glebas e lotes situados entre a linha férrea (Ferrovia Paulínia- -Mairinque), a Rua José Mendonça, a gleba onde está a ocupação irregular denominada Núcleo Residencial Vila Francisca, a Rodovia Anhanguera, a Gleba 2 do quarteirão 30.016 e o córrego, com exceção da área referida no inciso XLVII- UTB 9.B.1;
 
@@ -310,8 +284,6 @@ XL - Zona 1 para as glebas e lotes situados entre a Rua Manoel Tomas, a linha f�
 XLI - Zona 11 para as glebas situadas entre a Rua Orsina do Amaral Cyrino, o córrego e o ramal férreo - UTB 9.B.2;
 
 XLII - Zona 3 para as glebas e áreas não parceladas que atualmente pertencem à Zona 2
-
-9/19
 
 e estão situadas entre os loteamentos Parque Santa Bárbara, Parque Fazendinha, Parque São Jorge e a divisa com o município de Hortolândia - UTB 9.B.4;
 
@@ -372,8 +344,6 @@ VII - implantar ligação entre o Jardim Mirassol e a Estrada do Pari com 15,00m
 VIII - implantar ligação entre a via prevista no inciso VII e o Residencial Olímpia, com 15,00m de largura;
 
 IX - implantar via de contorno da divisa de município com Sumaré, com 15,00m de largura;
-
-11/19
 
 X - implantar via com 14,00m de largura ligando os loteamentos Parque Cidade Campinas e Campo Florido à divisa de município com Sumaré;
 

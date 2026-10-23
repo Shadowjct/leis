@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; REMISSIVAS: REPUBLICACA
 fonte: "https://sapl.campinas.sp.leg.br/norma/38606"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2014/38606/38606_texto_integral.pdf"
 sha256_fonte: "84a316ded2bcc29015f1fd1f49b94f866597712116702704457ed6959d89c50c"
-sha256_texto: "4609f3b0cc9c3c59dacf59637ffb3a5460c048bf29ce3568f6e095da7e6538e0"
+sha256_texto: "f27f5b612ce8e1dbb23a51deedd34a7aa06f3bae85555a5a5892bf30ea5cea2c"
 baixado_em: "2026-10-21"
 ---
 
 # Lei Complementar nº 85, de 04 de novembro de 2014
-
-1/35
 
 LEI COMPLEMENTAR N.º 85, DE 04 DE NOVEMBRO DE 2014.
 
@@ -59,8 +57,6 @@ I - 135 (cento e trinta e cinco) cargos de Professor de Educação Profissional;
 
 II - 20 (vinte) cargos de Professor Substituto de Educação Profissional;
 
-2/35
-
 III - 02 (dois) cargos de Orientador Pedagógico;
 
 IV - 01 (um) cargo de Engenheiro Civil;
@@ -94,8 +90,6 @@ títulos.
 I - 01 (um) cargo de Gestor Público Nível V da Área Administrativa e Financeira;
 
 II - 01 (um) cargo de Gestor Público Nível V do Programa de Educação Profissional;
-
-3/35
 
 III - 01 (um) cargo de Gestor Público Nível V do Programa de Educação de Jovens e Adultos;
 
@@ -143,43 +137,13 @@ IX - VIII - Tabela de Vencimentos dos Cargos de Provimento Efetivo;
 
 X - IX - Organograma, com as modificações introduzidas por esta Lei Complementar.
 
-**Art. 9º** - As despesas decorrentes da aplicação desta Lei Complementar correrão por conta de recursos orçamentários vigentes consignados à
-
-4/35
-
-Fundação Municipal para Educação Comunitária - FUMEC, em especial os constantes da Lei Municipal n° 14.743, de 19 de dezembro de 2013, que trata do Plano Plurianual para o Quadriênio de 2014 a 2017, e Lei Municipal n° 14.744, de 20 de dezembro de 2013, que trata da Lei Orçamentária para o Exercício de 2014, suplementados, se necessário.
+**Art. 9º** - As despesas decorrentes da aplicação desta Lei Complementar correrão por conta de recursos orçamentários vigentes consignados à Fundação Municipal para Educação Comunitária - FUMEC, em especial os constantes da Lei Municipal n° 14.743, de 19 de dezembro de 2013, que trata do Plano Plurianual para o Quadriênio de 2014 a 2017, e Lei Municipal n° 14.744, de 20 de dezembro de 2013, que trata da Lei Orçamentária para o Exercício de 2014, suplementados, se necessário.
 
 **Art. 10** - Esta Lei Complementar consolida todos os cargos de provimento efetivo, os cargos denominados função-atividade, os cargos em comissão e todas as gratificações de função, criados no âmbito da Fundação Municipal para Educação Comunitária – FUMEC, e revoga as disposições em contrário, em especial o Anexo I, alterado pela Lei 13.280/08, e os Anexos II, III e V, todos da Lei nº 12.988/07, de 28 de junho de 2007.
 
 Campinas, 04 de novembro de 2014.
 
 JONAS DONIZETTE PREFEITO MUNICIPAL
-
-5/35
-
-6/35
-
-7/35
-
-8/35
-
-9/35
-
-10/35
-
-11/35
-
-12/35
-
-13/35
-
-14/35
-
-15/35
-
-16/35
-
-17/35
 
 REPUBLICADO NO DIÁRIO OFICIAL DO MUNICÍPIO EM 06/11/2014.
 
@@ -215,11 +179,7 @@ IX - 01 (um) cargo de Coordenador Setorial do Programa de Ensino Profissional.
 
 **§ 2º** - Os cargos de que trata o caput deste artigo serão automaticamente extintos ao vagarem.
 
-**Art. 3º** - Ficam criados os seguintes cargos de provimento efetivo, no quadro da Fundação Municipal para Educação Comunitária - FUMEC, constantes do Anexo I-A, com as respectivas atribuições genéricas constantes do Anexo III, obedecendo ao disposto na Tabela de Referência constante do Anexo IV e na Tabela de Vencimentos dos Cargos de Provimento Efetivo do Anexo VIII desta
-
-18/35
-
-Lei Complementar:
+**Art. 3º** - Ficam criados os seguintes cargos de provimento efetivo, no quadro da Fundação Municipal para Educação Comunitária - FUMEC, constantes do Anexo I-A, com as respectivas atribuições genéricas constantes do Anexo III, obedecendo ao disposto na Tabela de Referência constante do Anexo IV e na Tabela de Vencimentos dos Cargos de Provimento Efetivo do Anexo VIII desta Lei Complementar:
 
 I - 135 (cento e trinta e cinco) cargos de Professor de Educação Profissional;
 
@@ -254,8 +214,6 @@ títulos.
 **Parágrafo único.** - Os cargos de que trata o caput deste artigo serão automaticamente extintos ao vagarem.
 
 **Art. 5º** - Ficam criados os seguintes cargos em comissão de livre provimento e exoneração no quadro da Fundação Municipal para Educação Comunitária – FUMEC, constantes do Anexo II, com as respectivas atribuições constantes do Anexo III, e os vencimentos do Anexo V desta Lei Complementar:
-
-19/35
 
 I - 01 (um) cargo de Gestor Público Nível V da Área Administrativa e Financeira;
 
@@ -307,8 +265,6 @@ IX - VIII - Tabela de Vencimentos dos Cargos de Provimento Efetivo;
 
 X - IX - Organograma, com as modificações introduzidas por esta Lei Complementar.
 
-20/35
-
 **Art. 9º** - As despesas decorrentes da aplicação desta Lei Complementar correrão por conta de recursos orçamentários vigentes consignados à Fundação Municipal para Educação Comunitária - FUMEC, em especial os constantes da Lei Municipal n° 14.743, de 19 de dezembro de 2013, que trata do Plano Plurianual para o Quadriênio de 2014 a 2017, e Lei Municipal n° 14.744, de 20 de dezembro de 2013, que trata da Lei Orçamentária para o Exercício de 2014, suplementados, se necessário.
 
 **Art. 10** - Esta Lei Complementar consolida todos os cargos de provimento efetivo, os cargos denominados função-atividade, os cargos em comissão e todas as gratificações de função, criados no âmbito da Fundação Municipal para Educação Comunitária - FUMEC,e revoga as disposições em contrário, em especial o Anexo I, alterado pela Lei13.280/08, e os Anexos II, III e V, todos da Lei nº 12.988/07, de 28 de junho de 2007.
@@ -317,39 +273,17 @@ Campinas, 04 de novembro de 2014.
 
 JONAS DONIZETTE PREFEITO MUNICIPAL
 
-21/35
-
 ANEXO I - A QUADRO DE PROVIMENTO EFETIVO
 
-22/35
-
 ANEXO I - B QUADRO SUPLEMENTAR - EXTINTOS NA VACÂNCIA
-
-23/35
 
 ANEXO II QUADRO DE CARGOS EM COMISSÃO CARGOS DE LIVRE PROVIMENTO E EXONERAÇÃO, PODENDO OU NÃO SEREM PREENCHIDOS POR SERVIDORES EFETIVOS . OS CARGOS DE COORDENADOR SETORIAL, CHEFE DE SETOR E PREGOEIRO SÓ PODERÃO SER PREENCHIDOS POR SERVIDORES EFETIVOS.
 
 10 CARGOS DE LIVRE PROVIMENTO E EXONERAÇÃO (1 DIRETOR EXECUTIVO, 5 ASSESSORES E 4 GESTORES PÚBLICOS) 04 CARGOS DE LIVRE PROVIMENTO E EXONERAÇÃO RESTRITOS À SERVIDORES DO QUADRO PERMANENTE (3 COORD. SETORIAIS E 1 PREGOEIRO) 13 CHEFIAS DE SETOR DE LIVRE PROVIMENTO E EXONERAÇÃO RESTRITAS À SERVIDORES DO QUADRO PERMANENTE TOTAL DE CARGOS = 571 % CARGOS LIVRE PROVIMENTO/TOTAL CARGOS (14/571) = 2,45%
 
-24/35
-
 ANEXO III ATRIBUIÇÕES GENÉRICAS DOS CARGOS
 
-25/35
-
-26/35
-
-27/35
-
-28/35
-
-29/35
-
-30/35
-
 ANEXO IV TABELA DE REFERÊNCIA
-
-31/35
 
 ANEXO V TABELA DE CARGOS EM COMISSÃO
 
@@ -359,21 +293,13 @@ ANEXO VI TABELA DE GRATIFICAÇÕES DE FUNÇÃO \*
 
 \* NOMEAÇÃO RESTRITA A SERVIDORES EFETIVOS
 
-32/35
-
 ANEXO VII ATRIBUIÇÕES GENÉRICAS DAS GRATIFICAÇÕES DE FUNÇÃO
-
-33/35
 
 ANEXO VIII TABELA DE VENCIMENTOS DOS CARGOS DE PROVIMENTO EFETIVO
 
 TABELA SALARIAL - QUADRO GERAL - 36 HORAS SEMANAIS
 
-34/35
-
 TABELA SALARIAL - MAGISTÉRIO - 20 HORAS SEMANAIS\*
-
-35/35
 
 ANEXO IX – ORGANOGRAMA
 

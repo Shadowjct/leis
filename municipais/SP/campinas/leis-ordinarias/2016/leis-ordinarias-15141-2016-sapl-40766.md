@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: EXECUTIVO MUNI
 fonte: "https://sapl.campinas.sp.leg.br/norma/40766"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2016/40766/40766_texto_integral.pdf"
 sha256_fonte: "d3d22381d9cedee36a7a2f7974d926cf7a53d1f2d122c44043b84e6d01327fb8"
-sha256_texto: "080c3da40c4da9b498d479701c24c3c2b7d841a431ed477d27b99f885aff03d9"
+sha256_texto: "197c275517bafa1f8cd0f339473c12453e252ca0450722739f74815e93cab43a"
 baixado_em: "2026-10-21"
 ---
 
 # Lei nº 15.141, de 12 de janeiro de 2016
-
-1/2
 
 LEI Nº 15.141 DE 12 DE JANEIRO DE 2016
 
@@ -56,8 +54,6 @@ VI - a data de validade do cartão.
 **Art. 5º** - O Cartão Acessibilidade terá validade de 02 (dois) anos, contados da data de sua emissão, e deverá ser renovado tão logo esteja vencido, sob pena de não atendimento nos serviços públicos municipais.
 
 **Parágrafo único** - Para renovação, a pessoa com deficiência deverá apresentar a documentação mencionada no art. 3º desta Lei.
-
-2/2
 
 **Art. 6º** - O Cartão Acessibilidade será emitido também para as pessoas com deficiência temporária, desde que cumprido o disposto no art. 3º desta Lei.
 

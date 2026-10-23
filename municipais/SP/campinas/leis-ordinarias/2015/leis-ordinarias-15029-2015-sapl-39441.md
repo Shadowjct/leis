@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; REPUBLICACAO NO DOM DE 
 fonte: "https://sapl.campinas.sp.leg.br/norma/39441"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2015/39441/39441_texto_integral.pdf"
 sha256_fonte: "6a03ebe076c2bc07c311fb61126bb8ad9afb82773a24c244c0bd53bf40ece7b2"
-sha256_texto: "23065174cf20fa04474a6f3df6ae1095bdd6451c4859278f24f3531b4d9b64e4"
+sha256_texto: "90e30130150044c37350679affdd18db4dbc95cbba854f08b9a10427127788e3"
 baixado_em: "2026-10-21"
 ---
 
 # Lei nº 15.029, de 24 de junho de 2015
-
-1/87
 
 LEI Nº 15.029 DE 24 DE JUNHO DE 2015
 
@@ -55,8 +53,6 @@ XI - vinculação do Plano Municipal de Educação ao projeto de desenvolvimento
 
 **Art. 4º** - O acompanhamento do cumprimento das metas previstas no Anexo Único desta Lei deverá ter como referência a Pesquisa Nacional por Amostra de Domicílios (PNAD), o censo demográfico e os censos nacionais da educação básica e superior, atualizados, disponíveis na data da publicação desta Lei;
 
-2/87
-
 bem como dados locais.
 
 **§ 1º** - O município deverá buscar parcerias institucionais até o final do primeiro ano de vigência deste Plano Municipal de Educação (PME) a fim de construir o Censo Escolar Municipal.
@@ -87,11 +83,7 @@ I - fiscalizar a execução do Plano Municipal de Educação e o cumprimento de 
 
 II - promover a articulação das Conferências Municipais com as conferências regionais, estaduais e federais, considerando as especificidades de cada instância.
 
-**Art. 6º** - O Município deverá promover a realização de pelo menos 3 (três) conferências municipais de educação até o final da vigência do Plano Municipal de Educação (PME), sendo a primeira realizada no segundo ano de sua
-
-3/87
-
-vigência, articuladas e coordenadas pelo Conselho Municipal de Educação de Campinas, instituído no âmbito da Secretaria Municipal de Educação (SME) e pelo Fórum Permanente de Educação.
+**Art. 6º** - O Município deverá promover a realização de pelo menos 3 (três) conferências municipais de educação até o final da vigência do Plano Municipal de Educação (PME), sendo a primeira realizada no segundo ano de sua vigência, articuladas e coordenadas pelo Conselho Municipal de Educação de Campinas, instituído no âmbito da Secretaria Municipal de Educação (SME) e pelo Fórum Permanente de Educação.
 
 **Parágrafo único.** - As conferências municipais de educação realizar-se-ão com intervalo de até 3 (três) anos entre elas, com o objetivo de avaliar e monitorar a execução do Plano Municipal de Educação (PME) e subsidiar a elaboração do Plano Municipal de Educação (PME) para o decênio subsequente.
 
@@ -112,8 +104,6 @@ III - garantir o atendimento das necessidades específicas na educação especia
 **Art. 9º** - Os processos de elaboração e adequação dos próximos Planos Municipais de Educação do município deverão ser realizados mediante a ampla participação da sociedade, assegurando-se o envolvimento das comunidades escolares, profissionais da educação, estudantes, pesquisadores, gestores e organizações da sociedade civil.
 
 **Art. 10.** O Município deverá aprovar lei específica disciplinando a gestão democrática da educação em seus respectivos âmbitos de atuação no prazo de 1 (um) ano contado da publicação desta Lei.
-
-4/87
 
 **Art. 11.** O plano plurianual, as diretrizes orçamentárias e os orçamentos anuais do Município deverão ser formulados de maneira a assegurar a consignação de dotações orçamentárias compatíveis com as diretrizes, metas e estratégias definidas neste Plano Municipal de Educação (PME), a fim de viabilizar sua plena execução.
 
@@ -143,11 +133,7 @@ a) a divulgação dos resultados individuais dos alunos e dos indicadores calcul
 
 b) os demais resultados serão públicos e receberão ampla divulgação, com as necessárias informações que permitam sua correta interpretação pelos segmentos diretamente interessados e pela sociedade;
 
-II - indicadores relativos a características como o perfil do alunado e do corpo
-
-5/87
-
-de profissionais da educação, as relações entre dimensão do corpo docente, do corpo técnico e do corpo discente, a infraestrutura das escolas, os recursos pedagógicos disponíveis e os processos da gestão, entre outras relevantes.
+II - indicadores relativos a características como o perfil do alunado e do corpo de profissionais da educação, as relações entre dimensão do corpo docente, do corpo técnico e do corpo discente, a infraestrutura das escolas, os recursos pedagógicos disponíveis e os processos da gestão, entre outras relevantes.
 
 **§ 4º** - Para a realização desta avaliação a Secretaria Municipal de Educação poderá buscar parcerias com instituições públicas, vedada a contratação de empresas privadas.
 
@@ -167,11 +153,7 @@ III - refeitórios amplos e arejados.
 
 **Art. 16.** Qualquer projeto de lei que se refira à educação deverá ser precedida de consulta à Secretaria Municipal de Educação (SME) e ao Conselho Municipal de Educação de Campinas.
 
-**Art. 17.** Qualquer modificação no Plano de Cargos, Carreiras e Vencimentos do magistério público Municipal só poderá ser realizada após ampla consulta aos
-
-6/87
-
-envolvidos.
+**Art. 17.** Qualquer modificação no Plano de Cargos, Carreiras e Vencimentos do magistério público Municipal só poderá ser realizada após ampla consulta aos envolvidos.
 
 **Art. 18.** Esta Lei entra em vigor na data de sua publicação.
 
@@ -193,8 +175,6 @@ ESTRATÉGIAS:
 
 1.3 - Promover em parceria com o Conselho Municipal de Educação a busca ativa de escolas privadas de educação infantil não autorizadas, informando a obrigatoriedade da oficialização da escola através da autorização para funcionamento garantindo o atendimento das crianças de 0 (zero) a 5 (cinco) anos em estabelecimentos que atendam a parâmetros nacionais de qualidade e em consonância com as Diretrizes Curriculares Nacionais para a Educação Infantil;
 
-7/87
-
 1.4 - Promover, no primeiro ano do PME, em parceria com o Conselho Municipal de Educação, Fórum Municipal de Educação e outros setores relacionados, campanhas de informação e conscientização dos pais e responsáveis sobre o direito da criança e das famílias à educação de qualidade e a importância de matricular seus fi lhos em escolas autorizadas pelo poder público municipal;
 
 1.5 - Garantir que todas as unidades de Educação Infantil do município mantenham o cadastro permanente de crianças, conforme estabelece a Lei Municipal 11600/2003, como forma de atualizar a demanda permanente e planejar a oferta de vagas na rede pública;
@@ -207,11 +187,7 @@ ESTRATÉGIAS:
 
 1.9 - Promover a formação inicial e continuada dos(as) profissionais da educação infantil, incluindo os (as) monitores(as) e agentes de educação infantil, garantindo, progressivamente, o atendimento das crianças por profissionais com formação superior em pedagogia, até o final de vigência deste PME;
 
-1.10 - Promover a articulação entre pós-graduação, núcleos de pesquisa e cursos de formação para profissionais da educação, com universidades, com o objetivo de oferecer cursos de formação para os profissionais da educação infantil e de modo a garantir a atualização/revisão de currículos e propostas pedagógicas que incorporem os avanços de pesquisas ligadas ao processo ensino aprendizagem e às teorias educacionais no atendimento da população de 0(zero) a 05(cinco) anos, estimulando a participação dos profissionais de educação infantil em cursos de pós graduação, mestrado, doutorado e
-
-8/87
-
-pesquisas, através de parcerias com universidades; 1.11 - Estabelecer, até o segundo ano de vigência do PME, normas, procedimentos e prazos para levantamento da demanda, no município, da população do campo, de comunidades indígenas, quilombolas e ciganas na educação infantil como forma de planejar a oferta e verificar o atendimento da demanda manifesta;
+1.10 - Promover a articulação entre pós-graduação, núcleos de pesquisa e cursos de formação para profissionais da educação, com universidades, com o objetivo de oferecer cursos de formação para os profissionais da educação infantil e de modo a garantir a atualização/revisão de currículos e propostas pedagógicas que incorporem os avanços de pesquisas ligadas ao processo ensino aprendizagem e às teorias educacionais no atendimento da população de 0(zero) a 05(cinco) anos, estimulando a participação dos profissionais de educação infantil em cursos de pós graduação, mestrado, doutorado e pesquisas, através de parcerias com universidades; 1.11 - Estabelecer, até o segundo ano de vigência do PME, normas, procedimentos e prazos para levantamento da demanda, no município, da população do campo, de comunidades indígenas, quilombolas e ciganas na educação infantil como forma de planejar a oferta e verificar o atendimento da demanda manifesta;
 
 1.12 - Garantir e realizar busca ativa permanente, a partir do primeiro ano de vigência deste PME, visando o atendimento de qualidade das populações do campo e das comunidades indígenas, quilombolas e ciganas, na educação infantil nas respectivas comunidades, por meio do redimensionamento da distribuição territorial da oferta, no escopo de evitar a nucleação de escolas e o deslocamento de crianças, de forma a atender às especificidades dessas comunidades;
 
@@ -222,8 +198,6 @@ pesquisas, através de parcerias com universidades; 1.11 - Estabelecer, até o s
 1.15 - Preservar as especificidades da educação infantil , garantir a escuta às crianças e respeitar os direitos à educação, ao cuidado e à brincadeira e o princípio constitucional do Estado laico , na organização das redes escolares , garantindo o atendimento da criança de 0 (zero) a 05 (cinco) anos 11 meses em estabelecimentos que atendam a parâmetros nacionais de qualidade e a articulação com a etapa escolar seguinte , garantindo o direito à infância;
 
 1.16 - Fortalecer o acompanhamento e o monitoramento do acesso e da permanência das crianças na educação infantil, em especial dos beneficiários de programas de transferência de renda, em colaboração com as famílias e com os órgãos públicos de assistência social, saúde e proteção à infância;
-
-9/87
 
 1.17 - Garantir e manter, a partir da aprovação do PME, a busca ativa de crianças em idade correspondente à educação infantil, em parceria com órgãos públicos de assistência social, saúde e proteção à infância, informando sempre que as crianças de 0 a 5 anos e 11 meses e suas famílias têm direito a educação, preservando o direito de opção da família em relação as crianças de até 03 anos e 11 meses;
 
@@ -243,8 +217,6 @@ pesquisas, através de parcerias com universidades; 1.11 - Estabelecer, até o s
 
 META 2 – ENSINO FUNDAMENTAL Universalizar o ensino fundamental de 09 (nove) anos para toda a população de 06 (seis) a 14 (quatorze) anos e garantir que pelo menos 95% (noventa e cinco por cento) dos alunos concluam essa etapa na idade recomendada, até o último ano de vigência deste PME.
 
-10/87
-
 ESTRATÉGIAS:
 
 2.1 - Realizar consulta pública Municipal, até o final do 2º (segundo) ano de vigência deste PME, para elaborar e encaminhar, com os profissionais da educação de cada UE, proposta de direitos e objetivos de aprendizagem e desenvolvimento para os (as) alunos (as) do ensino fundamental;
@@ -262,8 +234,6 @@ ESTRATÉGIAS:
 2.6 - Desenvolver tecnologias pedagógicas que combinem, de maneira articulada, a organização do tempo e das atividades didáticas entre a escola e o ambiente comunitário, considerando as especificidades da educação espacial, das escolas do campo e das comunidades indígenas e quilombolas e ciganos;
 
 2.7 - Organizar o trabalho pedagógico e o calendário escolar, de forma flexível de acordo com a realidade local e a identidade cultural, respeitando a legislação vigente;
-
-11/87
 
 2.8 - Promover a relação das escolas com instituições e movimentos culturais e ambientais, a fim de garantir a oferta regular de atividades culturais e socioambientais para a livre fruição dos (as) alunos (as) dentro e fora dos espaços escolares, instituições públicas e movimentos culturais locais populares;
 
@@ -283,8 +253,6 @@ ESTRATÉGIAS:
 
 2.16 - Garantir estudo e ações que limitem o número de alunos por professor. Que a relação professor / aluno seja definida por etapa, considerando as seguintes diretrizes:
 
-12/87
-
 a) para o ensino fundamental, anos iniciais: 20/25 estudantes por turma;
 
 b) para o ensino fundamental, anos fi nais: 25/30 estudantes por turma; 2.17 - Fornecer condições apropriadas de atendimento das crianças e de trabalho para os profissionais das UEs durante as reformas dos prédios escolares;
@@ -302,8 +270,6 @@ ESTRATÉGIAS:
 3.1 - Manter e ampliar programas e ações de correção de fluxo do ensino médio, por meio do acompanhamento individualizado do (a) aluno (a) com rendimento escolar defasado e pela adoção de práticas como aulas de reforço no turno complementar, estudos de recuperação e progressão parcial, de forma a reposicioná-lo no ciclo escolar de maneira compatível com sua idade;
 
 3.2 - Manter e ampliar programas e ações de correção de fluxo do ensino médio, por meio do acompanhamento individualizado do (a) aluno (a) com rendimento escolar defasado e pela adoção de práticas como aulas de reforço no turno complementar, estudos de recuperação e progressão parcial, de forma a reposicioná-lo no ciclo escolar de maneira compatível com sua idade;
-
-13/87
 
 3.3 - Fomentar a expansão das matrículas gratuitas de ensino médio integrado à educação profissional, observando-se as peculiaridades das populações do campo, indígenas e quilombolas e das pessoas com deficiência;
 
@@ -323,11 +289,7 @@ META 4 – EDUCAÇÃO INCLUSIVA Universalizar, para a população de 0 (zero) a 
 
 ESTRATÉGIAS:
 
-4.1 - Garantir, em todos os níveis e etapas da Educação Escolar, a educação
-
-14/87
-
-inclusiva, como proposto na Meta 4 supra, vedada a exclusão do ensino regular sob alegação de deficiência;
+4.1 - Garantir, em todos os níveis e etapas da Educação Escolar, a educação inclusiva, como proposto na Meta 4 supra, vedada a exclusão do ensino regular sob alegação de deficiência;
 
 4.2 - Promover a articulação pedagógica entre o ensino regular e o atendimento educacional especializado; no caso dos surdos garantindo o cumprimento da Lei 13.005/14;
 
@@ -343,8 +305,6 @@ inclusiva, como proposto na Meta 4 supra, vedada a exclusão do ensino regular s
 
 4.8 - Viabilizar o acesso à Libras para funcionários e professores das unidades do ensino regular pública, através de cursos e capacitações;
 
-15/87
-
 4.9 - Garantir pelo poder público a formação continuada, produção de material didático acessível, assim como serviços que garantam o atendimento integral dos alunos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação, matriculados na rede pública de ensino;
 
 4.10 - Estimular a criação de centros multidisciplinares de apoio, pesquisa e assessoria, articulados com instituições acadêmicas e integrados por profissionais das áreas de saúde, assistência social, pedagogia e psicologia, para apoiar o trabalho dos (as) professores, funcionários e funcionárias da educação básica com os (as) alunos (as) com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação;
@@ -358,8 +318,6 @@ inclusiva, como proposto na Meta 4 supra, vedada a exclusão do ensino regular s
 4.14 - Definir indicadores de qualidade e política de avaliação e supervisão para o funcionamento de instituições públicas e privadas que prestam atendimento a alunos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação;
 
 META 5 – ALFABETIZAÇÃO INFANTIL Alfabetizar todas as crianças no máximo até o final do 3º (terceiro)
-
-16/87
 
 ano do ensino fundamental.
 
@@ -379,11 +337,7 @@ META 6 – EDUCAÇÃO INTEGRAL Oferecer educação integral com a ampliação da
 
 ESTRATÉGIAS:
 
-6.1 - Promover, com o apoio da União, a oferta de educação básica pública em educação integral com ampliação da jornada escolar do aluno, por meio de atividades pedagógicas multidisciplinares, inclusive culturais, socioambientais e esportivas, de forma que o tempo de permanência dos (as) alunos (as) na escola passe a ser igual ou superior a 07 (sete) horas diárias durante todo o ano letivo, com a garantia da jornada de professores em uma única escola em
-
-17/87
-
-conformidade com a Lei nº 11.738/2008 (art. 2º);
+6.1 - Promover, com o apoio da União, a oferta de educação básica pública em educação integral com ampliação da jornada escolar do aluno, por meio de atividades pedagógicas multidisciplinares, inclusive culturais, socioambientais e esportivas, de forma que o tempo de permanência dos (as) alunos (as) na escola passe a ser igual ou superior a 07 (sete) horas diárias durante todo o ano letivo, com a garantia da jornada de professores em uma única escola em conformidade com a Lei nº 11.738/2008 (art. 2º);
 
 6.2 - Instituir, em regime de colaboração com diferentes entes da esfera pública, programa de construção de escolas com padrão arquitetônico caracterizado por edificações e espaços que priorizem critérios de sustentabilidade socioambiental e de mobiliário adequado para atendimento em educação integral, para a ampliação da jornada escolar do discente respeitadas as normas de acessibilidade universal e os padrões nacionais de qualidade, prioritariamente em comunidades pobres ou com discentes em situação de vulnerabilidade social;
 
@@ -397,11 +351,7 @@ conformidade com a Lei nº 11.738/2008 (art. 2º);
 
 6.7 - Assegurar jornada adequada ao trabalho pedagógico das escolas de Educação Integral a todos os profissionais;
 
-6.8 - Garantir estudo e ações que limitem o número de alunos por professor. Que a relação professor / aluno seja definida por etapa, considerando as
-
-18/87
-
-seguintes diretrizes:
+6.8 - Garantir estudo e ações que limitem o número de alunos por professor. Que a relação professor / aluno seja definida por etapa, considerando as seguintes diretrizes:
 
 a) para o ensino fundamental, anos iniciais: 20/25 estudantes por turma;
 
@@ -423,8 +373,6 @@ b) no último ano de vigência deste PME, todos os (as) estudantes do ensino fun
 
 7.4 - Colaborar com processo contínuo e autônomo de auto-avaliação das escolas de educação básica, por meio da constituição de instrumentos de avaliação que orientem as dimensões a serem fortalecidas, destacando-se a elaboração de planejamento estratégico, a melhoria contínua da qualidade educacional dos (as) profissionais da educação e o aprimoramento da gestão democrática;
 
-19/87
-
 7.5 - Formalizar e executar os planos de ações articuladas dando cumprimento às metas de qualidade estabelecidas para a educação básica pública e às estratégias de apoio técnico e financeiro voltadas à melhoria da gestão educacional, à formação de professores e professoras e profissionais de serviços e apoio escolares, à ampliação e ao desenvolvimento de recursos pedagógicos e à melhoria e expansão da infraestrutura física da rede escolar;
 
 7.6 - Desenvolver indicadores específicos de avaliação da qualidade da educação especial, bem como da qualidade da educação bilíngue para surdos;
@@ -439,11 +387,7 @@ b) no último ano de vigência deste PME, todos os (as) estudantes do ensino fun
 
 7.11 - Universalizar até o quinto ano de vigência deste PME, o acesso à rede mundial de computadores em banda larga de alta velocidade e triplicar, até o final da década, a relação computador/aluno nas da rede pública de educação básica, promovendo a utilização pedagógica das tecnologias da informação e da comunicação, bem como a contratação de um profissional fixo de apoio às salas de informática;
 
-7.12 - Apoiar técnica e financeiramente a gestão escolar mediante transferência direta de recursos financeiros à escola, garantindo a participação da comunidade escolar no planejamento e na aplicação dos recursos, visando à
-
-20/87
-
-ampliação da transparência e ao efetivo desenvolvimento da gestão democrática;
+7.12 - Apoiar técnica e financeiramente a gestão escolar mediante transferência direta de recursos financeiros à escola, garantindo a participação da comunidade escolar no planejamento e na aplicação dos recursos, visando à ampliação da transparência e ao efetivo desenvolvimento da gestão democrática;
 
 7.13 - Ampliar programas e aprofundar ações de atendimento ao (à) aluno (a), em todas as etapas da educação básica, por meio de transporte, alimentação e assistência à saúde. de forma continuada e baseada no CAQi;
 
@@ -459,11 +403,7 @@ ampliação da transparência e ao efetivo desenvolvimento da gestão democráti
 
 7.18 b) - Garantir que haja a equipe técnica nas secretarias das unidades escolares e formação continuada para estes;
 
-7.19 - Garantir políticas intersetoriais de prevenção e de combate à violência e toda forma de discriminação na escola, inclusive pelo desenvolvimento de
-
-21/87
-
-ações destinadas à capacitação de educadores para detecção dos sinais de suas causas, como a violência doméstica e sexual, favorecendo a adoção das providências adequadas para promover a construção da cultura de paz e um ambiente escolar dotado de segurança para a comunidade;
+7.19 - Garantir políticas intersetoriais de prevenção e de combate à violência e toda forma de discriminação na escola, inclusive pelo desenvolvimento de ações destinadas à capacitação de educadores para detecção dos sinais de suas causas, como a violência doméstica e sexual, favorecendo a adoção das providências adequadas para promover a construção da cultura de paz e um ambiente escolar dotado de segurança para a comunidade;
 
 7.20 - Implementar políticas intersetoriais de inclusão e permanência na escola para adolescentes e jovens que se encontram em regime de liberdade assistida e em situação de rua, assegurando os princípios da Lei nº 8.069, de 13 de julho de 1990 - Estatuto da Criança e do Adolescente;
 
@@ -474,8 +414,6 @@ ações destinadas à capacitação de educadores para detecção dos sinais de 
 7.23 - Desenvolver currículos, propostas pedagógicas e espaços adequados específicos para educação escolar para as escolas do campo, incluindo os conteúdos culturais e considerando o fortalecimento das práticas socioculturais, produzindo e disponibilizando materiais didáticos específicos, inclusive para os (as) alunos (as) com deficiência;
 
 7.24 - Mobilizar as famílias e setores da sociedade civil , por meio de programas e ações intersetoriais, articulando a educação formal com experiências de educação popular e cidadã, com os propósitos de que a educação seja assumida como responsabilidade de todos e de ampliar o controle social sobre o cumprimento das políticas públicas educacionais;
-
-22/87
 
 7.25 - Promover a articulação dos programas construídos por profissionais da área da educação, de âmbito local e nacional, com os de outras áreas , como saúde, trabalho e emprego, assistência social, esporte e cultura, possibilitando a criação de rede de apoio integral às famílias, como condição para a melhoria da qualidade educacional;
 
@@ -493,8 +431,6 @@ ações destinadas à capacitação de educadores para detecção dos sinais de 
 
 7.32 - Em regime de colaboração com estados e municípios instituir o programa nacional de formação de professores e de alunos para promover e consolidar a política de preservação da memória nacional e regional e seu patrimônio cultural e natural;
 
-23/87
-
 7.33 - Priorizar o uso e o desenvolvimento de programas tecnológicos, softwares e hardwares baseados em licença livre e criative commons;
 
 7.34 - Ampliar e prover as bibliotecas escolares, reformando os seus espaços físicos e seu acervo bibliográfico e virtual, garantindo o uso pelos alunos em horários extra aula, supervisionados por profissionais adequadamente formados para isto;
@@ -511,11 +447,7 @@ ações destinadas à capacitação de educadores para detecção dos sinais de 
 
 7.40 - Estruturar cursos em parceria com instituições de ensino superior, grupos de trabalho e pesquisa no intuito de atender aos profissionais da educação interessados em discutir, problematizar e criar alternativas práticas para as situações decorrentes do racismo e preconceito.
 
-META 8 – ELEVAÇÃO DA ESCOLARIDADE/DIVERSIDADE Elevar a escolaridade média de toda a população de modo a alcançar o mínimo de 12 anos de estudo para as populações do campo, itinerantes, comunidades indígenas e quilombolas, da região de menor escolaridade na cidade e dos vinte e cinco por cento mais pobres, bem como igualar a escolaridade média entre negros e não
-
-24/87
-
-negros, declarado à Fundação Instituto Brasileiro de Geografia e Estatística – IBGE, com vista à redução da desigualdade educacional.
+META 8 – ELEVAÇÃO DA ESCOLARIDADE/DIVERSIDADE Elevar a escolaridade média de toda a população de modo a alcançar o mínimo de 12 anos de estudo para as populações do campo, itinerantes, comunidades indígenas e quilombolas, da região de menor escolaridade na cidade e dos vinte e cinco por cento mais pobres, bem como igualar a escolaridade média entre negros e não negros, declarado à Fundação Instituto Brasileiro de Geografia e Estatística – IBGE, com vista à redução da desigualdade educacional.
 
 ESTRATÉGIAS:
 
@@ -545,11 +477,7 @@ g) Articulação com outras secretarias e profissionais para garantir a permanê
 
 8.6 - Promover busca ativa de toda a população com baixa escolaridade, em parceria com as áreas de assistência social , saúde e proteção à juventude;
 
-8.7 - Garantir, pelo poder público municipal, estadual e federal, oferta de EJA, o
-
-25/87
-
-mais próximo possível da comunidade, residência ou local de trabalho, a partir da vigência deste plano, para que os alunos continuem na escola e prossigam nos estudos até a conclusão com êxito da educação básica;
+8.7 - Garantir, pelo poder público municipal, estadual e federal, oferta de EJA, o mais próximo possível da comunidade, residência ou local de trabalho, a partir da vigência deste plano, para que os alunos continuem na escola e prossigam nos estudos até a conclusão com êxito da educação básica;
 
 8.8 - Promover divulgação efetiva dos cursos regulares da Educação de Jovens e Adultos, incluindo a alfabetização e cursos integrados à Educação Profissional, de modo a atingir a demanda conhecidamente existente no município;
 
@@ -567,8 +495,6 @@ ESTRATÉGIAS:
 
 9.1 - Assegurar, a partir da aprovação deste plano, em regime de colaboração com a União e o Estado, a oferta gratuita da educação de jovens e adultos a todos que não tiveram acesso à educação básica;
 
-26/87
-
 9.2 - Realizar censo dos jovens e adultos não escolarizados e com ensino fundamental e médio incompletos, para identificar a demanda ativa e por vagas na educação de jovens e adultos em Campinas, sob responsabilidade do poder público, em parceria intersetorial e com a sociedade civil, com a periodicidade regular, conforme prevê a LDB 9394/1996, a partir da vigência deste plano;
 
 9.3 - Ampliar as políticas públicas de alfabetização de jovens e adultos, para garantir o atendimento dos 3,30% (IBGE 2010) dos não alfabetizados do município de Campinas, assegurando-lhes a continuidade da escolarização básica, sob responsabilidade do poder público municipal, estadual e federal;
@@ -583,11 +509,7 @@ ESTRATÉGIAS:
 
 9.7 b) - Articular essa iniciativa com parcerias junto aos órgãos estaduais e federais, a partir da aprovação deste plano, visando a realização de pesquisas e estudos relacionados as necessidades e especificidades da EJA no âmbito de metodologias, materiais didáticos, equipamentos e recursos de tecnologia assistida, currículos e propostas pedagógicas.
 
-9.8 - Incentivar por meio de ações intersetoriais do poder público com o apoio da sociedade civil, a partir da aprovação deste plano, a realização de parcerias
-
-27/87
-
-que integrem os segmentos empregadores, públicos e privados, e os sistemas de ensino para promover a compatibilização da jornada de trabalho dos empregados e das empregadas e a oferta da EJA no ensino fundamental, médio e educação profissional;
+9.8 - Incentivar por meio de ações intersetoriais do poder público com o apoio da sociedade civil, a partir da aprovação deste plano, a realização de parcerias que integrem os segmentos empregadores, públicos e privados, e os sistemas de ensino para promover a compatibilização da jornada de trabalho dos empregados e das empregadas e a oferta da EJA no ensino fundamental, médio e educação profissional;
 
 9.9 - Implementar políticas públicas, gratuitas de capacitação tecnológica da população jovem e adulta, integradas com a elevação de escolaridade, para os segmentos com baixos níveis de escolarização formal e para os (as) alunos (as) com deficiência, articulando os itinerários formativos de modo a envolver os sistemas de ensino, a Rede Federal de Educação Profissional, Científica e Tecnológica, e os IES;
 
@@ -602,8 +524,6 @@ que integrem os segmentos empregadores, públicos e privados, e os sistemas de e
 9.14 - Reforçar o Projeto Pedagógico da unidade escolar, como a própria expressão da sua organização educativa, orientada pelos princípios democráticos e participativos;
 
 9.15 - Garantir que os espaços físicos destinados para funcionamento da EJA, desde a alfabetização até os anos finais do Ensino Médio, sejam devidamente estruturados, equipados, mobiliados e adequados para essa atividade e público constituído por jovens, adultos e idosos;
-
-28/87
 
 9.16 - Promover a relação das escolas com instituições culturais, equipamentos públicos de Cultura, bem como com movimentos culturais, a fim de garantir a oferta regular de atividades culturais para a livre fruição dos estudantes e de iniciação às linguagens artísticas dentro e fora dos espaços escolares, assegurando ainda que as escolas se tornem polos de criação e difusão cultural;
 
@@ -623,8 +543,6 @@ ESTRATÉGIAS:
 
 10.4 - Expandir as matrículas e implantar programas públicos intersetoriais de educação profissional na educação de jovens e adultos, de modo a articular a formação inicial e continuada de trabalhadores com a educação profissional, objetivando a elevação de nível de escolaridade do trabalhador e da trabalhadora;
 
-29/87
-
 10.5 - Fomentar a integração da educação de jovens e adultos com a educação profissional, em cursos planejados, de acordo com as características do público da educação de jovens e adultos e considerando as especificidades das populações itinerantes e do campo e das comunidades indígenas e quilombolas, inclusive na modalidade de educação a distância;
 
 10.6 - Garantir e ampliar aos jovens e adultos com deficiência e baixo nível de escolaridade, o acesso à educação de jovens e adultos integrada à educação profissional, sob a responsabilidade do poder público, a partir da aprovação do plano;
@@ -639,11 +557,7 @@ ESTRATÉGIAS:
 
 10.11 - Institucionalizar, em regime de colaboração com o estado e a União, programa municipal de assistência ao estudante, compreendendo ações de assistência social, financeira e de apoio pedagógico que contribuam para garantir o acesso, a permanência, a aprendizagem e a conclusão com êxito da educação de jovens e adultos articulada à educação profissional;
 
-10.12 - Ofertar educação de jovens e adultos, como direito humano, articulada
-
-30/87
-
-à educação profissional, de modo a atender às pessoas privadas de liberdade nos estabelecimentos penais, assegurando-se formação específica dos professores e das professoras e implementação de diretrizes nacionais em regime de colaboração com a União e o Estado;
+10.12 - Ofertar educação de jovens e adultos, como direito humano, articulada à educação profissional, de modo a atender às pessoas privadas de liberdade nos estabelecimentos penais, assegurando-se formação específica dos professores e das professoras e implementação de diretrizes nacionais em regime de colaboração com a União e o Estado;
 
 10.13 - Nos dois primeiros anos de vigência deste Plano viabilizar a inclusão digital aos alunos da EJA I através de laboratórios itinerantes e parcerias com Escolas para atender as classes que não tenham condições de manter em seu espaço o laboratório de informática.
 
@@ -661,11 +575,7 @@ ESTRATÉGIAS:
 
 11.5 - Fomentar a expansão da oferta de educação profissional técnica de nível médio na modalidade de educação a distância, com a finalidade de ampliar a oferta e democratizar o acesso à educação profissional pública e gratuita, assegurado padrão de qualidade;
 
-11.6 - Estimular a expansão do estágio na educação profissional técnica de nível médio e do ensino médio regular, preservando-se seu caráter pedagógico integrado ao itinerário formativo do aluno, visando à formação de qualificações
-
-31/87
-
-próprias da atividade profissional, à contextualização curricular e ao desenvolvimento da juventude;
+11.6 - Estimular a expansão do estágio na educação profissional técnica de nível médio e do ensino médio regular, preservando-se seu caráter pedagógico integrado ao itinerário formativo do aluno, visando à formação de qualificações próprias da atividade profissional, à contextualização curricular e ao desenvolvimento da juventude;
 
 11.7 - Ampliar a oferta de programas de reconhecimento de saberes para fins de certificação profissional em nível técnico;
 
@@ -685,11 +595,7 @@ META 12 - EDUCAÇÃO SUPERIOR Elevar a taxa bruta de matrícula na educação su
 
 ESTRATÉGIAS:
 
-12.1 - Otimizar a capacidade instalada da estrutura física e de recursos
-
-32/87
-
-humanos das instituições de educação superior, mediante ações planejadas e coordenadas, de forma a ampliar o acesso à graduação;
+12.1 - Otimizar a capacidade instalada da estrutura física e de recursos humanos das instituições de educação superior, mediante ações planejadas e coordenadas, de forma a ampliar o acesso à graduação;
 
 12.2 - Articular junto a União a implantação de instituição federal de educação superior, da Rede Federal de Educação Profissional, Científica e Tecnológica, bem como a ampliação dos cursos oferecidos pelo polo Campinas da Universidade Aberta do Brasil visando a ampliação da oferta pública de vagas no ensino superior, ampliação de matriculas e cursos na UNICAMP, criação de um polo da Universidade Virtual do Estado de São Paulo, ampliação da FATEC Campinas;
 
@@ -705,11 +611,7 @@ humanos das instituições de educação superior, mediante ações planejadas e
 
 12.8 - Assegurar condições de acessibilidade nas instituições de educação superior, na forma da legislação;
 
-12.9 - Fomentar estudos e pesquisas que analisem a necessidade de articulação entre formação, currículo, pesquisa e mundo do trabalho, considerando as necessidades econômicas, sociais e culturais do País, visando subsidiar a indicação dos cursos que serão oferecidos na expansão da
-
-33/87
-
-educação superior.
+12.9 - Fomentar estudos e pesquisas que analisem a necessidade de articulação entre formação, currículo, pesquisa e mundo do trabalho, considerando as necessidades econômicas, sociais e culturais do País, visando subsidiar a indicação dos cursos que serão oferecidos na expansão da educação superior.
 
 12.10 - Expandir atendimento específico a populações do campo e comunidades indígenas e quilombolas, em relação a acesso, permanência, conclusão e formação de profissionais para atuação nessas populações, preferencialmente de indivíduos pertencentes às comunidades autóctones;
 
@@ -731,8 +633,6 @@ ESTRATÉGIAS:
 
 13.3 - Fomentar a formação de consórcios entre instituições públicas de educação superior, com vistas a potencializar a atuação regional, inclusive por meio de plano de desenvolvimento institucional integrado, assegurando maior visibilidade nacional e internacional às atividades de ensino, pesquisa e extensão.
 
-34/87
-
 META 14 - PÓS-GRADUAÇÃO Estimular e acompanhar no Município o cumprimento da meta nacional: elevar em 21,44% gradualmente o número de matrículas na pós-graduação stricto sensu.
 
 ESTRATÉGIAS:
@@ -753,8 +653,6 @@ ESTRATÉGIAS:
 
 15.1 - Implementar programas específicos para formação de todos os profissionais da educação, incluindo monitores e agentes de educação infantil para escolas públicas do município, em parceria com as universidades públicas, para todos os profissionais da educação das escolas públicas do município;
 
-35/87
-
 15.2 - Implantar política municipal de formação continuada para os (as) profissionais da educação em parceria com universidades públicas;
 
 15.3 - Apoiar programas instituídos pelo governo federal de concessão de bolsas de estudo e ações afirmativas para professores de todas as áreas das escolas públicas, a fim de realizar estudos, pesquisas e experiências em outros países de acordo com a referencia da sua área de atuação;
@@ -771,11 +669,7 @@ ESTRATÉGIAS:
 
 16.2 - Consolidar política municipal de formação de professores e professoras e demais profissionais da educação, em regime de colaboração e fomentar a respectiva oferta por parte das instituições de educação superior, de forma orgânica e articulada às políticas de formação dos Estados, do Distrito Federal e dos Municípios, em consonância com as diretrizes nacionais, áreas prioritárias em instituições públicas de ensino com processos de certificação das atividades formativas;
 
-16.3 - Criar um programa de composição de acervo de obras didáticas, paradidáticas e de literatura e de dicionários, e programa específico de acesso a bens culturais, incluindo obras e materiais produzidos em Libras e em Braille, sem prejuízo de outros, a serem disponibilizados para os profissionais da
-
-36/87
-
-educação da rede pública de educação básica, favorecendo a construção do conhecimento e a valorização da cultura da investigação;
+16.3 - Criar um programa de composição de acervo de obras didáticas, paradidáticas e de literatura e de dicionários, e programa específico de acesso a bens culturais, incluindo obras e materiais produzidos em Libras e em Braille, sem prejuízo de outros, a serem disponibilizados para os profissionais da educação da rede pública de educação básica, favorecendo a construção do conhecimento e a valorização da cultura da investigação;
 
 16.4 - Criar portal eletrônico para subsidiar a atuação dos professores e das professoras da educação básica, demais profissionais da educação, inclusive os que atuam diretamente com a criança, disponibilizando gratuitamente materiais didáticos e pedagógicos suplementares, inclusive aqueles com formato acessível;
 
@@ -793,8 +687,6 @@ ESTRATÉGIAS:
 
 17.2 - Construir como tarefa do fórum permanente o acompanhamento da evolução salarial por meio de indicadores da pesquisa nacional por amostra de domicílios – PNAD – periodicamente divulgados pela fundação IBGE;
 
-37/87
-
 17.3 - Atualizar planos de Carreira para os (as) profissionais da educação das redes públicas de educação básica, de acordo com o estabelecido na Lei nº 11.738, de 16 de julho de 2008 (com no mínimo 1/3 destinado a formação e planejamento) e implantação gradual do cumprimento da jornada de trabalho em um único estabelecimento escolar;
 
 17.4 - Propiciar, consolidar e ampliar as ações especificamente voltadas à promoção, prevenção, atenção, cuidados e atendimento por especialistas à saúde e integridade física, mental e emocional dos trabalhadores da educação do município, tendo em vista a melhoria da qualidade da educação.
@@ -811,11 +703,7 @@ ESTRATÉGIAS:
 
 18.4 - Promover a formação continuada e em serviço, que subsidie o processo ensino e aprendizagem, principalmente com os alunos que apresentam necessidades educacionais especiais;
 
-18.5 - Manter parcerias com universidades e demais instituições para formação continuada dos educadores do município assegurando a progressão
-
-38/87
-
-Funcional conforme Plano de Cargos e Salários inclusive em nível de pós- graduação Stricto Senso;
+18.5 - Manter parcerias com universidades e demais instituições para formação continuada dos educadores do município assegurando a progressão Funcional conforme Plano de Cargos e Salários inclusive em nível de pós- graduação Stricto Senso;
 
 18.6 - Garantir que o Fórum Municipal de Educação, tenha ampla representação de escolas públicas e privadas, de todos os níveis e modalidades de ensino e de segmentos que atuam com a educação e cultura afro-brasileira, indígena, quilombola e de comunidades itinerantes;
 
@@ -833,11 +721,7 @@ ESTRATÉGIAS:
 
 19.3 - Realizar Conferência Municipal de Educação bianualmente para discussão e definição de princípios de educação e de gestão democrática participativa, estabelecendo normas e diretrizes gerais, desburocratizantes e flexíveis, na área administrativa e pedagógica, que garantam qualidade socialmente negociada e a participação da comunidade escolar;
 
-19.4 - Construir coletivamente, com os profissionais de todos os segmentos em cada unidade educacional pública, conveniada e privada, indicadores para
-
-39/87
-
-avaliação da qualidade da gestão democrática;
+19.4 - Construir coletivamente, com os profissionais de todos os segmentos em cada unidade educacional pública, conveniada e privada, indicadores para avaliação da qualidade da gestão democrática;
 
 19.5 - Acompanhar e avaliar, com a participação da comunidade e do Conselho Municipal de Educação, as políticas públicas na área de educação garantindo condições de continuidade das ações efetivas;
 
@@ -855,11 +739,7 @@ avaliação da qualidade da gestão democrática;
 
 19.12 - Garantir, a partir da vigência desse PME, condições para a participação dos profissionais da educação nos fóruns e conselhos vinculados à educação do município;
 
-19.13 - Garantir que o Fórum Municipal de Educação tenha ampla
-
-40/87
-
-representação de escolas públicas e privadas de todos os níveis e modalidades de ensino, e de segmentos que atuam com a educação e cultura afro- brasileira, indígena, quilombola, diversidades e comunidades itinerantes;
+19.13 - Garantir que o Fórum Municipal de Educação tenha ampla representação de escolas públicas e privadas de todos os níveis e modalidades de ensino, e de segmentos que atuam com a educação e cultura afro- brasileira, indígena, quilombola, diversidades e comunidades itinerantes;
 
 19.14 - Garantir a participação dos profissionais da educação em processos de definição das secretarias de educação, seleção e compra de materiais e serviços destinados às Unidades Educacionais;
 
@@ -875,11 +755,7 @@ ESTRATÉGIAS:
 
 20.3 - Fortalecer os mecanismos e os instrumentos que assegurem, nos termos do parágrafo único do art. 48 da Lei Complementar no 101, de 4 de maio de 2000, a transparência e o controle social na utilização dos recursos públicos aplicados em educação, especialmente a realização de audiências públicas, a criação de portais eletrônicos de transparência e a capacitação dos membros de conselhos de acompanhamento e controle social do FUNDEB, com a colaboração entre o Ministério da Educação, as Secretarias de Educação do Estado e do Município e os Tribunais de Contas da União, dos Estados e dos Municípios;
 
-20.4 - Implementar, no prazo de 2 (dois) anos de vigência desse PME, após aprovação do CME, o Custo Aluno-Qualidade Inicial - CAQi, referenciado no
-
-41/87
-
-conjunto de padrões mínimos estabelecidos na legislação educacional e cujo financiamento será calculado com base nos respectivos insumos indispensáveis ao processo de ensino-aprendizagem, de acordo com as necessidades regionais do município, e será progressivamente reajustado até a implementação plena do Custo Aluno Qualidade – CAQ;
+20.4 - Implementar, no prazo de 2 (dois) anos de vigência desse PME, após aprovação do CME, o Custo Aluno-Qualidade Inicial - CAQi, referenciado no conjunto de padrões mínimos estabelecidos na legislação educacional e cujo financiamento será calculado com base nos respectivos insumos indispensáveis ao processo de ensino-aprendizagem, de acordo com as necessidades regionais do município, e será progressivamente reajustado até a implementação plena do Custo Aluno Qualidade – CAQ;
 
 20.5 - Implementar, após aprovação, Custo Aluno Qualidade - CAQ como parâmetro para o financiamento da educação de todas as etapas e modalidades da educação básica, a partir do cálculo e do acompanhamento regular dos indicadores de gastos educacionais com investimentos em qualificação e remuneração do pessoal docente e dos demais profissionais da educação pública, em aquisição, manutenção, construção e conservação de instalações e equipamentos necessários ao ensino e em aquisição de material didático escolar, alimentação e transporte escolar;
 
@@ -890,8 +766,6 @@ conjunto de padrões mínimos estabelecidos na legislação educacional e cujo f
 20.8 - Aprimorar o sistema de compras e o cadastro de fornecedores, incluindo nos editais de licitação critérios de qualidade dos produtos e serviços que serão licitados;
 
 20.9 - Garantir fontes de financiamento permanentes e sustentáveis para todos os níveis, etapas e modalidades da educação básica, observando-se as políticas de colaboração entre os entes federados, em especial as decorrentes do art. 60 do Ato das Disposições Constitucionais Transitórias § 1º do art. 75 da Lei nº 9.394, de 20 de dezembro de 1996, que trata da capacidade de atendimento e do esforço fiscal de cada ente federado, com vistas a atender às demandas educacionais à luz do padrão de qualidade nacional;
-
-42/87
 
 20.10 - Aperfeiçoar e ampliar os mecanismos de acompanhamento social da arrecadação da contribuição social do salário-educação;
 
@@ -915,11 +789,7 @@ META 22 - RELAÇÕES ÉTNICO-RACIAIS – O NEGRO E O INDÍGENA BRASILEIROS Criar
 
 ESTRATÉGIAS:
 
-22.1 - Orientar a inclusão da temática étnico-racial no projeto pedagógico de cada unidade escolar, em todos os níveis de escolarização, nas esferas pública
-
-43/87
-
-e privada, ofertando ações formativas para promover a correta e ampla informação das comunidades escolares acerca das culturas afro-brasileira e indígenas como meio de qualificar o trabalho pedagógico com a temática, combater a intolerância e o preconceito;
+22.1 - Orientar a inclusão da temática étnico-racial no projeto pedagógico de cada unidade escolar, em todos os níveis de escolarização, nas esferas pública e privada, ofertando ações formativas para promover a correta e ampla informação das comunidades escolares acerca das culturas afro-brasileira e indígenas como meio de qualificar o trabalho pedagógico com a temática, combater a intolerância e o preconceito;
 
 22.2 - Implementar por meio de colegiado composto por educadores das redes públicas e membros dos movimentos sociais programa que contemple as demandas suscitadas pelas Leis nº 10.639/2003 e nº 11.645/2008;
 
@@ -936,8 +806,6 @@ e privada, ofertando ações formativas para promover a correta e ampla informa�
 22.8 - Garantir acesso e permanência em instituições de ensino de nível superior para formação acerca das questões étnico-raciais destinada aos profissionais de educação da rede pública de Campinas na modalidade extensão e especialização;
 
 22.9 - Incentivar, por meio de convênio e acordos de cooperação técnica com as universidades, a formação em nível mestrado (profissional) e doutorado dos professores da rede pública de Campinas sobre a temática étnico-racial com ênfase nas culturas indígenas, africanas e afro-brasileiras;
-
-44/87
 
 22.10 - Garantir parcerias e recursos das agências envolvidas com os programas, projetos e editais relacionados às políticas étnico-raciais para a realização de estudos e ações pedagógicas desenvolvidas por profissionais da educação de Campinas.
 
@@ -977,8 +845,6 @@ X - promoção dos princípios do respeito aos direitos humanos, à diversidade 
 
 XI - vinculação do Plano Municipal de Educação ao projeto de desenvolvimento do Município e às necessidades de melhoria das condições de vida da população.
 
-45/87
-
 **Art. 3º** - As metas previstas no Anexo Único desta Lei deverão ser cumpridas no prazo de vigência deste Plano Municipal de Educação (PME), resguardando os prazos inferiores definidos para metas e estratégias específicas.
 
 **Art. 4º** - O acompanhamento do cumprimento das metas previstas no Anexo Único desta Lei deverá ter como referência a Pesquisa Nacional por Amostra de Domicílios (PNAD), o censo demográfico e os censos nacionais da educação básica e superior, atualizados, disponíveis na data da publicação desta Lei, bem como dados locais.
@@ -1007,11 +873,7 @@ IV - analisar e propor a revisão do percentual de investimento público em educ
 
 **§ 2º** - Compete, ainda, ao Fórum Permanente de Educação:
 
-I - fiscalizar a execução do Plano Municipal de Educação e o cumprimento de
-
-46/87
-
-suas metas; e
+I - fiscalizar a execução do Plano Municipal de Educação e o cumprimento de suas metas; e
 
 II - promover a articulação das Conferências Municipais com as conferências regionais, estaduais e federais, considerando as especificidades de cada instância.
 
@@ -1033,11 +895,7 @@ II - considerar a necessidade de identificação das populações do campo e das
 
 III - garantir o atendimento das necessidades específicas na educação especial, assegurado sistema educacional inclusivo em todos os níveis, etapas e modalidades.
 
-**Art. 9º** - Os processos de elaboração e adequação dos próximos Planos Municipais de Educação do Município deverão ser realizados mediante a ampla
-
-47/87
-
-participação da sociedade, assegurando-se o envolvimento das comunidades escolares, profissionais da educação, estudantes, pesquisadores, gestores e organizações da sociedade civil.
+**Art. 9º** - Os processos de elaboração e adequação dos próximos Planos Municipais de Educação do Município deverão ser realizados mediante a ampla participação da sociedade, assegurando-se o envolvimento das comunidades escolares, profissionais da educação, estudantes, pesquisadores, gestores e organizações da sociedade civil.
 
 **Art. 10.** - O Município deverá aprovar Lei específica disciplinando a gestão democrática da educação em seus respectivos âmbitos de atuação no prazo de 1 (um) ano contado da publicação desta Lei.
 
@@ -1065,11 +923,7 @@ VI - o desenvolvimento integral dos estudantes da educação infantil e fundamen
 
 I - indicadores de rendimento escolar, referentes ao desempenho dos estudantes, estimados por turma, unidade escolar e rede escolar, sendo que:
 
-a) a divulgação dos resultados individuais dos alunos e dos indicadores
-
-48/87
-
-calculados para cada turma de alunos ficará restrita à comunidade da respectiva unidade escolar e à gestão da rede escolar;
+a) a divulgação dos resultados individuais dos alunos e dos indicadores calculados para cada turma de alunos ficará restrita à comunidade da respectiva unidade escolar e à gestão da rede escolar;
 
 b) os demais resultados serão públicos e receberão ampla divulgação, com as necessárias informações que permitam sua correta interpretação pelos segmentos diretamente interessados e pela sociedade;
 
@@ -1087,11 +941,7 @@ II - indicadores relativos a características como o perfil do alunado e do corp
 
 I - metragem exigida por aluno para as salas de aula, de acordo com o nível de ensino;
 
-II - criação de espaços de salas de leitura, brinquedotecas, salas de recursos e
-
-49/87
-
-multiúsos, parques, tanques de areia, quadras poliesportivas;
+II - criação de espaços de salas de leitura, brinquedotecas, salas de recursos e multiúsos, parques, tanques de areia, quadras poliesportivas;
 
 III - refeitórios amplos e arejados.
 
@@ -1117,8 +967,6 @@ ESTRATÉGIAS:
 
 1.2 - Consolidar, em regime de colaboração com todos os órgãos e instâncias envolvidos, levantamento da demanda por creche para a população de zero a 03 (três) anos, como forma de planejar a oferta e verificar o atendimento da demanda manifesta;
 
-50/87
-
 1.3 - Promover, em parceria com o Conselho Municipal de Educação, a busca ativa de escolas privadas de educação infantil não autorizadas, informando a obrigatoriedade da oficialização da escola através da autorização para funcionamento, garantindo o atendimento das crianças de 0 (zero) a 5 (cinco) anos em estabelecimentos que atendam a parâmetros nacionais de qualidade e em consonância com as Diretrizes Curriculares Nacionais para a Educação Infantil;
 
 1.4 - Promover, no primeiro ano do PME, em parceria com o Conselho Municipal de Educação, Fórum Municipal de Educação e outros setores relacionados, campanhas de informação e conscientização dos pais e responsáveis sobre o direito da criança e das famílias à educação de qualidade e a importância de matricular seus filhos em escolas autorizadas pelo poder público municipal;
@@ -1133,8 +981,6 @@ ESTRATÉGIAS:
 
 1.9 - Promover a formação inicial e continuada dos(as) profissionais da educação infantil, incluindo os(as) monitores(as) e agentes de educação infantil, garantindo, progressivamente, o atendimento das crianças por profissionais com formação superior em pedagogia, até o final de vigência deste PME;
 
-51/87
-
 1.10 - Promover a articulação entre pós-graduação, núcleos de pesquisa e cursos de formação para profissionais da educação, com universidades, com o objetivo de oferecer cursos de formação para os profissionais da educação infantil e de modo a garantir a atualização/revisão de currículos e propostas pedagógicas que incorporem os avanços de pesquisas ligadas ao processo ensino-aprendizagem e às teorias educacionais no atendimento da população de 0 (zero) a 05 (cinco) anos, estimulando a participação dos profissionais de educação infantil em cursos de pós-graduação, mestrado, doutorado e pesquisas, através de parcerias com universidades;
 
 1.11 - Estabelecer, até o segundo ano de vigência do PME, normas, procedimentos e prazos para levantamento da demanda, no município, da população do campo, de comunidades indígenas, quilombolas e ciganas na educação infantil como forma de planejar a oferta e verificar o atendimento da demanda manifesta;
@@ -1145,11 +991,7 @@ ESTRATÉGIAS:
 
 1.14 - Garantir, em caráter complementar, até o terceiro ano de vigência deste PME, programas de orientação e apoio às famílias, por meio da articulação das áreas de educação, saúde e assistência social, com foco no desenvolvimento integral das crianças de até 5 (cinco) anos e 11 (onze) meses de idade e que os programas e parcerias atendam na região em que as unidades estão inseridas;
 
-1.15 - Preservar as especificidades da educação infantil, garantir a escuta às crianças e respeitar os direitos à educação, ao cuidado e à brincadeira e o princípio constitucional do Estado laico, na organização das redes escolares,
-
-52/87
-
-garantindo o atendimento da criança de 0 (zero) a 05 (cinco) anos e 11 (onze) meses em estabelecimentos que atendam a parâmetros nacionais de qualidade e a articulação com a etapa escolar seguinte, garantindo o direito à infância;
+1.15 - Preservar as especificidades da educação infantil, garantir a escuta às crianças e respeitar os direitos à educação, ao cuidado e à brincadeira e o princípio constitucional do Estado laico, na organização das redes escolares, garantindo o atendimento da criança de 0 (zero) a 05 (cinco) anos e 11 (onze) meses em estabelecimentos que atendam a parâmetros nacionais de qualidade e a articulação com a etapa escolar seguinte, garantindo o direito à infância;
 
 1.16 - Fortalecer o acompanhamento e o monitoramento do acesso e da permanência das crianças na educação infantil, em especial dos beneficiários de programas de transferência de renda, em colaboração com as famílias e com os órgãos públicos de assistência social, saúde e proteção à infância;
 
@@ -1166,8 +1008,6 @@ garantindo o atendimento da criança de 0 (zero) a 05 (cinco) anos e 11 (onze) m
 1.22 - Adequar, até o segundo ano da vigência do PME, brinquedos para parque e brinquedos adaptados para parque, mobiliários e mobiliários adaptados, estrutura física em todas as UEs, conforme os padrões de segurança (ABNT) nas escolas do município de Campinas;
 
 1.23 - Promover o debate e o respeito à diversidade nas escolas do município de Campinas;
-
-53/87
 
 1.24 - Garantir à educação infantil um programa de articulação entre as secretarias de educação, cultura e esporte para oferecimento de programações e eventos nas Ues.
 
@@ -1187,8 +1027,6 @@ ESTRATÉGIAS:
 
 2.5 b) - Buscar parcerias para um cadastro único para a realização da busca ativa e criar fórum permanente de discussão e encaminhamentos com profissionais da assistência, da saúde e da educação;
 
-54/87
-
 2.6 - Desenvolver tecnologias pedagógicas que combinem, de maneira articulada, a organização do tempo e das atividades didáticas entre a escola e o ambiente comunitário, considerando as especificidades da educação especial, das escolas do campo e das comunidades indígenas e quilombolas e ciganos;
 
 2.7 - Organizar o trabalho pedagógico e o calendário escolar, de forma flexível de acordo com a realidade local e a identidade cultural, respeitando a legislação vigente;
@@ -1205,11 +1043,7 @@ ESTRATÉGIAS:
 
 2.13 - Oferecer atividades extracurriculares de incentivo aos(às) estudantes e de estímulo a habilidades, inclusive mediante certames e concursos nacionais;
 
-2.14 - Promover atividades de desenvolvimento e estímulo a habilidades esportivas nas escolas, interligadas a um plano de disseminação do desporto
-
-55/87
-
-educacional e de desenvolvimento esportivo nacional;
+2.14 - Promover atividades de desenvolvimento e estímulo a habilidades esportivas nas escolas, interligadas a um plano de disseminação do desporto educacional e de desenvolvimento esportivo nacional;
 
 2.15 - Contratar um professor de apoio por sala, priorizando o Ciclo I do ensino Fundamental, por turma e professor de apoio ou estagiário remunerado fixo por UE para o ciclo I e professor substituto fixo por unidade de ensino para os ciclos II, III e IV;
 
@@ -1231,8 +1065,6 @@ META 3 – ENSINO MÉDIO Universalizar, até 2016, o atendimento escolar para to
 
 ESTRATÉGIAS:
 
-56/87
-
 3.1 - Manter e ampliar programas e ações de correção de fluxo do ensino médio, por meio do acompanhamento individualizado do(a) aluno(a) com rendimento escolar defasado e pela adoção de práticas como aulas de reforço no turno complementar, estudos de recuperação e progressão parcial, de forma a reposicioná-lo no ciclo escolar de maneira compatível com sua idade;
 
 3.2 - Fomentar a expansão das matrículas gratuitas de ensino médio integrado à educação profissional, observando-se as peculiaridades das populações do campo, indígenas e quilombolas e das pessoas com deficiência;
@@ -1249,11 +1081,7 @@ ESTRATÉGIAS:
 
 3.8 - Em havendo demanda, oferecer e realizar busca ativa permanente, a partir do primeiro ano de vigência deste PME, visando garantir o atendimento do ensino médio gratuito para as populações do campo e para as comunidades indígenas, quilombolas e ciganas, de acordo com seus interesses e necessidades.
 
-META 4 – EDUCAÇÃO INCLUSIVA Universalizar, para a população de 0 (zero) a 17 (dezessete) anos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação, o acesso à educação básica e ao atendimento educacional especializado, preferencialmente na rede regular de ensino, com a garantia de sistema educacional inclusivo, de
-
-57/87
-
-salas de recursos multifuncionais, classes e escolas bilíngues de surdos, serviços especializados, públicos ou conveniados.
+META 4 – EDUCAÇÃO INCLUSIVA Universalizar, para a população de 0 (zero) a 17 (dezessete) anos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação, o acesso à educação básica e ao atendimento educacional especializado, preferencialmente na rede regular de ensino, com a garantia de sistema educacional inclusivo, de salas de recursos multifuncionais, classes e escolas bilíngues de surdos, serviços especializados, públicos ou conveniados.
 
 ESTRATÉGIAS:
 
@@ -1269,11 +1097,7 @@ ESTRATÉGIAS:
 
 4.6 - Ampliar o AEE - Atendimento Educacional Especializado, através da oferta de salas de recursos multifuncionais, classes regulares, serviços especializados, nas formas complementar e suplementar a todos os alunos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação;
 
-4.7 - Garantir a oferta de educação bilíngue, em Língua Brasileira de Sinais – LIBRAS como primeira língua e na modalidade escrita da Língua Portuguesa como segunda língua, aos(às) alunos(as) surdos e com deficiência auditiva de 0 (zero) a 17 (dezessete) anos, em escolas e classes bilíngues e em escolas
-
-58/87
-
-inclusivas, nos termos dos arts. 24 e 30 da Convenção sobre os Direitos das Pessoas com Deficiência e da estratégia 4.7 da Lei nº 13.005/14; bem como a adoção do Sistema Braille de leitura para cegos e surdos-cegos;
+4.7 - Garantir a oferta de educação bilíngue, em Língua Brasileira de Sinais – LIBRAS como primeira língua e na modalidade escrita da Língua Portuguesa como segunda língua, aos(às) alunos(as) surdos e com deficiência auditiva de 0 (zero) a 17 (dezessete) anos, em escolas e classes bilíngues e em escolas inclusivas, nos termos dos arts. 24 e 30 da Convenção sobre os Direitos das Pessoas com Deficiência e da estratégia 4.7 da Lei nº 13.005/14; bem como a adoção do Sistema Braille de leitura para cegos e surdos-cegos;
 
 4.8 - Viabilizar o acesso à Libras para funcionários e professores das unidades do ensino regular pública, através de cursos e capacitações;
 
@@ -1287,11 +1111,7 @@ inclusivas, nos termos dos arts. 24 e 30 da Convenção sobre os Direitos das Pe
 
 4.13 - Manter e ampliar programas suplementares que promovam a acessibilidade nas escolas de ensino regular públicas para garantir o acesso e a permanência dos(as) alunos(as) com deficiência por meio de adequação arquitetônica, da oferta de transporte acessível e da disponibilização de material didático próprio e de recurso de tecnologia assistiva, assegurando, ainda, no contexto escolar, em todas as etapas, níveis e modalidades de ensino, a identificação dos(as) alunos(as) com altas habilidades ou superdotação;
 
-4.14 - Definir indicadores de qualidade e política de avaliação e supervisão
-
-59/87
-
-para o funcionamento de instituições públicas e privadas que prestam atendimento a alunos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação.
+4.14 - Definir indicadores de qualidade e política de avaliação e supervisão para o funcionamento de instituições públicas e privadas que prestam atendimento a alunos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação.
 
 META 5 – ALFABETIZAÇÃO INFANTIL Alfabetizar todas as crianças no máximo até o final do 3º (terceiro) ano do ensino fundamental.
 
@@ -1311,8 +1131,6 @@ META 6 – EDUCAÇÃO INTEGRAL Oferecer educação integral com a ampliação da
 
 ESTRATÉGIAS:
 
-60/87
-
 6.1 - Promover, com o apoio da União, a oferta de educação básica pública em educação integral com ampliação da jornada escolar do aluno, por meio de atividades pedagógicas e multidisciplinares, inclusive culturais, socioambientais e esportivas, de forma que o tempo de permanência dos(as) alunos(as) na escola passe a ser igual ou superior a 07 (sete) horas diárias durante todo o ano letivo, com a garantia da jornada de professores em uma única escola em conformidade com a Lei nº 11.738/2008 (art. 2º);
 
 6.2 - Instituir, em regime de colaboração com diferentes entes da esfera pública, programa de construção de escolas com padrão arquitetônico caracterizado por edificações e espaços que priorizem critérios de sustentabilidade socioambiental e de mobiliário adequado para atendimento em educação integral, para a ampliação da jornada escolar do discente, respeitadas as normas de acessibilidade universal e os padrões nacionais de qualidade, prioritariamente em comunidades pobres ou com discentes em situação de vulnerabilidade social;
@@ -1324,8 +1142,6 @@ ESTRATÉGIAS:
 6.5 - Garantir a educação integral para pessoas com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação a partir da faixa etária de 04 (quatro) anos, em turno escolar, e assegurar o atendimento educacional especializado complementar e suplementar ofertado em salas de recursos multifuncionais da própria escola;
 
 6.6 - Criar subsídios e viabilizar construção curricular nas escolas de Educação Integral que garanta a permanência dos alunos em jornada ampliada, contemplando as múltiplas dimensões formativas dos sujeitos, sem hierarquização e fragmentação das diferentes áreas do conhecimento no espaço e tempo curricular;
-
-61/87
 
 6.7 - Assegurar jornada adequada ao trabalho pedagógico das escolas de Educação Integral a todos os profissionais;
 
@@ -1349,8 +1165,6 @@ b) no último ano de vigência deste PME, todos(as) os(as) estudantes do ensino 
 
 7.3 - Constituir, em diálogo com a Comunidade Escolar, um conjunto de indicadores de avaliação institucional com base no perfil do aluno e do corpo de profissionais da educação, nas condições de infraestrutura das escolas, nos recursos pedagógicos disponíveis, nas características da gestão e em outras dimensões relevantes, considerando as especificidades das etapas de ensino;
 
-62/87
-
 7.4 - Colaborar com processo contínuo e autônomo de autoavaliação das escolas de educação básica, por meio da constituição de instrumentos de avaliação que orientem as dimensões a serem fortalecidas, destacando-se a elaboração de planejamento estratégico, a melhoria contínua da qualidade educacional dos(as) profissionais da educação e o aprimoramento da gestão democrática;
 
 7.5 - Formalizar e executar os planos de ações articuladas dando cumprimento às metas de qualidade estabelecidas para a educação básica pública e às estratégias de apoio técnico e financeiro voltadas à melhoria da gestão educacional, à formação de professores e professoras e profissionais de serviços e apoio escolares, à ampliação e ao desenvolvimento de recursos pedagógicos e à melhoria e expansão da infraestrutura física da rede escolar;
@@ -1365,11 +1179,7 @@ b) no último ano de vigência deste PME, todos(as) os(as) estudantes do ensino 
 
 7.10 - Desenvolver pesquisas em instituições públicas de modelos alternativos de atendimento escolar para a população do campo que considerem as especificidades locais e as boas práticas nacionais e internacionais;
 
-7.11 - Universalizar, até o quinto ano de vigência deste PME, o acesso à rede mundial de computadores em banda larga de alta velocidade e triplicar, até o final da década, a relação computador/aluno na rede pública de educação
-
-63/87
-
-básica, promovendo a utilização pedagógica das tecnologias da informação e da comunicação, bem como a contratação de um profissional fixo de apoio às salas de informática;
+7.11 - Universalizar, até o quinto ano de vigência deste PME, o acesso à rede mundial de computadores em banda larga de alta velocidade e triplicar, até o final da década, a relação computador/aluno na rede pública de educação básica, promovendo a utilização pedagógica das tecnologias da informação e da comunicação, bem como a contratação de um profissional fixo de apoio às salas de informática;
 
 7.12 - Apoiar técnica e financeiramente a gestão escolar mediante transferência direta de recursos financeiros à escola, garantindo a participação da comunidade escolar no planejamento e na aplicação dos recursos, visando à ampliação da transparência e ao efetivo desenvolvimento da gestão democrática;
 
@@ -1383,11 +1193,7 @@ básica, promovendo a utilização pedagógica das tecnologias da informação e
 
 7.17 - Estabelecer, em consonância com as diretrizes nacionais e junto à comunidade escolar, num processo democrático de ampla participação da sociedade, no prazo de 02 (dois) anos contados da publicação desta Lei, parâmetros mínimos de qualidade dos serviços da educação básica, a serem utilizados como referência para infraestrutura das escolas, recursos pedagógicos, entre outros insumos relevantes, bem como instrumento para adoção de medidas para a melhoria da qualidade do ensino;
 
-7.18 a) - Informatizar integralmente a gestão das escolas públicas e da Secretaria de Educação do Município, bem como manter programa de
-
-64/87
-
-formação continuada para o pessoal técnico da Secretaria de Educação;
+7.18 a) - Informatizar integralmente a gestão das escolas públicas e da Secretaria de Educação do Município, bem como manter programa de formação continuada para o pessoal técnico da Secretaria de Educação;
 
 7.18 b) - Garantir que haja a equipe técnica nas secretarias das unidades escolares e formação continuada para estes;
 
@@ -1400,8 +1206,6 @@ formação continuada para o pessoal técnico da Secretaria de Educação;
 7.22 - Consolidar a educação escolar das populações do campo, itinerantes e de comunidades indígenas e quilombolas, respeitando-se a articulação entre os ambientes escolares e comunitários, garantindo-se o desenvolvimento sustentável, a preservação da identidade cultural, a participação da comunidade na definição do modelo de organização pedagógica e de gestão das instituições, consideradas as práticas socioculturais e as formas particulares de organização do tempo; a oferta bilíngue na Educação Infantil e nos Anos Iniciais do Ensino Fundamental, em Língua Materna das comunidades indígenas e em Língua portuguesa; reestruturação e a aquisição de equipamentos; a oferta de programa para a formação continuada de profissionais da educação; e o atendimento em educação especial;
 
 7.23 - Desenvolver currículos, propostas pedagógicas e espaços adequados específicos para educação escolar para as escolas do campo, incluindo os conteúdos culturais e considerando o fortalecimento das práticas socioculturais, produzindo e disponibilizando materiais didáticos específicos, inclusive para os(as) alunos(as) com deficiência;
-
-65/87
 
 7.24 - Mobilizar as famílias e setores da sociedade civil, por meio de programas e ações intersetoriais, articulando a educação formal com experiências de educação popular e cidadã, com os propósitos de que a educação seja assumida como responsabilidade de todos e de ampliar o controle social sobre o cumprimento das políticas públicas educacionais;
 
@@ -1418,8 +1222,6 @@ formação continuada para o pessoal técnico da Secretaria de Educação;
 7.30 - Criar mecanismos pelo poder público para regulação da educação básica oferecida pela iniciativa privada, garantindo a qualidade e o cumprimento da função social da educação;
 
 7.31 - Garantir que, até o segundo ano de vigência deste PME, constem dos planejamentos pedagógicos das unidades de educação públicas e privadas, em todos os níveis e modalidades, os conteúdos e ações a serem desenvolvidas sobre a história e as culturas afro-brasileiras e indígena nos termos das Leis
-
-66/87
 
 Federais nº 10.639/2003 e nº 11.645/2008;
 
@@ -1440,8 +1242,6 @@ Federais nº 10.639/2003 e nº 11.645/2008;
 7.39 - Promover a articulação de ações educativas com as ações previstas no calendário sociocultural relacionado às temáticas relevantes aos povos indígenas e afro-brasileiros;
 
 7.40 - Estruturar cursos em parceria com instituições de ensino superior, grupos de trabalho e pesquisa no intuito de atender aos profissionais da educação interessados em discutir, problematizar e criar alternativas práticas para as situações decorrentes do racismo e preconceito.
-
-67/87
 
 META 8 – ELEVAÇÃO DA ESCOLARIDADE/DIVERSIDADE Elevar a escolaridade média de toda a população de modo a alcançar o mínimo de 12 anos de estudo para as populações do campo, itinerantes, comunidades indígenas e quilombolas, da região de menor escolaridade na cidade e dos vinte e cinco por cento mais pobres, bem como igualar a escolaridade média entre negros e não negros, declarado à Fundação Instituto Brasileiro de Geografia e Estatística – IBGE, com vista à redução da desigualdade educacional.
 
@@ -1469,11 +1269,7 @@ g) articulação com outras secretarias e profissionais para garantir a permanê
 
 8.4 - Expandir a oferta pública e gratuita de educação profissional, com ênfase na proposta de currículos integrados;
 
-8.5 - Promover, em parceria com as áreas de saúde e assistência social, o acompanhamento e o monitoramento do acesso à escola; identificar motivos de absenteísmo para a garantia de frequência e apoio à aprendizagem, de
-
-68/87
-
-maneira a estimular a ampliação do atendimento desses(as) estudantes na rede pública regular de ensino;
+8.5 - Promover, em parceria com as áreas de saúde e assistência social, o acompanhamento e o monitoramento do acesso à escola; identificar motivos de absenteísmo para a garantia de frequência e apoio à aprendizagem, de maneira a estimular a ampliação do atendimento desses(as) estudantes na rede pública regular de ensino;
 
 8.6 - Promover busca ativa de toda a população com baixa escolaridade, em parceria com as áreas de assistência social, saúde e proteção à juventude;
 
@@ -1491,8 +1287,6 @@ maneira a estimular a ampliação do atendimento desses(as) estudantes na rede p
 
 META 9 - ALFABETIZAÇÃO DE JOVENS E ADULTOS Universalizar a alfabetização da população com 15 (quinze) anos ou mais até o final da vigência deste PME e reduzir em 70% (setenta por cento) a taxa de analfabetismo funcional.
 
-69/87
-
 ESTRATÉGIAS:
 
 9.1 - Assegurar, a partir da aprovação deste plano, em regime de colaboração com a União e o Estado, a oferta gratuita da educação de jovens e adultos a todos que não tiveram acesso à educação básica;
@@ -1509,11 +1303,7 @@ ESTRATÉGIAS:
 
 9.7 a) - Identificar e fomentar na rede pública projetos de organização dos cursos de EJA que busquem uma maior adequação às demandas formativas e às condições de vida e trabalho do seu público;
 
-9.7 b) - Articular essa iniciativa com parcerias junto aos órgãos estaduais e federais, a partir da aprovação deste plano, visando a realização de pesquisas
-
-70/87
-
-e estudos relacionados as necessidades e especificidades da EJA no âmbito de metodologias, materiais didáticos, equipamentos e recursos de tecnologia assistida, currículos e propostas pedagógicas.
+9.7 b) - Articular essa iniciativa com parcerias junto aos órgãos estaduais e federais, a partir da aprovação deste plano, visando a realização de pesquisas e estudos relacionados as necessidades e especificidades da EJA no âmbito de metodologias, materiais didáticos, equipamentos e recursos de tecnologia assistida, currículos e propostas pedagógicas.
 
 9.8 - Incentivar, por meio de ações intersetoriais do poder público com o apoio da sociedade civil, a partir da aprovação deste plano, a realização de parcerias que integrem os segmentos empregadores, públicos e privados, e os sistemas de ensino para promover a compatibilização da jornada de trabalho dos empregados e das empregadas e a oferta da EJA no ensino fundamental, médio e educação profissional;
 
@@ -1527,11 +1317,7 @@ e estudos relacionados as necessidades e especificidades da EJA no âmbito de me
 
 9.13 - Construir novos centros de EJA por região e reformar os existentes, equipando-os com materiais didáticos, pedagógicos e tecnológicos apropriados;
 
-9.14 - Reforçar o Projeto Pedagógico da unidade escolar, como a própria expressão da sua organização educativa, orientada pelos princípios
-
-71/87
-
-democráticos e participativos;
+9.14 - Reforçar o Projeto Pedagógico da unidade escolar, como a própria expressão da sua organização educativa, orientada pelos princípios democráticos e participativos;
 
 9.15 - Garantir que os espaços físicos destinados para funcionamento da EJA, desde a alfabetização até os anos finais do Ensino Médio, sejam devidamente estruturados, equipados, mobiliados e adequados para essa atividade e público constituído por jovens, adultos e idosos;
 
@@ -1551,8 +1337,6 @@ ESTRATÉGIAS:
 
 10.3 - Estabelecer, no primeiro ano de vigência do PME, normas, procedimentos e prazos para implementação de programa público de educação de jovens e adultos voltados para a formação profissional;
 
-72/87
-
 10.4 - Expandir as matrículas e implantar programas públicos intersetoriais de educação profissional na educação de jovens e adultos, de modo a articular a formação inicial e continuada de trabalhadores com a educação profissional, objetivando a elevação de nível de escolaridade do trabalhador e da trabalhadora;
 
 10.5 - Fomentar a integração da educação de jovens e adultos com a educação profissional, em cursos planejados, de acordo com as características do público da educação de jovens e adultos e considerando as especificidades das populações itinerantes e do campo e das comunidades indígenas e quilombolas, inclusive na modalidade de educação a distância;
@@ -1568,8 +1352,6 @@ ESTRATÉGIAS:
 10.10 - Garantir a educação inclusiva na modalidade EJA com formação continuada para os profissionais que atuam na EJA. Com o atendimento educacional especializado complementar e suplementar, ofertado em sala de recursos multifuncionais da própria escola, de outra escola da rede pública ou em instituições conveniadas e centros de atendimento educacional e especializados, a partir da aprovação deste plano;
 
 10.11 - Institucionalizar, em regime de colaboração com o estado e a União,
-
-73/87
 
 programa municipal de assistência ao estudante, compreendendo ações de assistência social, financeira e de apoio pedagógico que contribuam para garantir o acesso, a permanência, a aprendizagem e a conclusão com êxito da educação de jovens e adultos articulada à educação profissional;
 
@@ -1589,11 +1371,7 @@ ESTRATÉGIAS:
 
 11.4 - Considerando os dados obtidos no mapeamento realizado, estudos e pesquisas analisadas, fomentar a expansão da oferta de educação profissional técnica de nível médio nas redes públicas de ensino;
 
-11.5 - Fomentar a expansão da oferta de educação profissional técnica de nível médio na modalidade de educação a distância, com a finalidade de
-
-74/87
-
-ampliar a oferta e democratizar o acesso à educação profissional pública e gratuita, assegurado padrão de qualidade;
+11.5 - Fomentar a expansão da oferta de educação profissional técnica de nível médio na modalidade de educação a distância, com a finalidade de ampliar a oferta e democratizar o acesso à educação profissional pública e gratuita, assegurado padrão de qualidade;
 
 11.6 - Estimular a expansão do estágio na educação profissional técnica de nível médio e do ensino médio regular, preservando-se seu caráter pedagógico integrado ao itinerário formativo do aluno, visando à formação de qualificações próprias da atividade profissional, à contextualização curricular e ao desenvolvimento da juventude;
 
@@ -1611,11 +1389,7 @@ ampliar a oferta e democratizar o acesso à educação profissional pública e g
 
 11.13 - Proporcionar condições e mecanismos de disponibilizar recursos, aos estudantes, em suas modalidades e etapas de ensino, durante sua permanência nos cursos, prioritariamente em ações que contribuam com a redução das desigualdades étnico-raciais no acesso e permanência na educação profissional técnica de nível médio, inclusive mediante a adoção de políticas afirmativas, na forma da lei.
 
-META 12 - EDUCAÇÃO SUPERIOR Elevar a taxa bruta de matrícula na educação superior para 50% (cinquenta por cento) e a taxa líquida para 33% (trinta e três por
-
-75/87
-
-cento) da população de 18 anos (dezoito) a 24 (vinte e quatro) anos, assegurando a qualidade de oferta.
+META 12 - EDUCAÇÃO SUPERIOR Elevar a taxa bruta de matrícula na educação superior para 50% (cinquenta por cento) e a taxa líquida para 33% (trinta e três por cento) da população de 18 anos (dezoito) a 24 (vinte e quatro) anos, assegurando a qualidade de oferta.
 
 ESTRATÉGIAS:
 
@@ -1633,11 +1407,7 @@ ESTRATÉGIAS:
 
 12.7 - Ampliar a participação proporcional de grupos historicamente desfavorecidos na educação superior pública estatal, inclusive mediante a adoção de políticas afirmativas, na forma da lei de cotas;
 
-12.8 - Assegurar condições de acessibilidade nas instituições de educação
-
-76/87
-
-superior, na forma da legislação;
+12.8 - Assegurar condições de acessibilidade nas instituições de educação superior, na forma da legislação;
 
 12.9 - Fomentar estudos e pesquisas que analisem a necessidade de articulação entre formação, currículo, pesquisa e mundo do trabalho, considerando as necessidades econômicas, sociais e culturais do País, visando subsidiar a indicação dos cursos que serão oferecidos na expansão da educação superior.
 
@@ -1659,8 +1429,6 @@ ESTRATÉGIAS:
 
 13.2 - Estimular a formação continuada dos servidores públicos, prioritariamente dos profissionais da educação e em universidades, em programas de pós-graduação stricto sensu;
 
-77/87
-
 13.3 - Fomentar a formação de consórcios entre instituições públicas de educação superior, com vistas a potencializar a atuação regional, inclusive por meio de plano de desenvolvimento institucional integrado, assegurando maior visibilidade nacional e internacional às atividades de ensino, pesquisa e extensão.
 
 META 14 - PÓS-GRADUAÇÃO Estimular e acompanhar no Município o cumprimento da meta nacional: elevar em 21,44% gradualmente o número de matrículas na pós-graduação stricto sensu.
@@ -1681,8 +1449,6 @@ META 15 - PROFISSIONAIS DE EDUCAÇÃO Garantir, em regime de colaboração entre
 
 ESTRATÉGIAS:
 
-78/87
-
 15.1 - Implementar programas específicos para formação de todos os profissionais da educação, incluindo monitores e agentes de educação infantil para escolas públicas do Município, em parceria com as universidades públicas, para todos os profissionais da educação das escolas públicas do município;
 
 15.2 - Implantar política municipal de formação continuada para os(as) profissionais da educação em parceria com universidades públicas;
@@ -1701,8 +1467,6 @@ ESTRATÉGIAS:
 
 16.2 - Consolidar política municipal de formação de professores e professoras e demais profissionais da educação, em regime de colaboração, e fomentar a respectiva oferta por parte das instituições de educação superior, de forma orgânica e articulada às políticas de formação dos Estados, do Distrito Federal e dos Municípios, em consonância com as diretrizes nacionais, áreas prioritárias em instituições públicas de ensino com processos de certificação das atividades formativas;
 
-79/87
-
 16.3 - Criar um programa de composição de acervo de obras didáticas, paradidáticas e de literatura e de dicionários, e programa específico de acesso a bens culturais, incluindo obras e materiais produzidos em Libras e em Braille, sem prejuízo de outros, a serem disponibilizados para os profissionais da educação da rede pública de educação básica, favorecendo a construção do conhecimento e a valorização da cultura da investigação;
 
 16.4 - Criar portal eletrônico para subsidiar a atuação dos professores e das professoras da educação básica, demais profissionais da educação, inclusive os que atuam diretamente com a criança, disponibilizando gratuitamente materiais didáticos e pedagógicos suplementares, inclusive aqueles com formato acessível;
@@ -1718,8 +1482,6 @@ META 17 - VALORIZAÇÃO DOS PROFISSIONAIS DA EDUCAÇÃO Valorizar os(as) profiss
 ESTRATÉGIAS:
 
 17.1 - Constituir fórum permanente, no prazo de 2 anos da vigência deste PME, formado por representantes dos profissionais da educação das redes públicas para acompanhamento da atualização progressiva do valor do piso salarial municipal para os profissionais do magistério público da educação básica, equiparando ao piso salarial dos demais profissionais com mesmo nível de formação;
-
-80/87
 
 17.2 - Construir como tarefa do fórum permanente o acompanhamento da evolução salarial por meio de indicadores da pesquisa nacional por amostra de domicílios – PNAD – periodicamente divulgados pela fundação IBGE;
 
@@ -1737,11 +1499,7 @@ ESTRATÉGIAS:
 
 18.3 - Criar possibilidades de formação e aprimoramento profissional de acordo com as necessidades da UE definidas pelo Conselho de Escola, em diversas modalidades: presencial, semipresencial e a distância;
 
-18.4 - Promover a formação continuada e em serviço, que subsidie o processo ensino e aprendizagem, principalmente com os alunos que apresentam
-
-81/87
-
-necessidades educacionais especiais;
+18.4 - Promover a formação continuada e em serviço, que subsidie o processo ensino e aprendizagem, principalmente com os alunos que apresentam necessidades educacionais especiais;
 
 18.5 - Manter parcerias com universidades e demais instituições para formação continuada dos educadores do Município assegurando a progressão Funcional conforme Plano de Cargos e Salários, inclusive em nível de pós- graduação Stricto Sensu;
 
@@ -1761,8 +1519,6 @@ ESTRATÉGIAS:
 
 19.3 - Realizar Conferência Municipal de Educação bianualmente para discussão e definição de princípios de educação e de gestão democrática participativa, estabelecendo normas e diretrizes gerais, desburocratizantes e flexíveis, na área administrativa e pedagógica, que garantam qualidade socialmente negociada e a participação da comunidade escolar;
 
-82/87
-
 19.4 - Construir coletivamente, com os profissionais de todos os segmentos em cada unidade educacional pública, conveniada e privada, indicadores para avaliação da qualidade da gestão democrática;
 
 19.5 - Acompanhar e avaliar, com a participação da comunidade e do Conselho Municipal de Educação, as políticas públicas na área de educação garantindo condições de continuidade das ações efetivas;
@@ -1781,8 +1537,6 @@ ESTRATÉGIAS:
 
 19.12 - Garantir, a partir da vigência desse PME, condições para a participação dos profissionais da educação nos fóruns e conselhos vinculados à educação do Município;
 
-83/87
-
 19.13 - Garantir que o Fórum Municipal de Educação tenha ampla representação de escolas públicas e privadas de todos os níveis e modalidades de ensino, e de segmentos que atuam com a educação e cultura afro- brasileira, indígena, quilombola, diversidades e comunidades itinerantes;
 
 19.14 - Garantir a participação dos profissionais da educação em processos de definição das secretarias de educação, seleção e compra de materiais e serviços destinados às Unidades Educacionais;
@@ -1799,11 +1553,7 @@ ESTRATÉGIAS:
 
 20.3 - Fortalecer os mecanismos e os instrumentos que assegurem, nos termos do parágrafo único do art. 48 da Lei Complementar nº 101, de 4 de maio de 2000, a transparência e o controle social na utilização dos recursos públicos aplicados em educação, especialmente a realização de audiências públicas, a criação de portais eletrônicos de transparência e a capacitação dos membros de conselhos de acompanhamento e controle social do FUNDEB, com a colaboração entre o Ministério da Educação, as Secretarias de Educação do Estado e do Município e os Tribunais de Contas da União, dos Estados e dos Municípios;
 
-20.4 - Implementar, no prazo de 2 (dois) anos de vigência desse PME, após
-
-84/87
-
-aprovação do CME, o Custo Aluno Qualidade Inicial - CAQi, referenciado no conjunto de padrões mínimos estabelecidos na legislação educacional e cujo financiamento será calculado com base nos respectivos insumos indispensáveis ao processo de ensino-aprendizagem, de acordo com as necessidades regionais do município, e será progressivamente reajustado até a implementação plena do Custo Aluno Qualidade – CAQ;
+20.4 - Implementar, no prazo de 2 (dois) anos de vigência desse PME, após aprovação do CME, o Custo Aluno Qualidade Inicial - CAQi, referenciado no conjunto de padrões mínimos estabelecidos na legislação educacional e cujo financiamento será calculado com base nos respectivos insumos indispensáveis ao processo de ensino-aprendizagem, de acordo com as necessidades regionais do município, e será progressivamente reajustado até a implementação plena do Custo Aluno Qualidade – CAQ;
 
 20.5 - Implementar, após aprovação, Custo Aluno Qualidade - CAQ como parâmetro para o financiamento da educação de todas as etapas e modalidades da educação básica, a partir do cálculo e do acompanhamento regular dos indicadores de gastos educacionais com investimentos em qualificação e remuneração do pessoal docente e dos demais profissionais da educação pública, em aquisição, manutenção, construção e conservação de instalações e equipamentos necessários ao ensino e em aquisição de material didático escolar, alimentação e transporte escolar;
 
@@ -1813,11 +1563,7 @@ aprovação do CME, o Custo Aluno Qualidade Inicial - CAQi, referenciado no conj
 
 20.8 - Aprimorar o sistema de compras e o cadastro de fornecedores, incluindo nos editais de licitação critérios de qualidade dos produtos e serviços que serão licitados;
 
-20.9 - Garantir fontes de financiamento permanentes e sustentáveis para todos os níveis, etapas e modalidades da educação básica, observando-se as políticas de colaboração entre os entes federados, em especial as decorrentes do art. 60 do Ato das Disposições Constitucionais Transitórias e do § 1º do art. 75 da Lei nº 9.394, de 20 de dezembro de 1996, que trata da capacidade de
-
-85/87
-
-atendimento e do esforço fiscal de cada ente federado, com vistas a atender às demandas educacionais à luz do padrão de qualidade nacional;
+20.9 - Garantir fontes de financiamento permanentes e sustentáveis para todos os níveis, etapas e modalidades da educação básica, observando-se as políticas de colaboração entre os entes federados, em especial as decorrentes do art. 60 do Ato das Disposições Constitucionais Transitórias e do § 1º do art. 75 da Lei nº 9.394, de 20 de dezembro de 1996, que trata da capacidade de atendimento e do esforço fiscal de cada ente federado, com vistas a atender às demandas educacionais à luz do padrão de qualidade nacional;
 
 20.10 - Aperfeiçoar e ampliar os mecanismos de acompanhamento social da arrecadação da contribuição social do salário-educação;
 
@@ -1841,8 +1587,6 @@ META 22 - RELAÇÕES ÉTNICO-RACIAIS – O NEGRO E O INDÍGENA BRASILEIROS Criar
 
 ESTRATÉGIAS:
 
-86/87
-
 22.1 - Orientar a inclusão da temática étnico-racial no projeto pedagógico de cada unidade escolar, em todos os níveis de escolarização, nas esferas pública e privada, ofertando ações formativas para promover a correta e ampla informação das comunidades escolares acerca das culturas afro-brasileira e indígenas como meio de qualificar o trabalho pedagógico com a temática, combater a intolerância e o preconceito;
 
 22.2 - Implementar, por meio de colegiado composto por educadores das redes públicas e membros dos movimentos sociais, programa que contemple as demandas suscitadas pelas Leis nº 10.639/2003 e nº 11.645/2008;
@@ -1859,11 +1603,7 @@ ESTRATÉGIAS:
 
 22.8 - Garantir acesso e permanência em instituições de ensino de nível superior para formação acerca das questões étnico-raciais destinada aos profissionais de educação da rede pública de Campinas na modalidade extensão e especialização;
 
-22.9 - Incentivar, por meio de convênio e acordos de cooperação técnica com as universidades, a formação em nível mestrado (profissional) e doutorado dos
-
-87/87
-
-professores da rede pública de Campinas sobre a temática étnico-racial com ênfase nas culturas indígenas, africanas e afro-brasileiras;
+22.9 - Incentivar, por meio de convênio e acordos de cooperação técnica com as universidades, a formação em nível mestrado (profissional) e doutorado dos professores da rede pública de Campinas sobre a temática étnico-racial com ênfase nas culturas indígenas, africanas e afro-brasileiras;
 
 22.10 - Garantir parcerias e recursos das agências envolvidas com os programas, projetos e editais relacionados às políticas étnico-raciais para a realização de estudos e ações pedagógicas desenvolvidas por profissionais da educação de Campinas.
 

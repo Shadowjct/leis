@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; "
 fonte: "https://sapl.campinas.sp.leg.br/norma/38494"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2014/38494/38494_texto_integral.pdf"
 sha256_fonte: "814cff2bb54b1e0b9cca18059615c5303d4021f266ff0891b54a799aaca3e8ab"
-sha256_texto: "34b6184285dd203594855ba8e5098b14df50ad5d2142651911eab1f00756c2f8"
+sha256_texto: "0cafdfeed71422133299f4edc840e0433004ff3abc89749d442cfc54a9b783c2"
 baixado_em: "2026-10-21"
 ---
 
 # Lei Complementar nº 80, de 29 de setembro de 2014
-
-1/3
 
 LEI COMPLEMENTAR Nº 80 DE 29 DE SETEMBRO DE 2014
 
@@ -43,8 +41,6 @@ III - caso possua alvará de uso, se não encerrada a atividade em cumprimento �
 
 IV - para os casos da inexistência do alvará de uso, se o exercício da atividade persistir em descumprimento à segunda intimação (inciso II), o estabelecimento será lacrado;
 
-2/3
-
 V - multa equivalente a 5.000 UFIC's (cinco mil Unidades Fiscais de Campinas), caso seja descumprida a ordem de lacração e, se constatada a continuidade da atividade em descumprimento da lacração, será reaplicada, em dobro, a multa constante deste inciso, e concomitante encaminhamento a Secretaria Municipal de Assuntos Jurídicos para que sejam tomadas as medidas judiciais cabíveis;
 
 **§ 1º** Referente à intimação que trata o item II deste artigo, o interessado, no mesmo prazo, poderá protocolar defesa (Ver Ordem de Serviço nº 10, de 28/08/2012 - SMU).
@@ -67,11 +63,7 @@ b) se descumprida a intimação (alínea anterior), lacração do estabeleciment
 
 c) aplicação das penalidades capituladas pelo inciso V deste artigo."
 
-**Art. 2º** Esta Lei Complementar entra em vigor na data de sua publicação
-
-3/3
-
-e revogadas as disposições em contrário.
+**Art. 2º** Esta Lei Complementar entra em vigor na data de sua publicação e revogadas as disposições em contrário.
 
 Campinas, 29 de setembro de 2014 JONAS DONIZETTE Prefeito Municipal
 

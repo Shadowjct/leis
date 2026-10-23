@@ -7,11 +7,11 @@ data: "2012-08-16"
 municipio: "Campinas"
 uf: "SP"
 codigo_ibge: "3509502"
-versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: VEREADOR DARIO SAADI."
+versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: VEREADOR DARIO SAADI.; cópia de consulta da Câmara, sem valor legal"
 fonte: "https://sapl.campinas.sp.leg.br/norma/36742"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2012/36742/36742_texto_integral.pdf"
 sha256_fonte: "3be4a8fb8c56005a7e1b6aab46f0ef5cdfded0ffeecf629acaef5327ca1cc50c"
-sha256_texto: "ea74a79b77d594778e94893087b0bff5a1e91e85369b0fb570f550191eda3585"
+sha256_texto: "c67c75dbd61dd23f6cdf4d4e1d2895cec6976230578a596a018a31bcb0772b4c"
 baixado_em: "2026-10-21"
 ---
 
@@ -46,6 +46,3 @@ III - na reincidência multa de 10.000 UFIC's (Unidade Fiscal de Campinas).
 Campinas, 16 de agosto de 2012 THIAGO FERRARI Presidente autoria: Vereador Dário Saadi
 
 PUBLICADO NA SECRETARIA DA CÂMARA MUNICIPAL DE CAMPINAS, EM 16 DE AGOSTO DE 2012. ISRAEL MAZZO Diretor Geral
-
-\_\_\_\_ Texto somente para consulta, sem valor legal.
-

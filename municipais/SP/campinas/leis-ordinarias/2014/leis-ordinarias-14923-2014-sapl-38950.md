@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; "
 fonte: "https://sapl.campinas.sp.leg.br/norma/38950"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2014/38950/38950_texto_integral.pdf"
 sha256_fonte: "6d4fd263e510fa14627c4090b6a3d91d6019777a1e831a05d324918d6f5a7b19"
-sha256_texto: "ee9a9ad4ee0aa7d4739f79c73061462ed59cd483e8b4c07246a26b5c46594149"
+sha256_texto: "a48eca9b70dea72dc350e10c372d01038603568cd7f9b22ac63e2ac1d4068ea1"
 baixado_em: "2026-10-21"
 ---
 
 # Lei nº 14.923, de 24 de novembro de 2014
-
-1/12
 
 LEI Nº 14.923, DE 24 DE NOVEMBRO DE 2014.
 
@@ -45,11 +43,7 @@ II - o Centro de Comércio Justo e Solidário.
 
 **§ 2º** - Para implementação e suas respectivas ações, o Poder Público poderá estabelecer parceria com as entidades públicas e privadas.
 
-**§ 3º** - A Secretaria Municipal de Trabalho e Renda constituirá um Comitê Gestor, representado por uma instância colegiada, de caráter propositivo,
-
-2/12
-
-consultivo e deliberativo, para gestão do Centro Público de Economia Solidária e do Centro de Comércio Justo e Solidário.
+**§ 3º** - A Secretaria Municipal de Trabalho e Renda constituirá um Comitê Gestor, representado por uma instância colegiada, de caráter propositivo, consultivo e deliberativo, para gestão do Centro Público de Economia Solidária e do Centro de Comércio Justo e Solidário.
 
 **§ 4º** - O Comitê Gestor terá funções de organização, planejamento, monitoramento e avaliação das ações desenvolvidas no Centro Público de Economia Solidária e do Centro de Comércio Justo e Solidário, que serão definidas pelo Poder Executivo através de Decreto regulamentador.
 
@@ -76,8 +70,6 @@ III - o direito ao trabalho decente;
 IV - o primado do trabalho, com o controle do processo produtivo pelos trabalhadores;
 
 V - a valorização da autogestão, da cooperação, da integração e da solidariedade;
-
-3/12
 
 VI - a instituição de relações igualitárias entre homens e mulheres;
 
@@ -113,11 +105,7 @@ VIII - criar e dar efetividade a mecanismos institucionais que facilitem sua imp
 
 IX - estimular a produção intelectual sobre o tema, bem como de material didático de apoio aos Empreendimentos de Economia Solidária;
 
-X - oferecer formação autogestionária e capacitação técnica aos trabalhadores dos Empreendimentos de Economia Solidária, bem como estimular a elevação
-
-4/12
-
-do grau de escolaridade;
+X - oferecer formação autogestionária e capacitação técnica aos trabalhadores dos Empreendimentos de Economia Solidária, bem como estimular a elevação do grau de escolaridade;
 
 XI - criar e consolidar uma cultura empreendedora baseada nos valores da Economia Solidária;
 
@@ -150,8 +138,6 @@ V - desenvolver cooperação com outros grupos e empreendimentos;
 VI - buscar a inserção comunitária, com a adoção de práticas democráticas e de cidadania;
 
 VII - desenvolver ações condizentes com a função social do empreendimento e a preservação do meio ambiente;
-
-5/12
 
 VIII - praticar a produção e/ou comercialização coletiva;
 
@@ -186,8 +172,6 @@ III - inclusão do tema Economia Solidária na rede municipal de ensino.
 **Art. 11** - Será criado, por meio de Lei específica, o Conselho Municipal de Economia Solidária e o Fundo Municipal de Fomento à Economia Solidária no âmbito do órgão executor da Política Municipal de Fomento à Economia Solidária.
 
 **Parágrafo único.** - O Poder Executivo deverá enviar ao Poder Legislativo projeto de lei criando o Conselho Municipal de Economia Solidária e o Fundo Municipal de Fomento à Economia Solidária no prazo de 120 (cento e vinte) dias após a publicação da presente Lei.
-
-6/12
 
 **Art. 12** - Na implementação da Política Municipal de Fomento à Economia Solidária, com vistas à consecução dos objetivos desta Lei, poderão ser conferidos aos beneficiários:
 
@@ -225,8 +209,6 @@ XVI - reconhecimento e certificação participativa dos Empreendimentos de Econo
 
 XVII - formação para cidadania dos integrantes dos Empreendimentos de Economia Solidária.
 
-7/12
-
 **§ 1º** - O Poder Público poderá instituir medidas indutoras e linhas de financiamento para atender às iniciativas de implantação de infraestrutura física e aquisição de equipamentos para cooperativas ou outras formas de associação de catadores de materiais reutilizáveis e recicláveis formados por pessoas físicas de baixa renda.
 
 **§ 2º** - Para os fins estabelecidos neste artigo, o Poder Público poderá instituir legislação específica.
@@ -243,11 +225,7 @@ XVII - formação para cidadania dos integrantes dos Empreendimentos de Economia
 
 **§ 1º** - Para os fins desta Lei, a incubação de Empreendimentos de Economia Solidária consiste no processo de formação, fomento, desenvolvimento e aperfeiçoamento de novos modelos socioprodutivos coletivos e autogestionários, com a qualificação dos trabalhadores para a gestão de seus empreendimentos e acesso a novas tecnologias.
 
-**§ 2º** - Constituem diretrizes de ação da Incubadora Pública de
-
-8/12
-
-Empreendimentos de Economia Solidária:
+**§ 2º** - Constituem diretrizes de ação da Incubadora Pública de Empreendimentos de Economia Solidária:
 
 I - oferecimento de assessoria técnica aos Empreendimentos de Economia Solidária;
 
@@ -279,11 +257,7 @@ XII - difusão da cultura autogestionária, sobretudo junto aos beneficiários e
 
 **§ 2º** - O Poder Executivo, por meio da Secretaria Municipal de Trabalho e Renda, instituirá Comissão de Apoio composta pelo Poder Público e outros setores afins para seleção, aprovação e avaliação dos planos de negócios dos Empreendimentos da Economia Solidária.
 
-**§ 3º** - O processo de incubação poderá contar com a cooperação de universidades e/ou de outras instituições governamentais ou não governamentais que comprovem experiência e competência técnica nesta atividade, em conformidade aos princípios, objetivos e critérios previstos nesta Lei, para desenvolver ações de formação, capacitação dos trabalhadores e
-
-9/12
-
-assessoria técnica e tecnológica aos Empreendimentos de Economia Solidária.
+**§ 3º** - O processo de incubação poderá contar com a cooperação de universidades e/ou de outras instituições governamentais ou não governamentais que comprovem experiência e competência técnica nesta atividade, em conformidade aos princípios, objetivos e critérios previstos nesta Lei, para desenvolver ações de formação, capacitação dos trabalhadores e assessoria técnica e tecnológica aos Empreendimentos de Economia Solidária.
 
 ###### Subseção II Dos Equipamentos Públicos
 
@@ -308,8 +282,6 @@ V - a promoção do consumo e trocas de bens e serviços entre Empreendimentos d
 **Art. 19** - O Centro Público de Economia Solidária tem por escopo abrigar e apoiar iniciativas e projetos governamentais, ou não governamentais, voltados ao fortalecimento de Economia Solidária no Município.
 
 **§ 1º** - São funções do Centro Público de Economia Solidária:
-
-10/12
 
 I - fortalecer e dar destaque às iniciativas de Economia Solidária do Município, estimulando a constituição de cadeias produtivas e/ou arranjos produtivos solidários no âmbito local, regional e nacional;
 
@@ -342,8 +314,6 @@ IV - demais atores definidos pelo Comitê Gestor.
 **Art. 20** - Os órgãos da Administração Direta e Indireta incumbidos da execução da Política Municipal de Fomento à Economia Solidária prevista nesta Lei, ainda que na função de atividade meio, deverão instituir indicadores e metodologias de análise apropriados aos princípios da Economia Solidária, com vistas ao monitoramento, aperfeiçoamento da política pública e avaliação das ações, dos projetos e das atividades a serem implementadas.
 
 **Art. 21** - A avaliação da Política Municipal de Fomento à Economia Solidária será baseada, prioritariamente, nos seguintes parâmetros e critérios:
-
-11/12
 
 I - inclusão social e desenvolvimento do cidadão, considerando o grau de:
 
@@ -407,11 +377,7 @@ e) distribuição democrática dos resultados do trabalho;
 
 f) controle e gestão pelos trabalhadores associados de todo o processo produtivo.
 
-V - contribuição para o desenvolvimento da Economia Solidária, com base na participação em redes, arranjos e/ou cadeias produtivas solidárias, em intercooperação de Empreendimentos, clubes de troca, compras solidárias,
-
-12/12
-
-feiras de economia solidária, clubes de poupança, cooperativas de crédito ou fundo solidário e demais iniciativas congêneres.
+V - contribuição para o desenvolvimento da Economia Solidária, com base na participação em redes, arranjos e/ou cadeias produtivas solidárias, em intercooperação de Empreendimentos, clubes de troca, compras solidárias, feiras de economia solidária, clubes de poupança, cooperativas de crédito ou fundo solidário e demais iniciativas congêneres.
 
 **Art. 22** - A Secretaria Municipal de Trabalho e Renda manterá sistema de caráter público e permanente de monitoramento e avaliação das atividades previstas nesta Lei e promoverá ações para o aperfeiçoamento das estratégias e metodologias empregadas na execução das mesmas.
 

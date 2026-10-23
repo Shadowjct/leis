@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: EXECUTIVO MUNI
 fonte: "https://sapl.campinas.sp.leg.br/norma/40307"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2015/40307/40307_texto_integral.pdf"
 sha256_fonte: "cbddaeb179d6ba56db3afc14bf60307c11035a1cdf8de7e313aea8998ef9d53b"
-sha256_texto: "f8fd72bc835d3d14a64290432300e8cbe069d7f3d43b4e9a7222e6bbaf3915bd"
+sha256_texto: "35ce77ac5a1948e695de91ac7f3ee32b37870a937587634d6c6b45065ee2f80e"
 baixado_em: "2026-10-21"
 ---
 
 # Lei nº 15.037, de 06 de julho de 2015
-
-1/13
 
 LEI Nº 15.037 DE 06 DE JULHO DE 2015
 
@@ -61,8 +59,6 @@ III - Desenvolvimento Econômico;
 
 IV - Estrutura Governamental.
 
-2/13
-
 #### CAPÍTULO III DAS DIRETRIZES GERAIS PARA A ELABORAÇÃO DOS ORÇAMENTOS DO MUNICÍPIO E SUAS ALTERAÇÕES
 
 **Art. 3º** - O projeto de lei orçamentária do Município para o ano de 2016 será elaborado em observância às diretrizes fixadas nesta Lei, ao art. 165 da Constituição Federal, ao art. 166 da Lei Orgânica do Município, à Lei Federal nº 4.320, de 17 de março de 1964, e à Lei Complementar Federal nº 101, de 04 de maio de 2000, e compreenderá:
@@ -88,8 +84,6 @@ III - o princípio de transparência implica, além da observação do princípi
 **Art. 6º** - O processo de elaboração da lei orçamentária para 2016 contará com ampla participação da sociedade civil e das comunidades organizadas, devendo o Governo Municipal dispor de todos os organismos de comunicação possíveis para dar amplo conhecimento aos munícipes.
 
 **Parágrafo único.** - As audiências serão divulgadas e realizadas em datas estabelecidas pelo Poder Executivo e sob os critérios por este fixados.
-
-3/13
 
 #### CAPÍTULO IV DAS PROPOSTAS DE ALTERAÇÃO DA LEGISLAÇÃO TRIBUTÁRIA DO MUNICÍPIO
 
@@ -123,8 +117,6 @@ X - adoção de instrumentos de indução e desenvolvimento urbano previstos na 
 
 **Art. 9º** - A proposta orçamentária do Município para 2016 será encaminhada pelo Poder Executivo à Câmara Municipal até 30 de setembro de 2015,
 
-4/13
-
 contendo:
 
 I - mensagem;
@@ -157,8 +149,6 @@ III - demonstrativo do cumprimento da Emenda Constitucional no 29/2000.
 
 **Art. 11.** - Os orçamentos das entidades autárquicas, fundacionais e fundos municipais compreenderão:
 
-5/13
-
 I - o programa de trabalho e os demonstrativos da despesa por natureza e pela classificação funcional de cada órgão, de acordo com as especificações legais;
 
 II - o demonstrativo da receita, por órgãos, de acordo com a fonte e a origem dos recursos (recursos próprios, transferências intergovernamentais, operações de crédito).
@@ -187,11 +177,7 @@ IV - garantia do cumprimento dos princípios constitucionais, em especial no que
 
 **Art. 16.** - As diretrizes da receita para o ano 2016 impõem o contínuo aperfeiçoamento da administração dos tributos municipais, com vistas ao incremento real das receitas próprias e ao contínuo acompanhamento dos repasses e adoção das medidas necessárias para seu aumento.
 
-**Parágrafo único.** - As receitas municipais deverão possibilitar a prestação de serviços e execução de investimentos de qualidade no município, a fim de permitir e influenciar o desenvolvimento econômico local, seguindo princípios
-
-6/13
-
-de justiça tributária.
+**Parágrafo único.** - As receitas municipais deverão possibilitar a prestação de serviços e execução de investimentos de qualidade no município, a fim de permitir e influenciar o desenvolvimento econômico local, seguindo princípios de justiça tributária.
 
 **Art. 17.** - O projeto de Lei Orçamentária poderá computar, na receita:
 
@@ -217,11 +203,7 @@ III - tiverem perfeitamente definidas suas fontes de custeio;
 
 IV - os recursos alocados viabilizarem a conclusão de uma etapa ou a obtenção de uma unidade completa, considerando-se as contrapartidas exigidas quando da alocação de recursos federais, estaduais ou de operações de crédito.
 
-**Art. 20.** - A Lei Orçamentária somente contemplará dotação para investimento com duração superior a um exercício financeiro se o mesmo estiver contido no
-
-7/13
-
-plano plurianual ou em lei que autorize sua inclusão.
+**Art. 20.** - A Lei Orçamentária somente contemplará dotação para investimento com duração superior a um exercício financeiro se o mesmo estiver contido no plano plurianual ou em lei que autorize sua inclusão.
 
 **Art. 21.** - Na elaboração da proposta orçamentária para o exercício de 2016, a projeção das despesas com pessoal e encargos observará:
 
@@ -242,8 +224,6 @@ II - os limites estabelecidos pela Lei Complementar Federal nº 101, de 4 de mai
 **Art. 27.** - As despesas com publicidade de interesse do Município restringir-se- ão aos gastos necessários à divulgação de atos, programas, bens, serviços e campanhas dos órgãos públicos e deverão ter caráter educativo, informativo e de orientação social (§1º do art. 37 da Constituição Federal de 1988), excluídas as despesas com a publicação de editais e outras legais.
 
 #### CAPÍTULO VIII DA TRANSFERÊNCIA DE RECURSOS A ENTIDADES PÚBLICAS E PRIVADAS SUBVENÇÕES, AUXÍLIOS E CONTRIBUIÇÕES
-
-8/13
 
 **Art. 28.** - A concessão de subvenções sociais a entidades de direito público ou privado sem finalidade lucrativa, com capacidade jurídica e regularidade fiscal, visando o custeio de serviços essenciais de assistência social, saúde, cultura, esporte e educação, depende de lei específica e fica vinculada ao estrito cumprimento das normativas de cada política e da deliberação do Conselho de Políticas Públicas pertinente, quando for o caso.
 
@@ -267,11 +247,7 @@ V - Termo de Ciência e de Notificação, relativo à tramitação do processo p
 
 **Art. 30.** - As contribuições do Poder Público a entidades de direito público ou privado, sem finalidade lucrativa, serão concedidas:
 
-I - quando classificadas como despesas correntes, de forma vinculada ao cumprimento das normativas de cada política e da deliberação do Conselho de
-
-9/13
-
-Políticas Públicas pertinente, quando for o caso;
+I - quando classificadas como despesas correntes, de forma vinculada ao cumprimento das normativas de cada política e da deliberação do Conselho de Políticas Públicas pertinente, quando for o caso;
 
 II - quando classificadas como despesa de capital, mediante lei específica.
 
@@ -301,11 +277,7 @@ II - a utilização dos recursos repassados em estrita consonância com o Plano 
 
 III - a observância das regras específicas quanto à transferência de recursos a entidades privadas sem fins lucrativos quando efetuada com recursos de fundos especiais, além das regras gerais;
 
-IV - previsão de suspensão das transferências dos recursos em caso de
-
-10/13
-
-ausência de prestação de contas ou impropriedade não sanada na prestação, bem como a devolução de valores não utilizados ou reprovados, com os acréscimos legais e demais penalidades previstas na legislação vigente.
+IV - previsão de suspensão das transferências dos recursos em caso de ausência de prestação de contas ou impropriedade não sanada na prestação, bem como a devolução de valores não utilizados ou reprovados, com os acréscimos legais e demais penalidades previstas na legislação vigente.
 
 **Art. 33.** - As informações relativas à celebração de convênios, termos de cooperação e demais ajustes serão publicadas no Portal da Prefeitura do Município de Campinas.
 
@@ -331,11 +303,7 @@ b) à amortização do endividamento; c)ao custeio dos benefícios previdenciár
 
 **Art. 36.** - Na Lei Orçamentária Anual, as despesas com amortizações, juros e demais encargos da dívida serão fixadas com base apenas nas operações contratadas até a data do encaminhamento do projeto de Lei Orçamentária à Câmara Municipal.
 
-**Parágrafo único.** - O Poder Executivo encaminhará, juntamente com a proposta orçamentária para 2016, quadro demonstrativo da previsão de
-
-11/13
-
-pagamento de serviço da dívida para 2016, incluindo a modalidade de operação, valor do principal, juros e demais encargos.
+**Parágrafo único.** - O Poder Executivo encaminhará, juntamente com a proposta orçamentária para 2016, quadro demonstrativo da previsão de pagamento de serviço da dívida para 2016, incluindo a modalidade de operação, valor do principal, juros e demais encargos.
 
 #### CAPÍTULO XI DAS DISPOSIÇÕES GERAIS
 
@@ -355,8 +323,6 @@ pagamento de serviço da dívida para 2016, incluindo a modalidade de operação
 
 **§ 5º** - O disposto nos §§ 3º e 4º não se aplica se observada a diferença entre a receita estimada e arrecadada ao final do quinto bimestre do exercício.
 
-12/13
-
 **Art. 39.** - Na ocorrência de despesas resultantes de criação, expansão ou aperfeiçoamento de ações governamentais que demandam alterações orçamentárias, aplicam-se as disposições do art. 16 da Lei Complementar Federal nº 101, de 04 de maio de 2000.
 
 **Art. 40.** - Para efeito do disposto no art. 42 da Lei Complementar Federal nº 101, de 04 de maio de 2000, considera-se:
@@ -374,8 +340,6 @@ II - despesa compromissada, apenas o montante cujo pagamento deva se verificar n
 **Art. 43.** - No projeto de lei orçamentária, referente ao exercício de 2016, as receitas e despesas serão orçadas segundo os preços vigentes em junho de 2015, atualizados com base na projeção do Índice Nacional de Preços ao Consumidor Amplo - IPCA e do crescimento do Produto Interno Bruto - PIB do Estado de São Paulo.
 
 **Art. 44.** - Se o projeto de Lei Orçamentária Anual não for aprovado até o término da Sessão Legislativa, a Câmara Municipal de Campinas será de imediato convocada extraordinariamente pelo Prefeito, como preceitua o inciso II do art. 33 da Lei Orgânica do Município.
-
-13/13
 
 **Art. 45.** - A reabertura dos créditos especiais e extraordinários conforme o disposto no § 2º do art. 167 da Constituição Federal será efetuada mediante
 

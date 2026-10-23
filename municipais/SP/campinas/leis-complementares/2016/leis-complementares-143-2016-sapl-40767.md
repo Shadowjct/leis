@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: EXECUTIVO MUNI
 fonte: "https://sapl.campinas.sp.leg.br/norma/40767"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2016/40767/40767_texto_integral.pdf"
 sha256_fonte: "dde32641890ccbc080b2d8c103cc4bc3a1461549dee7e25fffa219190ca1f208"
-sha256_texto: "94802bb9b835596557359bc33792b0153d30c3e1f7ee4ffb3a2f66adebe07460"
+sha256_texto: "b1845d24c6a221ed8af83d02d183ba33101a69b334d7111f4f285f4e60e7cf21"
 baixado_em: "2026-10-21"
 ---
 
 # Lei Complementar nº 143, de 12 de janeiro de 2016
-
-1/2
 
 LEI COMPLEMENTAR Nº 143 DE 12 DE JANEIRO DE 2016
 
@@ -54,8 +52,6 @@ III - a partir da segunda reincidência, cassação do alvará de funcionamento 
 **Art. 5º** - O valor arrecadado com aplicação das multas previstas nesta Lei Complementar será revertido para o Fundo Municipal para Preservação do Patrimônio Artístico, Arquitetônico, Histórico, Paisagístico e Cultural de Campinas, criado pela Lei nº 7.859, de 04 de maio de 1994.
 
 **Art. 6°** - Compete à Secretaria Municipal de Urbanismo, à Secretaria Municipal de Serviços Públicos, à Secretaria Municipal do Verde, Meio Ambiente e Desenvolvimento
-
-2/2
 
 Sustentável e à Secretaria Municipal de Cooperação nos Assuntos de Segurança Pública a fiscalização e aplicação das autuações estabelecidas nesta Lei Complementar.
 

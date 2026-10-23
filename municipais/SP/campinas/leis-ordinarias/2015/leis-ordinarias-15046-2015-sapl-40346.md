@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: EXECUTIVO MUNI
 fonte: "https://sapl.campinas.sp.leg.br/norma/40346"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2015/40346/40346_texto_integral.pdf"
 sha256_fonte: "cd0f0b2b27194d89b482681fecae5f726629b70d0f75fdf567f7cd7c2dba37cd"
-sha256_texto: "228961ff205e4262b607a46462b12085853f16f67a8ef9a96052462c64c6138b"
+sha256_texto: "aab0cd6c67c09f395abd3172f9fc57a2230a4b4a48a7b1f687ce0dab6fd6082a"
 baixado_em: "2026-10-21"
 ---
 
 # Lei nº 15.046, de 23 de julho de 2015
-
-1/13
 
 LEI Nº 15.046 DE 23 DE JULHO DE 2015
 
@@ -51,8 +49,6 @@ VII - a conservação e recuperação do solo.
 
 **Art. 3º** - O Programa de Pagamento por Serviços Ambientais (PSA) segue as diretrizes gerais definidas na Lei Orgânica do Município, no Plano Diretor do Município, nos Planos Locais de Gestão Urbana e nas diretrizes específicas definidas no Plano Municipal de Recursos Hídricos, no Plano Municipal do Verde, no Plano Municipal de Saneamento Básico, no Plano Municipal de Desenvolvimento Rural e em outros dispositivos que disciplinem diretrizes específicas sobre os recursos naturais.
 
-2/13
-
 **Art. 4º** - O PSA será implementado por meio de Subprogramas e Projetos de Pagamento por Serviços Ambientais, com vistas a atender aos critérios de prioridade de conservação e recuperação dos recursos naturais.
 
 #### CAPÍTULO II - DAS DEFINIÇÕES
@@ -73,8 +69,6 @@ c) serviços de regulação: os que concorrem para a manutenção da estabilidad
 
 d) serviços culturais: os que proveem benefícios recreacionais, estéticos, de bem-estar ou outros benefícios imateriais à sociedade humana;
 
-3/13
-
 IV - pagamento por serviços ambientais: mecanismo de compensação, monetária ou não, de insumos ou de incentivos, baseado no princípio do provedor-recebedor, no qual os fornecedores de serviços ambientais são compensados por esses serviços, para estímulo à proteção e recuperação ambiental, amparados por subprogramas e projetos;
 
 V - provedor de serviços ambientais: pessoa física ou jurídica, de direito público ou privado, grupo familiar ou comunitário que, preenchidos os critérios de elegibilidade, mantém, recupera ou melhora as condições ambientais de ecossistemas que prestam serviços ambientais;
@@ -93,8 +87,6 @@ XI - serviços hídricos: manutenção da qualidade hídrica por meio da regula�
 
 XII - sociobiodiversidade: inter-relação entre os recursos naturais e os sistemas sociais, gerando bens e serviços voltados a cadeias direta ou indiretamente ligadas à proteção dos serviços ambientais e que promovam a manutenção e valoração das práticas socioculturais, assegurando a geração de renda e a promoção da qualidade de vida e do meio ambiente em que vivem;
 
-4/13
-
 XIII - produtos ecossistêmicos: produtos resultantes dos processos ecossistêmicos e/ou obtidos dos ecossistemas, tais como água, carbono, alimentos e fibras, madeira, recursos genéticos e extratos naturais, medicinais, farmacêuticos e ornamentais, entre outros;
 
 XIV - regulação do clima: manejo e preservação dos ecossistemas naturais, que contribuam para o equilíbrio climático e o conforto térmico em benefício da coletividade;
@@ -110,8 +102,6 @@ XVI - emissões: liberação de substâncias gasosas na atmosfera, considerando-
 **Art. 6º** - O PSA considerará os princípios gerais nacionais e internacionais sobre o tema, em especial a existência de responsabilidades comuns, porém diferenciadas, entre os atores públicos e privados; a precaução para se evitar ou minimizar as causas das mudanças climáticas; a participação social na formulação, gestão, monitoramento, avaliação e revisão do Programa e de seus Subprogramas e Projetos; a transparência, eficiência e efetividade na administração dos recursos financeiros.
 
 **§ 1º** - O PSA deverá seguir os seguintes princípios:
-
-5/13
 
 I -uso dos recursos naturais com responsabilidade e conhecimento técnico, para proteção e integridade em benefício das presentes e futuras gerações;
 
@@ -139,11 +129,7 @@ XII - prioridade para áreas sob maior risco socioambiental;
 
 XIII - transparência, eficiência e efetividade na administração dos recursos financeiros, com participação social no planejamento, gestão, acompanhamento, avaliação e revisão dos seus Subprogramas e Projetos.
 
-**§ 2º** - O Poder Público Municipal é competente para a gestão, o planejamento, a formulação, a implementação, o monitoramento, a avaliação de ações e a criação de normas que objetivem a proteção do meio ambiente e, dessa forma,
-
-6/13
-
-a intensificação de práticas para aumento de áreas verdes e proteção dos recursos hídricos, tendo em vista a sua crescente escassez, a redução de emissões de gases de efeito estufa, a manutenção de estoques de carbono florestal no Município e a provisão e conservação de outros serviços ambientais e produtos ecossistêmicos.
+**§ 2º** - O Poder Público Municipal é competente para a gestão, o planejamento, a formulação, a implementação, o monitoramento, a avaliação de ações e a criação de normas que objetivem a proteção do meio ambiente e, dessa forma, a intensificação de práticas para aumento de áreas verdes e proteção dos recursos hídricos, tendo em vista a sua crescente escassez, a redução de emissões de gases de efeito estufa, a manutenção de estoques de carbono florestal no Município e a provisão e conservação de outros serviços ambientais e produtos ecossistêmicos.
 
 #### CAPÍTULO IV - DOS INSTRUMENTOS DO PSA
 
@@ -185,8 +171,6 @@ VII - Projeto de Incentivo às Reservas Particulares do Patrimônio Natural (RPP
 
 **Parágrafo único.** - Os Subprogramas e Projetos mencionados no caput deste artigo e as condições de sua implementação, monitoramento e avaliação e normas complementares serão definidos em decreto regulamentador, atendidas as disponibilidades orçamentárias, sob competência da Secretaria do Verde, Meio Ambiente e Desenvolvimento Sustentável (SVDS), ouvido o Conselho Diretor do PSA.
 
-7/13
-
 **Art. 9º** - É permitida a sobreposição de ações na mesma área de serviços ambientais desde que tecnicamente justificada e com a aprovação do Conselho Diretor do PSA, desde que não acarrete acúmulo de incentivo de ordem monetária e sobreposição de ordem não monetária, nos termos de decreto regulamentador específico.
 
 ##### Seção II - Do Conselho Diretor do PSA
@@ -225,8 +209,6 @@ V - elaborar e apresentar relatórios anuais de suas atividades e conferir trans
 
 VI - outras atribuições que venham a ser definidas em decreto regulamentador;
 
-8/13
-
 VII - os representantes, titulares e suplentes indicados conforme dispõe o artigo anterior não receberão remuneração para integrarem o Conselho Diretor do PSA.
 
 **Parágrafo único.** - Será definido um Agente Técnico-Financeiro, responsável pelo gerenciamento e/ou liberação de recursos aprovados pelo Conselho Diretor do PSA, nos termos da lei vigente, com a atribuição ainda de prestar apoio técnico ao Conselho Diretor do PSA.
@@ -251,11 +233,7 @@ VII - os representantes, titulares e suplentes indicados conforme dispõe o arti
 
 **§ 1º** - Os provedores, para serem considerados beneficiários do PSA, devem ser integrados aos Subprogramas e Projetos aprovados nos termos desta Lei e cumprir os requisitos neles previstos, sejam pessoas físicas, sejam jurídicas, em área urbana ou rural.
 
-**§ 2º** - Os requisitos gerais de elegibilidade do presente Título não excluem as
-
-9/13
-
-obrigações legais vinculadas à propriedade.
+**§ 2º** - Os requisitos gerais de elegibilidade do presente Título não excluem as obrigações legais vinculadas à propriedade.
 
 #### CAPÍTULO II - DO ENQUADRAMENTO AMBIENTAL DA ÁREA SUBME- TIDA AO PSA
 
@@ -281,11 +259,7 @@ IV - em condição de infrator ambiental: aquele proponente responsabilizado pen
 
 **Art. 18.** - Atendidos os requisitos de elegibilidade, o Termo de Habilitação para receber os benefícios será emitido pelo Conselho Diretor do PSA.
 
-**§ 1º** - O Termo de Habilitação firmado pelo provedor de serviços ambientais e pela Prefeitura Municipal de Campinas terá as definições dos compromissos
-
-10/13
-
-assumidos, requisitos, prazos de execução e demais condições a serem cumpridas pelo provedor de serviços ambientais para fazer jus ao incentivo, a serem fixadas por decreto regulamentador.
+**§ 1º** - O Termo de Habilitação firmado pelo provedor de serviços ambientais e pela Prefeitura Municipal de Campinas terá as definições dos compromissos assumidos, requisitos, prazos de execução e demais condições a serem cumpridas pelo provedor de serviços ambientais para fazer jus ao incentivo, a serem fixadas por decreto regulamentador.
 
 **§ 2º** - O Conselho Diretor pode indeferir a habilitação sempre que julgar necessário, desde que justificado por parecer técnico e ouvida a Junta Administrativa de Recursos da SVDS.
 
@@ -304,8 +278,6 @@ IV - Classe IV: não dará direito ao recebimento de incentivos monetários e/ou
 **§ 2º** - As áreas verdes, as matas ciliares, as Áreas de Proteção Permanente - APPs e os demais ecossistemas objeto de condicionantes, compensações, mitigações e contrapartidas de projetos do Licenciamento Ambiental concedidos pelos órgãos públicos competentes nas esferas federal, estadual e municipal estão impedidos de se habilitarem ao PSA.
 
 **§ 3º** - Também não se aplica o disposto na presente Lei aos proprietários de imóveis que gozem do benefício de isenção do Imposto sobre a Propriedade Predial e Territorial Urbana - IPTU, nos termos do art. 14 do Decreto nº 16.974, de 04 de fevereiro de 2010.
-
-11/13
 
 **§ 4º** - Os incentivos a serem concedidos aos provedores de serviços ambientais deverão ser proporcionais aos serviços prestados, considerando a extensão e as características da área submetida ao PSA, os custos de oportunidade e as ações efetivamente realizadas.
 
@@ -326,8 +298,6 @@ IV - Classe IV: não dará direito ao recebimento de incentivos monetários e/ou
 I - dotações consignadas nas leis orçamentárias anuais a favor do Fundo de Recuperação, Manutenção e Preservação do Meio Ambiente (PROAMB) e/ou do Fundo Municipal de Prevenção e Reparação de Direitos Difusos e Coletivos (FUNDIF);
 
 II - doações realizadas por entidades nacionais e internacionais, na forma da legislação vigente, e por outras pessoas físicas ou jurídicas, a favor do PROAMB e/ou FUNDIF;
-
-12/13
 
 III - rendimentos das aplicações dos recursos do PROAMB e/ou FUNDIF;
 
@@ -353,11 +323,7 @@ II - recursos oriundos de acordos judiciais.
 
 **Art. 25.** - O município de Campinas poderá desenvolver termo de cooperação com órgãos do Governo Federal e/ou Estadual, bem como com entidades internacionais públicas e privadas, para implementação das ações previstas nesta Lei.
 
-**Art. 26.** - Fica o Município autorizado, por si ou por meio de sua administração indireta, a alienar créditos decorrentes de serviços ambientais e produtos
-
-13/13
-
-ecossistêmicos de titularidade do Município, desde que devidamente reconhecidos ou certificados, tais como:
+**Art. 26.** - Fica o Município autorizado, por si ou por meio de sua administração indireta, a alienar créditos decorrentes de serviços ambientais e produtos ecossistêmicos de titularidade do Município, desde que devidamente reconhecidos ou certificados, tais como:
 
 I - emissão evitada de carbono em florestas naturais e reflorestamento de áreas degradadas ou convertidas para uso alternativo do solo, vinculada a subprogramas, planos de ação e projetos do Programa ISA Carbono, nos termos da legislação em vigor;
 

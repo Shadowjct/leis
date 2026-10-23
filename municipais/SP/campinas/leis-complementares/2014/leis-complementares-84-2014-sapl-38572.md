@@ -11,13 +11,11 @@ versao_texto: "texto integral anexado no SAPL municipal; AUTORIA: EXECUTIVO MUNI
 fonte: "https://sapl.campinas.sp.leg.br/norma/38572"
 fonte_texto: "https://sapl.campinas.sp.leg.br/media/sapl/public/normajuridica/2014/38572/38572_texto_integral.pdf"
 sha256_fonte: "1bced84a1ba6df1454df7d112083d34638a9fdae261dd9a9ab651ea89e6895de"
-sha256_texto: "d0eaf5cb1e95ff4266d2ec56d680c36d970192946ef8119313152ad496665082"
+sha256_texto: "f77182d3f37706a6a70ee8c6b824e7c512b1c00a035babf884be841715c6ea10"
 baixado_em: "2026-10-21"
 ---
 
 # Lei Complementar nº 84, de 24 de outubro de 2014
-
-1/3
 
 LEI COMPLEMENTAR Nº 84 DE 24 DE OUTUBRO DE 2014 .
 
@@ -39,11 +37,7 @@ III - Lote 04 da quadra 11 do loteamento Jardim do Lago Continuação, com área
 
 **§3º** - Tais imóveis poderão ser objeto de anexação, subdivisão ou qualquer outro ato que viabilize o melhor aproveitamento para construção de empreendimento habitacional.
 
-**Art. 2º** - Os bens imóveis descritos no artigo 1o desta Lei Complementar serão utilizados exclusivamente no âmbito do Programa Minha Casa Minha Vida - PMCMV 2 e constarão dos bens e direitos integrantes do FAR - Fundo de Arrendamento Residencial, com fins específicos de manter a segregação patrimonial e contábil dos haveres financeiros e imobiliários, observadas,
-
-2/3
-
-quanto a tais bens, as seguintes restrições:
+**Art. 2º** - Os bens imóveis descritos no artigo 1o desta Lei Complementar serão utilizados exclusivamente no âmbito do Programa Minha Casa Minha Vida - PMCMV 2 e constarão dos bens e direitos integrantes do FAR - Fundo de Arrendamento Residencial, com fins específicos de manter a segregação patrimonial e contábil dos haveres financeiros e imobiliários, observadas, quanto a tais bens, as seguintes restrições:
 
 I - não integre o ativo da Caixa Econômica Federal;
 
@@ -74,8 +68,6 @@ II - a construção das unidades habitacionais não tiver início em até 36 (tr
 I - ITBI - Imposto de Transmissão de Bens Imóveis:
 
 a) quando da transferência da propriedade dos imóveis do Município para o Donatário, na efetivação da doação;
-
-3/3
 
 b) quando da transferência da propriedade das unidades habitacionais produzidas aos beneficiários pelo donatário, efetivada pela Caixa Econômica Federal.
 
