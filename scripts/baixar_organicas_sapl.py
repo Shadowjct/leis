@@ -142,13 +142,17 @@ def contadores_de_folha(paragrafos):
     Em PDFs de 2014 a 2017 o cabeçalho vem como "CÂMARAMUNICIPAL DE CAMPINAS" e o contador na linha de baixo;
     o conversor tira o cabeçalho como linha repetida e o contador fica sozinho. Só conta como contador a
     sequência: dois ou mais, começando em 1, crescentes e com o mesmo total (uma fração solta no texto fica).
+    Quando as primeiras folhas trazem o contador colado ao cabeçalho, que sai com ele, a sequência solta começa
+    depois ("10/135"); aí valem três ou mais seguidos.
     """
     achados = [(i, CONTADOR_FOLHA.fullmatch(p.strip())) for i, p in enumerate(paragrafos)]
     achados = [(i, int(m[1]), int(m[2])) for i, m in achados if m]
     folhas = [k for _, k, _ in achados]
     totais = {t for _, _, t in achados}
-    if (len(achados) >= 2 and folhas[0] == 1 and len(totais) == 1 and folhas[-1] <= min(totais)
-            and all(a < b for a, b in zip(folhas, folhas[1:]))):
+    seguidos = all(b == a + 1 for a, b in zip(folhas, folhas[1:]))
+    if (len(achados) >= 2 and len(totais) == 1 and folhas[-1] <= min(totais)
+            and all(a < b for a, b in zip(folhas, folhas[1:]))
+            and (folhas[0] == 1 or len(folhas) >= 3 and seguidos)):
         return {i for i, _, _ in achados}
     return set()
 

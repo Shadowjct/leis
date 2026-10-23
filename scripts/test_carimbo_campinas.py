@@ -150,6 +150,16 @@ class CabecalhoDePagina(unittest.TestCase):
         corpo, _ = limpar_carimbo_campinas("\n\n".join(["1/19", LEI, "2/19", "Anexo I.", "4/19", "Anexo II."]))
         self.assertEqual(corpo, "\n\n".join([LEI, "Anexo I.", "Anexo II."]))
 
+    def test_contador_solto_que_comeca_depois_da_primeira_folha(self):
+        # Lei 10.760/2000: até a folha 9 o contador vem colado ao cabeçalho e sai com ele; da 10ª em diante fica sozinho
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, "10/135", "Receitas correntes.", "11/135", "Receitas de capital.", "12/135"]))
+        self.assertEqual(corpo, "\n\n".join([LEI, "Receitas correntes.", "Receitas de capital."]))
+
+    def test_sequencia_que_nao_comeca_em_1_precisa_ser_seguida(self):
+        for fracoes in (["2/4", "3/4"], ["3/9", "5/9", "6/9"]):
+            corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, *fracoes]))
+            self.assertEqual(corpo, "\n\n".join([LEI, *fracoes]), fracoes)
+
     def test_fracao_solta_no_texto_nao_e_contador(self):
         for fracoes in (["1/2"], ["1/2", "1/2"], ["2/3", "3/3"], ["1/3", "2/4"], ["1/2", "3/2"]):
             corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, *fracoes]))
