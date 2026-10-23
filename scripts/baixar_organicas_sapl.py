@@ -112,6 +112,16 @@ def motivo_retencao(cache, identificador, bruto):
     return None
 
 
+def data_diverge_do_ano(norma):
+    """A data do cadastro é de outro ano, mas o ano da norma e o da publicação concordam entre si.
+
+    Erro de digitação na data (Campinas: Lei 11.551 "de 05/03/2000", publicada em 13/05/2003 e
+    assinada em 12/05/2003): a data e a pasta sairiam erradas. Não corrige; retém para revisão.
+    """
+    data, ano = norma.get("data") or "", str(norma["ano"])
+    return bool(data) and data[:4] != ano and str(norma.get("data_publicacao") or "")[:4] == ano
+
+
 CARIMBO_CAMPINAS = [
     # nas leis de 2002 a capa ainda não tinha a Diretoria de Gestão Documental
     re.compile(r"(?:CÂMARA MUNICIPAL DE CAMPINAS (?:Estado de São Paulo )?)?(?:Diretoria de Gestão Documental )?Coordenadoria de Biblioteca "
@@ -350,6 +360,9 @@ def executar(fontes, rps, modo="organicas", max_documentos=0, ano_filtro=None, s
                                 data = ""
                                 ano_documento = "1990"
                                 observacao_data = "Texto integral assinado apenas com ano de 1990; cadastro apresenta 2011-11-04, sem confirmação no documento."
+                            if not observacao_data and data_diverge_do_ano(n):
+                                raise RuntimeError(f"data do cadastro ({data}) diverge do ano da norma ({n['ano']}) e da publicação "
+                                                   f"({n['data_publicacao']}); revisar")
                             ano = data[:4] if data else ano_documento
                             numero = str(n["numero"])
                             titulo = n["__str__"]
