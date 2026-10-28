@@ -1,0 +1,81 @@
+name: Ingestao complementar de leis estaduais da Bahia (ALBA)
+
+on:
+  workflow_dispatch:
+    inputs:
+      data_inicial:
+        description: Data inicial da edicao no Diario ALBA (AAAA-MM-DD)
+        type: string
+        required: true
+        default: "2026-01-29"
+      dias:
+        description: Numero de dias corridos (1 a 7)
+        type: string
+        required: true
+        default: "1"
+      max_novas:
+        description: Limite de novas leis nesta execucao (1 a 40)
+        type: string
+        required: true
+        default: "15"
+      simular:
+        description: Somente conferir fontes, sem gravar no repositorio
+        type: boolean
+        required: true
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingestao-ba-alba-main
+  cancel-in-progress: false
+
+jobs:
+  importar:
+    if: github.repository == 'Shadowjct/leis' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Recuperar apenas o script no SHA da main (sem checkout)
+        env:
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          repo = os.environ["REPO"]
+          sha = os.environ["SHA"]
+          if repo != "Shadowjct/leis" or not re.fullmatch(r"[0-9a-f]{40}", sha):
+              raise SystemExit("Repositorio ou revisao inesperada")
+          url = f"https://raw.githubusercontent.com/{repo}/{sha}/scripts/ingestao_ba_alba.py"
+          with urlopen(Request(url, headers={"User-Agent":"leis-bahia-alba/1.0"}), timeout=35) as response:
+              script = response.read()
+          p = Path("scripts/ingestao_ba_alba.py")
+          p.parent.mkdir(parents=True, exist_ok=True)
+          p.write_bytes(script)
+          print("Script obtido:", len(script), "bytes")
+          PY
+      - name: Conferir sintaxe e testes embutidos do coletor
+        run: |
+          python -m py_compile scripts/ingestao_ba_alba.py
+      - name: Consultar ALBA e publicar somente leis novas
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: refs/heads/main
+          DATA_INICIAL: ${{ inputs.data_inicial }}
+          DIAS: ${{ inputs.dias }}
+          MAX_NOVAS: ${{ inputs.max_novas }}
+          SIMULAR: ${{ inputs.simular }}
+        run: |
+          if [ "$SIMULAR" = "true" ]; then
+            python -I scripts/ingestao_ba_alba.py --data-inicial "$DATA_INICIAL" \
+              --dias "$DIAS" --max-novas "$MAX_NOVAS" --simular
+          else
+            python -I scripts/ingestao_ba_alba.py --data-inicial "$DATA_INICIAL" \
+              --dias "$DIAS" --max-novas "$MAX_NOVAS"
+          fi
