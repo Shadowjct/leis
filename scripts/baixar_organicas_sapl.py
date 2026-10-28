@@ -92,9 +92,14 @@ def corpo_integral_reconhecivel(corpo, emenda=False):
     # Algumas emendas transcrevem primeiro o artigo que alteram; o próprio ato
     # usa PROMULGA/PROMULGAM e traz sua cláusula de vigência, sem um Art. 1º.
     # Não corrige nem adivinha numeração eventualmente reconhecida por OCR.
-    return bool(emenda and len(corpo) > 500
-                and re.search(r"\bpromulg(?:o|a|am|amos)\b", corpo, re.I)
-                and re.search(r"vigorar|vigor", corpo, re.I))
+    promulga = re.search(r"\bpromulg(?:o|a|am|amos)\b", corpo, re.I) if emenda and len(corpo) > 500 else None
+    if not promulga:
+        return False
+    # Sem cláusula de vigência, vale a assinatura de encerramento depois da promulgação
+    # (data seguida de Presidente da Mesa): o texto chega ao fim do ato. Citar o
+    # Presidente no texto transcrito não basta.
+    assinatura = re.search(r"\d{1,2}º?\.? de \w+ de \d[\d.]*\W.{0,120}?\bPresidente\b", corpo[promulga.end():], re.I | re.S)
+    return bool(re.search(r"vigorar|vigor", corpo, re.I) or assinatura)
 
 
 def motivo_retencao(cache, identificador, bruto):
@@ -110,30 +115,87 @@ def motivo_retencao(cache, identificador, bruto):
 CARIMBO_CAMPINAS = [
     re.compile(r"(?:CÂMARA MUNICIPAL DE CAMPINAS Estado de São Paulo )?Diretoria de Gestão Documental Coordenadoria de Biblioteca "
                r"\S+@campinas\.sp\.leg\.br(?: –| -)? ?(?:Ramal:? ?\d+)?"),
-    re.compile(r"Avenida da Saudade, nº 1\.004 – Ponte Preta – CEP: 13041-670 – Campinas – SP – PABX: \(19\) 3736-1300\.?(?: www\.campinas\.sp\.leg\.br)?"),
+    # o OCR lê os travessões como hífen
+    re.compile(r"Avenida da Saudade, nº 1\.004 [–-] Ponte Preta [–-] CEP: 13041-670 [–-] Campinas [–-] SP [–-] PABX: \(19\) 3736-1300\.?(?: www\.campinas\.sp\.leg\.br)?"),
 ]
 # a fonte tem erros de grafia nesta linha ("Municipio", "Municípo", "Campina"); a data também varia ("1º de outubro", "novembrode")
 AVISO_NAO_SUBSTITUI_CAMPINAS = re.compile(
     r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial do Munic\w+(?: de Campinas?)? em \d{1,2}º? de \w+ ?de \d{4}")
+AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS = re.compile(
+    r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial da Câmara Municipal de Campinas em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_REPRODUZIDO_CAMPINAS = re.compile(
-    r"Texto para consulta, reproduzido conforme a publicação no Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
+    r"Texto para consulta, reproduzido conforme (?:a )?publicação(?: extra)? (?:no|do) Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
+# às vezes sob um fio de sublinhados, que o conversor escapa como "\_"
+AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(r"(?:(?:\\_)+ )?Texto somente para consulta, sem valor legal\.?")
+# cabeçalho de cada folha dos PDFs antigos; o total some em alguns ("CÂMARA MUNICIPAL DE CAMPINAS 10/") e há folhas sem contador.
+# Anexos copiados de suplementos do Diário Oficial trazem o cabeçalho corrente dele, com número de folha e às vezes a data.
+PAGINA_CAMPINAS = re.compile(
+    r"CÂMARA MUNICIPAL DE CAMPINAS(?: \d+/\d*)?"
+    r"|(?:\d+ )?Diário Oficial do Município de Campinas(?: Campinas, \w+-feira, \d{1,2} de \w+ de \d{4})?(?: \d+)?(?: PREF[EI]TURA MUNICIPAL DE CAMPINAS)?")
 SUPLEMENTO_CAMPINAS = re.compile(r"TABELAS? [^.\n]{0,80}PUBLICADAS? EM SUPLEMENTO", re.I)
+CONTADOR_FOLHA = re.compile(r"(\d+)/(\d+)")
+
+
+def contadores_de_folha(paragrafos):
+    """Parágrafos que são só o contador de folha ("2/19").
+
+    Em PDFs de 2014 a 2017 o cabeçalho vem como "CÂMARAMUNICIPAL DE CAMPINAS" e o contador na linha de baixo;
+    o conversor tira o cabeçalho como linha repetida e o contador fica sozinho. Só conta como contador a
+    sequência: dois ou mais, começando em 1, crescentes e com o mesmo total (uma fração solta no texto fica).
+    """
+    achados = [(i, CONTADOR_FOLHA.fullmatch(p.strip())) for i, p in enumerate(paragrafos)]
+    achados = [(i, int(m[1]), int(m[2])) for i, m in achados if m]
+    folhas = [k for _, k, _ in achados]
+    totais = {t for _, _, t in achados}
+    if (len(achados) >= 2 and folhas[0] == 1 and len(totais) == 1 and folhas[-1] <= min(totais)
+            and all(a < b for a, b in zip(folhas, folhas[1:]))):
+        return {i for i, _, _ in achados}
+    return set()
+
+
+def frase_continua_na_pagina_seguinte(anterior, proximo):
+    """A folha terminou no meio da frase: último termo em minúscula, sem pontuação final, e o próximo não abre dispositivo."""
+    termos = anterior.split()
+    return bool(termos and re.match(r"[a-zà-ú]", termos[-1]) and not anterior.rstrip().endswith(tuple('.;:!?"”)'))
+                and not proximo.startswith(("**", "#")))
 
 
 def limpar_carimbo_campinas(corpo):
-    """Remove só a capa e o rodapé da biblioteca da Câmara (parágrafo inteiro, correspondência exata).
+    """Remove só os carimbos da biblioteca da Câmara (parágrafo inteiro, correspondência exata).
 
     Retorna (corpo, notas): o aviso da cópia de consulta e os anexos em suplemento vão para `versao_texto`.
+    Onde o cabeçalho de folha cai no meio de uma frase, ele sai e a frase é reunida.
     """
     mantidos, notas = [], []
-    for par in corpo.split("\n\n"):
+    quebra_de_pagina = False
+    # espaço de largura zero é artefato de cópia do Word ("\u200bcaput"): invisível, mas quebra a busca.
+    # Retorno de carro solto não tem função em Markdown e faz a auditoria em disco (read_text) recalcular outro hash.
+    paragrafos = corpo.replace("\u200b", "").replace("\r\n", "\n").replace("\r", "\n").split("\n\n")
+    contadores = contadores_de_folha(paragrafos)
+    for i, par in enumerate(paragrafos):
         plano = re.sub(r"\s+", " ", par).strip()
+        capa = CARIMBO_CAMPINAS[0].match(plano)
+        if capa:  # a capa pode vir fundida com o aviso no mesmo parágrafo
+            plano = par = plano[capa.end():].strip()
+            if not plano:
+                continue
+        if PAGINA_CAMPINAS.fullmatch(plano) or i in contadores:
+            quebra_de_pagina = True
+            continue
         if AVISO_NAO_SUBSTITUI_CAMPINAS.fullmatch(plano):
             notas.append("cópia de consulta da Câmara, não substitui o Diário Oficial do Município")
+        elif AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS.fullmatch(plano):
+            notas.append("cópia de consulta da Câmara, não substitui o Diário Oficial da Câmara Municipal")
         elif AVISO_REPRODUZIDO_CAMPINAS.fullmatch(plano):
             notas.append("cópia de consulta da Câmara, reproduzida conforme a publicação no Diário Oficial do Município")
+        elif AVISO_SEM_VALOR_LEGAL_CAMPINAS.fullmatch(plano):
+            notas.append("cópia de consulta da Câmara, sem valor legal")
         elif not any(r.fullmatch(plano) for r in CARIMBO_CAMPINAS):
-            mantidos.append(par)
+            if quebra_de_pagina and mantidos and frase_continua_na_pagina_seguinte(mantidos[-1], par):
+                mantidos[-1] = mantidos[-1] + " " + par
+            else:
+                mantidos.append(par)
+            quebra_de_pagina = False
     corpo = "\n\n".join(mantidos)
     if SUPLEMENTO_CAMPINAS.search(corpo):
         notas.append("tabelas e anexos publicados em suplemento, ausentes do texto integral")

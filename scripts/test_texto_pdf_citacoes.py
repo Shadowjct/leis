@@ -23,6 +23,15 @@ class CitacaoQuebradaNaLinha(unittest.TestCase):
         corpo = texto_pdf_para_md("Art. 2º Esta Lei entra em vigor.\nLEI Nº 5, DE 1 DE JANEIRO DE 2000\nArt. 1º Texto.\n")
         self.assertEqual(corpo.strip().count("\n\n"), 2)
 
+    def test_ementa_em_maiusculas_que_termina_em_conectivo_continua(self):
+        corpo = texto_pdf_para_md("REVOGA O ITEM 6 DO INCISO XIV DO ART. 27 DA\n"
+                                  "LEI Nº 6.031, DE 28 DE DEZEMBRO DE 1988, QUE DISPÕE SOBRE O USO DO SOLO.\n")
+        self.assertEqual(corpo.strip().count("\n\n"), 0)
+
+    def test_letra_isolada_em_maiuscula_nao_e_conectivo(self):
+        corpo = texto_pdf_para_md("ANEXO A\nANEXO B\n")
+        self.assertEqual(corpo.strip().count("\n\n"), 1)
+
     def test_inciso_terminado_em_e_ainda_abre_novo_bloco(self):
         corpo = texto_pdf_para_md("Art. 3º Compete:\nI - fiscalizar; e\nII - julgar.\n")
         self.assertIn("\n\n", corpo.strip())
