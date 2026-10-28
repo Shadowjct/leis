@@ -1,0 +1,169 @@
+name: Ingestao incremental Uberlandia (sem checkout do acervo)
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_edicoes:
+        description: Numero de edicoes recentes do Diario Oficial (1-60)
+        required: true
+        default: "30"
+        type: string
+      max_novas:
+        description: Limite de novas normas publicadas por execucao (1-100)
+        required: true
+        default: "40"
+        type: string
+      simular:
+        description: Somente conferir o lote, sem publicar commits
+        required: true
+        default: true
+        type: boolean
+  schedule:
+    - cron: "17 10 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingestao-uberlandia-main
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    if: github.repository == 'Shadowjct/leis' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Recuperar apenas os quatro scripts do commit exato, sem checkout
+        env:
+          COMMIT_REF: ${{ github.sha }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          import os
+          import re
+
+          repo = os.environ["REPOSITORY"]
+          sha = os.environ["COMMIT_REF"]
+          if repo != "Shadowjct/leis" or not re.fullmatch(r"[0-9a-f]{40}", sha):
+              raise SystemExit("Repositório ou SHA inesperado")
+          for name in ("baixar_uberlandia.py", "test_baixar_uberlandia.py", "comum.py", "html2md.py"):
+              url = f"https://raw.githubusercontent.com/{repo}/{sha}/scripts/{name}"
+              with urlopen(Request(url, headers={"User-Agent": "leis-ingestao/1.0"}), timeout=30) as r:
+                  raw = r.read()
+              dest = Path("scripts") / name
+              dest.parent.mkdir(parents=True, exist_ok=True)
+              dest.write_bytes(raw)
+              print("Script recuperado:", name, len(raw), "bytes")
+          PY
+      - name: Testes de regressao do coletor
+        run: python -m unittest discover -s scripts -p 'test_baixar_uberlandia.py' -v
+
+      - name: Coletar edicoes oficiais recentes para diretorio efemero
+        env:
+          MAX_EDICOES: ${{ inputs.max_edicoes || '30' }}
+        run: |
+          python - <<'PY'
+          import os
+          n = int(os.environ["MAX_EDICOES"])
+          if not 1 <= n <= 60:
+              raise SystemExit("max_edicoes deve estar entre 1 e 60")
+          PY
+          python -I scripts/baixar_uberlandia.py --max-edicoes "$MAX_EDICOES" --categorias "Lei Ordinária,Lei Complementar,Decreto"
+
+      - name: Conferir e publicar apenas documentos novos via Contents API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_NOVAS: ${{ inputs.max_novas || '40' }}
+          SIMULAR: ${{ inputs.simular || 'false' }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import base64
+          import json
+          import os
+          import re
+          from pathlib import Path
+          from urllib.error import HTTPError
+          from urllib.parse import quote
+          from urllib.request import Request, urlopen
+
+          repo = os.environ["REPOSITORY"]
+          token = os.environ["GH_TOKEN"]
+          if repo != "Shadowjct/leis" or not token:
+              raise SystemExit("Publicação autorizada somente no fork com token")
+          max_novas = int(os.environ["MAX_NOVAS"])
+          if not 1 <= max_novas <= 100:
+              raise SystemExit("max_novas deve estar entre 1 e 100")
+          dry_run = os.environ["SIMULAR"].lower() in ("true", "1", "yes")
+          prefix = Path("municipais/MG/uberlandia")
+          paths = sorted(prefix.rglob("*.md")) if prefix.exists() else []
+          hdr = {
+              "Authorization": "Bearer " + token,
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "leis-ingestao/1.0",
+          }
+
+          def github_api(method, path, payload=None):
+              url = "https://api.github.com/repos/" + repo + "/contents/" + quote(path, safe="/")
+              if method == "GET":
+                  url += "?ref=main"
+              data = json.dumps(payload, ensure_ascii=False).encode("utf-8") if payload is not None else None
+              request = Request(url, headers=hdr, data=data, method=method)
+              if data is not None:
+                  request.add_header("Content-Type", "application/json")
+              try:
+                  with urlopen(request, timeout=35) as response:
+                      return response.status, json.loads(response.read())
+              except HTTPError as ex:
+                  if ex.code == 404 and method == "GET":
+                      return 404, None
+                  details = ex.read().decode("utf-8", "replace")[:400]
+                  raise RuntimeError(f"GitHub API {method} falhou HTTP {ex.code}: {details}") from ex
+
+          novos = existentes = 0
+          for file in paths:
+              rel = file.as_posix()
+              content = file.read_text(encoding="utf-8")
+              if not (content.startswith("---\n")
+                      and "\n---\n" in content[4:]
+                      and 'fonte: "https://diario.uberlandia.mg.gov.br/documento/' in content
+                      and re.search(r'^sha256_fonte: "[0-9a-f]{64}"$', content, re.M)
+                      and re.search(r'^sha256_texto: "[0-9a-f]{64}"$', content, re.M)
+                      and rel.startswith("municipais/MG/uberlandia/")):
+                  raise SystemExit(f"Documento sem procedencia verificavel: {rel}")
+              status, existing = github_api("GET", rel)
+              if status == 200:
+                  existentes += 1
+                  continue
+              if status != 404:
+                  raise SystemExit(f"Status inesperado ao consultar {rel}: {status}")
+              if novos >= max_novas:
+                  continue
+              if dry_run:
+                  print("SIMULACAO novo:", rel)
+              else:
+                  payload = {
+                      "message": "feat(uberlandia): incluir norma do DOM " + file.stem,
+                      "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
+                      "branch": "main",
+                  }
+                  status_put, result = github_api("PUT", rel, payload)
+                  if status_put != 201:
+                      raise SystemExit(f"Criacao nao confirmada {rel}: {status_put}")
+                  sha_new = result["content"]["sha"]
+                  status_check, check = github_api("GET", rel)
+                  if status_check != 200 or check.get("sha") != sha_new:
+                      raise SystemExit(f"Leitura de persistencia falhou: {rel}")
+                  print("PUBLICADO e verificado:", rel, result["commit"]["sha"])
+              novos += 1
+          resumo = f"Uberlandia | modo={'simulacao' if dry_run else 'publicacao'} | gerados={len(paths)} | existentes={existentes} | novos={novos} | limite={max_novas}"
+          print(resumo)
+          summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary_file:
+              with open(summary_file, "a", encoding="utf-8") as f:
+                  f.write("## Ingestão oficial incremental\n\n" + resumo + "\n")
+          PY
