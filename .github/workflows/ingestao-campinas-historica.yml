@@ -1,0 +1,209 @@
+name: Ingestao historica Campinas SAPL (sem checkout do acervo)
+
+on:
+  workflow_dispatch:
+    inputs:
+      ano:
+        description: Ano das leis municipais, entre 1949 e 1999
+        required: true
+        default: "1999"
+        type: string
+      max_documentos:
+        description: Quantidade maxima de novas conversoes (1-30)
+        required: true
+        default: "8"
+        type: string
+      simular:
+        description: Conferir fonte e arquivos sem publicar commits
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingestao-campinas-historica-main
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    if: github.repository == 'Shadowjct/leis' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Recuperar somente sete scripts da main (sem checkout)
+        env:
+          REPOSITORY: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          from urllib.request import Request, urlopen
+          from pathlib import Path
+          import os
+          import re
+
+          sha, repo = os.environ["SHA"], os.environ["REPOSITORY"]
+          if repo != "Shadowjct/leis" or not re.fullmatch(r"[0-9a-f]{40}", sha):
+              raise SystemExit("Repositorio ou SHA inesperado")
+          names = (
+              "baixar_organicas_sapl.py", "comum.py", "html2md.py",
+              "granularidade_sapl.py", "test_carimbo_campinas.py",
+              "test_texto_pdf_citacoes.py", "test_sapl_integralidade.py",
+          )
+          for name in names:
+              url = f"https://raw.githubusercontent.com/{repo}/{sha}/scripts/{name}"
+              with urlopen(Request(url, headers={"User-Agent": "leis-ingestao/1.0"}), timeout=30) as response:
+                  data = response.read()
+              dest = Path("scripts") / name
+              dest.parent.mkdir(parents=True, exist_ok=True)
+              dest.write_bytes(data)
+              print("Script:", name, len(data), "bytes")
+          PY
+
+      - name: Recuperar indice oficial IBGE apenas para validar municipio
+        run: |
+          python - <<'PY'
+          import gzip
+          import json
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+
+          url = "https://servicodados.ibge.gov.br/api/v1/localidades/municipios"
+          with urlopen(Request(url, headers={"User-Agent": "leis-ingestao/1.0", "Accept-Encoding": "identity"}), timeout=45) as response:
+              data = response.read()
+          if data[:2] == b"\x1f\x8b":
+              data = gzip.decompress(data)
+          docs = json.loads(data.decode("utf-8"))
+          match = [m for m in docs if m["id"] == 3509502 and m["nome"] == "Campinas"
+                   and m["regiao-imediata"]["regiao-intermediaria"]["UF"]["sigla"] == "SP"]
+          if len(match) != 1:
+              raise SystemExit("Identidade de Campinas ausente ou ambigua no IBGE")
+          dest = Path("municipais/_indice/ibge-municipios.json")
+          dest.parent.mkdir(parents=True, exist_ok=True)
+          dest.write_bytes(data)
+          print("Indice oficial IBGE validado:", len(docs), "municipios")
+          PY
+
+      - name: Executar testes municipais focais
+        run: |
+          python -m unittest discover -s scripts -p 'test_carimbo_campinas.py' -v
+          python -m unittest discover -s scripts -p 'test_texto_pdf_citacoes.py' -v
+          python -m unittest discover -s scripts -p 'test_sapl_integralidade.py' -v
+
+      - name: Coletar somente leis ordinarias do ano escolhido no SAPL oficial
+        env:
+          ANO: ${{ inputs.ano }}
+          MAX_DOCS: ${{ inputs.max_documentos }}
+        run: |
+          python - <<'PY'
+          import os
+          ano = int(os.environ["ANO"])
+          max_docs = int(os.environ["MAX_DOCS"])
+          if not 1949 <= ano <= 1999 or not 1 <= max_docs <= 30:
+              raise SystemExit("Limites invalidos: ano 1949-1999; max_documentos 1-30")
+          PY
+          if ! command -v pdftotext >/dev/null 2>&1; then
+            echo "pdftotext nao disponivel no runner; sem coleta" >&2
+            exit 1
+          fi
+          python -I scripts/baixar_organicas_sapl.py \
+            --descobrir sapl.campinas.sp.leg.br \
+            --modo legislacao \
+            --ano "$ANO" --siglas LEI --max-documentos "$MAX_DOCS" --rps 1
+
+      - name: Publicar somente novos documentos em caminho canonico
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+          ANO: ${{ inputs.ano }}
+          MAX_DOCS: ${{ inputs.max_documentos }}
+          SIMULAR: ${{ inputs.simular }}
+        run: |
+          python - <<'PY'
+          import base64
+          import json
+          import os
+          import re
+          from pathlib import Path
+          from urllib.error import HTTPError
+          from urllib.parse import quote
+          from urllib.request import Request, urlopen
+
+          repo, token = os.environ["REPOSITORY"], os.environ["GH_TOKEN"]
+          ano, limit = int(os.environ["ANO"]), int(os.environ["MAX_DOCS"])
+          dry = os.environ["SIMULAR"].lower() in ("true", "1", "yes")
+          if repo != "Shadowjct/leis" or not token or not (1949 <= ano <= 1999 and 1 <= limit <= 30):
+              raise SystemExit("Parametros de publicacao invalidos")
+          root = Path("municipais/SP/campinas/leis-ordinarias") / str(ano)
+          candidates = sorted(root.glob("*.md")) if root.exists() else []
+          if len(candidates) > limit:
+              raise SystemExit("O coletor excedeu o limite de candidatos")
+
+          headers = {
+              "Authorization": "Bearer " + token,
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "leis-ingestao/1.0",
+          }
+
+          def contents_api(method, path, payload=None):
+              url = "https://api.github.com/repos/" + repo + "/contents/" + quote(path, safe="/")
+              if method == "GET":
+                  url += "?ref=main"
+              data = json.dumps(payload, ensure_ascii=False).encode("utf-8") if payload is not None else None
+              request = Request(url, headers=headers, data=data, method=method)
+              if data is not None:
+                  request.add_header("Content-Type", "application/json")
+              try:
+                  with urlopen(request, timeout=35) as response:
+                      return response.status, json.loads(response.read())
+              except HTTPError as ex:
+                  if ex.code == 404 and method == "GET":
+                      return 404, None
+                  raise RuntimeError(f"API GitHub {method} HTTP {ex.code}: {ex.read()[:250]!r}") from ex
+
+          novos = existentes = 0
+          for file in candidates:
+              rel = file.as_posix()
+              content = file.read_text(encoding="utf-8")
+              if not (
+                  content.startswith("---\n")
+                  and "\n---\n" in content[4:]
+                  and re.search(r'^fonte: "https://sapl\.campinas\.sp\.leg\.br/norma/\d+"$', content, re.M)
+                  and re.search(r'^fonte_texto: "https://sapl\.campinas\.sp\.leg\.br/', content, re.M)
+                  and re.search(r'^sha256_fonte: "[0-9a-f]{64}"$', content, re.M)
+                  and re.search(r'^sha256_texto: "[0-9a-f]{64}"$', content, re.M)
+                  and re.search(r'^uf: "SP"$', content, re.M)
+                  and re.search(r'^municipio: "Campinas"$', content, re.M)
+                  and re.search(r'^tipo: "Lei ordinária"$', content, re.M)
+                  and re.search(r'^data: "' + str(ano) + r"-\d{2}-\d{2}" + '"$', content, re.M)
+                  and "**Art." in content
+                  and rel.startswith("municipais/SP/campinas/leis-ordinarias/" + str(ano) + "/")
+              ):
+                  raise SystemExit(f"Falha na validacao de identidade/fonte/texto: {rel}")
+              status, existing = contents_api("GET", rel)
+              if status == 200:
+                  existentes += 1
+                  continue
+              if status != 404:
+                  raise SystemExit(f"Resposta inesperada ao verificar {rel}: {status}")
+              if dry:
+                  print("SIMULACAO novo:", rel)
+              else:
+                  payload = {
+                      "message": "feat(campinas): incluir lei municipal do SAPL " + file.stem,
+                      "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
+                      "branch": "main",
+                  }
+                  status_create, result = contents_api("PUT", rel, payload)
+                  if status_create != 201:
+                      raise SystemExit(f"Nova norma nao persistiu {rel}: {status_create}")
+                  status_check, confirmed = contents_api("GET", rel)
+                  if status_check != 200 or confirmed.get("sha") != result["content"]["sha"]:
+                      raise SystemExit(f"Readback divergiu em {rel}")
+                  print("PUBLICADO e verificado:", rel, result["commit"]["sha"])
+              novos += 1
+          print("Campinas | ano", ano, "| gerados", len(candidates),
+                "| existentes", existentes, "| novos", novos, "| simulacao", dry)
+          PY
