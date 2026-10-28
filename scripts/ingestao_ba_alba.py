@@ -143,7 +143,10 @@ def read_edition(date):
     url = ROOT + "/apifront/portal/edicoes/edicoes_from_data/" + date.isoformat() + ".json"
     payload = json.loads(official(url).decode("utf-8"))
     if payload.get("erro"):
-        raise RuntimeError("API EGBA: " + str(payload.get("msg")))
+        msg = str(payload.get("msg", ""))
+        if "edicao nao existente" in fold(msg):
+            return []
+        raise RuntimeError("API EGBA: " + msg)
     editions = []
     for item in payload.get("itens", []):
         if "Assembleia Legislativa" not in item.get("tipo_edicao_nome", ""):
