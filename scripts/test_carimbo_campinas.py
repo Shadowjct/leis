@@ -27,6 +27,10 @@ class LimparCarimbo(unittest.TestCase):
         self.verificar("Texto somente para consulta. Não substitui o publicado no Diário Oficial do Município de Campinas em 8 de novembrode 2024",
                    "cópia de consulta da Câmara, não substitui o Diário Oficial do Município")
 
+    def test_nao_substitui_a_edicao_extra(self):
+        self.verificar("Texto somente para consulta. Não substitui o publicado na Edição Extra do Diário Oficial do Município de Campinas em 5 de julho de 2025",
+                   "cópia de consulta da Câmara, não substitui o Diário Oficial do Município")
+
     def test_reproduzido_conforme_publicacao(self):
         self.verificar("Texto para consulta, reproduzido conforme a publicação no Diário Oficial do Município em 17 de março de 2022",
                    "cópia de consulta da Câmara, reproduzida conforme a publicação no Diário Oficial do Município")
@@ -146,6 +150,16 @@ class CabecalhoDePagina(unittest.TestCase):
         corpo, _ = limpar_carimbo_campinas("\n\n".join(["1/19", LEI, "2/19", "Anexo I.", "4/19", "Anexo II."]))
         self.assertEqual(corpo, "\n\n".join([LEI, "Anexo I.", "Anexo II."]))
 
+    def test_contador_solto_que_comeca_depois_da_primeira_folha(self):
+        # Lei 10.760/2000: até a folha 9 o contador vem colado ao cabeçalho e sai com ele; da 10ª em diante fica sozinho
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, "10/135", "Receitas correntes.", "11/135", "Receitas de capital.", "12/135"]))
+        self.assertEqual(corpo, "\n\n".join([LEI, "Receitas correntes.", "Receitas de capital."]))
+
+    def test_sequencia_que_nao_comeca_em_1_precisa_ser_seguida(self):
+        for fracoes in (["2/4", "3/4"], ["3/9", "5/9", "6/9"]):
+            corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, *fracoes]))
+            self.assertEqual(corpo, "\n\n".join([LEI, *fracoes]), fracoes)
+
     def test_fracao_solta_no_texto_nao_e_contador(self):
         for fracoes in (["1/2"], ["1/2", "1/2"], ["2/3", "3/3"], ["1/3", "2/4"], ["1/2", "3/2"]):
             corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, *fracoes]))
@@ -153,6 +167,30 @@ class CabecalhoDePagina(unittest.TestCase):
 
     def test_aviso_sem_valor_legal_sob_fio_de_sublinhados(self):
         corpo, notas = limpar_carimbo_campinas("\n\n".join([LEI, "\\_\\_\\_\\_ Texto somente para consulta, sem valor legal."]))
+        self.assertEqual(corpo, LEI)
+        self.assertEqual(notas, ["cópia de consulta da Câmara, sem valor legal"])
+
+    def test_cabecalho_com_contador_colado_ao_paragrafo_seguinte(self):
+        # Lei 11.322/2002
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([
+            "CÂMARA MUNICIPAL DE CAMPINAS 1/18 Publicada no Diário Oficial do Município de Campinas em 30/07/2002", LEI]))
+        self.assertEqual(corpo, "\n\n".join(["Publicada no Diário Oficial do Município de Campinas em 30/07/2002", LEI]))
+        corpo, _ = limpar_carimbo_campinas("\n\n".join([
+            "**Art. 3º** A incidência exigirá a cessão de uso da faixa viária para o",
+            "CÂMARA MUNICIPAL DE CAMPINAS 2/4 Município e a implantação das ruas."]))
+        self.assertEqual(corpo, "**Art. 3º** A incidência exigirá a cessão de uso da faixa viária para o Município e a implantação das ruas.")
+
+    def test_camara_no_inicio_do_paragrafo_sem_contador_fica(self):
+        par = "CÂMARA MUNICIPAL DE CAMPINAS 2 votos contrários."
+        for texto in (par, "CÂMARA MUNICIPAL DE CAMPINAS aprovou a matéria."):
+            corpo, _ = limpar_carimbo_campinas("\n\n".join([LEI, texto]))
+            self.assertEqual(corpo, "\n\n".join([LEI, texto]))
+
+    def test_capa_antiga_so_com_a_coordenadoria(self):
+        # Lei 11.292/2002, com o aviso na redação longa
+        corpo, notas = limpar_carimbo_campinas("\n\n".join([
+            "CÂMARA MUNICIPAL DE CAMPINAS Coordenadoria de Biblioteca cbib@campinas.sp.leg.br", LEI,
+            "Texto somente para consulta, sem valor legal, reproduzido de acordo com a publicação oficial.\n"]))
         self.assertEqual(corpo, LEI)
         self.assertEqual(notas, ["cópia de consulta da Câmara, sem valor legal"])
 

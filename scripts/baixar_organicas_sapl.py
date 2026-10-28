@@ -112,26 +112,41 @@ def motivo_retencao(cache, identificador, bruto):
     return None
 
 
+def data_diverge_do_ano(norma):
+    """A data do cadastro é de outro ano, mas o ano da norma e o da publicação concordam entre si.
+
+    Erro de digitação na data (Campinas: Lei 11.551 "de 05/03/2000", publicada em 13/05/2003 e
+    assinada em 12/05/2003): a data e a pasta sairiam erradas. Não corrige; retém para revisão.
+    """
+    data, ano = norma.get("data") or "", str(norma["ano"])
+    return bool(data) and data[:4] != ano and str(norma.get("data_publicacao") or "")[:4] == ano
+
+
 CARIMBO_CAMPINAS = [
-    re.compile(r"(?:CÂMARA MUNICIPAL DE CAMPINAS Estado de São Paulo )?Diretoria de Gestão Documental Coordenadoria de Biblioteca "
+    # nas leis de 2002 a capa ainda não tinha a Diretoria de Gestão Documental
+    re.compile(r"(?:CÂMARA MUNICIPAL DE CAMPINAS (?:Estado de São Paulo )?)?(?:Diretoria de Gestão Documental )?Coordenadoria de Biblioteca "
                r"\S+@campinas\.sp\.leg\.br(?: –| -)? ?(?:Ramal:? ?\d+)?"),
     # o OCR lê os travessões como hífen
     re.compile(r"Avenida da Saudade, nº 1\.004 [–-] Ponte Preta [–-] CEP: 13041-670 [–-] Campinas [–-] SP [–-] PABX: \(19\) 3736-1300\.?(?: www\.campinas\.sp\.leg\.br)?"),
 ]
 # a fonte tem erros de grafia nesta linha ("Municipio", "Municípo", "Campina"); a data também varia ("1º de outubro", "novembrode")
 AVISO_NAO_SUBSTITUI_CAMPINAS = re.compile(
-    r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial do Munic\w+(?: de Campinas?)? em \d{1,2}º? de \w+ ?de \d{4}")
+    r"Texto somente para consulta\. Não substitui o publicado (?:no|na Edição Extra do) Diário Oficial do Munic\w+(?: de Campinas?)? em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_NAO_SUBSTITUI_DOCM_CAMPINAS = re.compile(
     r"Texto somente para consulta\. Não substitui o publicado no Diário Oficial da Câmara Municipal de Campinas em \d{1,2}º? de \w+ ?de \d{4}")
 AVISO_REPRODUZIDO_CAMPINAS = re.compile(
     r"Texto para consulta, reproduzido conforme (?:a )?publicação(?: extra)? (?:no|do) Diário Oficial do Município em \d{1,2}º? de \w+ ?de \d{4}")
 # às vezes sob um fio de sublinhados, que o conversor escapa como "\_"
-AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(r"(?:(?:\\_)+ )?Texto somente para consulta, sem valor legal\.?")
+AVISO_SEM_VALOR_LEGAL_CAMPINAS = re.compile(
+    r"(?:(?:\\_)+ )?Texto somente para consulta, sem valor legal(?:, reproduzido de acordo com a publicação oficial)?\.?")
 # cabeçalho de cada folha dos PDFs antigos; o total some em alguns ("CÂMARA MUNICIPAL DE CAMPINAS 10/") e há folhas sem contador.
 # Anexos copiados de suplementos do Diário Oficial trazem o cabeçalho corrente dele, com número de folha e às vezes a data.
 PAGINA_CAMPINAS = re.compile(
     r"CÂMARA MUNICIPAL DE CAMPINAS(?: \d+/\d*)?"
     r"|(?:\d+ )?Diário Oficial do Município de Campinas(?: Campinas, \w+-feira, \d{1,2} de \w+ de \d{4})?(?: \d+)?(?: PREF[EI]TURA MUNICIPAL DE CAMPINAS)?")
+# com o rodapé tirado como linha repetida, o cabeçalho com contador se cola ao que vem depois na mesma folha
+# ("CÂMARA MUNICIPAL DE CAMPINAS 1/18 Publicada no Diário Oficial..."); sem o contador, não há como distinguir do texto
+PAGINA_NO_INICIO_CAMPINAS = re.compile(r"CÂMARA MUNICIPAL DE CAMPINAS \d+/\d* (?=\S)")
 SUPLEMENTO_CAMPINAS = re.compile(r"TABELAS? [^.\n]{0,80}PUBLICADAS? EM SUPLEMENTO", re.I)
 CONTADOR_FOLHA = re.compile(r"(\d+)/(\d+)")
 
@@ -142,13 +157,17 @@ def contadores_de_folha(paragrafos):
     Em PDFs de 2014 a 2017 o cabeçalho vem como "CÂMARAMUNICIPAL DE CAMPINAS" e o contador na linha de baixo;
     o conversor tira o cabeçalho como linha repetida e o contador fica sozinho. Só conta como contador a
     sequência: dois ou mais, começando em 1, crescentes e com o mesmo total (uma fração solta no texto fica).
+    Quando as primeiras folhas trazem o contador colado ao cabeçalho, que sai com ele, a sequência solta começa
+    depois ("10/135"); aí valem três ou mais seguidos.
     """
     achados = [(i, CONTADOR_FOLHA.fullmatch(p.strip())) for i, p in enumerate(paragrafos)]
     achados = [(i, int(m[1]), int(m[2])) for i, m in achados if m]
     folhas = [k for _, k, _ in achados]
     totais = {t for _, _, t in achados}
-    if (len(achados) >= 2 and folhas[0] == 1 and len(totais) == 1 and folhas[-1] <= min(totais)
-            and all(a < b for a, b in zip(folhas, folhas[1:]))):
+    seguidos = all(b == a + 1 for a, b in zip(folhas, folhas[1:]))
+    if (len(achados) >= 2 and len(totais) == 1 and folhas[-1] <= min(totais)
+            and all(a < b for a, b in zip(folhas, folhas[1:]))
+            and (folhas[0] == 1 or len(folhas) >= 3 and seguidos)):
         return {i for i, _, _ in achados}
     return set()
 
@@ -179,6 +198,10 @@ def limpar_carimbo_campinas(corpo):
             plano = par = plano[capa.end():].strip()
             if not plano:
                 continue
+        cabecalho = PAGINA_NO_INICIO_CAMPINAS.match(plano)
+        if cabecalho:
+            plano = par = plano[cabecalho.end():]
+            quebra_de_pagina = True
         if PAGINA_CAMPINAS.fullmatch(plano) or i in contadores:
             quebra_de_pagina = True
             continue
@@ -337,6 +360,9 @@ def executar(fontes, rps, modo="organicas", max_documentos=0, ano_filtro=None, s
                                 data = ""
                                 ano_documento = "1990"
                                 observacao_data = "Texto integral assinado apenas com ano de 1990; cadastro apresenta 2011-11-04, sem confirmação no documento."
+                            if not observacao_data and data_diverge_do_ano(n):
+                                raise RuntimeError(f"data do cadastro ({data}) diverge do ano da norma ({n['ano']}) e da publicação "
+                                                   f"({n['data_publicacao']}); revisar")
                             ano = data[:4] if data else ano_documento
                             numero = str(n["numero"])
                             titulo = n["__str__"]
