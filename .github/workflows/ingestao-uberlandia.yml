@@ -142,7 +142,7 @@ jobs:
               title_text, kind_text = title.group(1), kind.group(1)
               patterns = {
                   "Decreto": r"^DECRETO\b",
-                  "Lei Ordinária": r"^LEI(?:\s+ORDINÁRIA)?\b",
+                  "Lei Ordinária": r"^LEI(?:\s+ORDINÁRIA)?\b(?!\s+(?:COMPLEMENTAR|DELEGADA|ORGÂNICA)\b)",
                   "Lei Complementar": r"^LEI COMPLEMENTAR\b",
               }
               if (kind_text not in patterns
