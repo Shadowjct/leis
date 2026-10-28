@@ -44,7 +44,13 @@ jobs:
           print("Script unico:", len(data), "bytes")
           PY
       - name: Confirmar disponibilidade do extrator PDF
-        run: command -v pdftotext && pdftotext -v
+        run: |
+          if ! command -v pdftotext >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+          command -v pdftotext
+          pdftotext -v
       - name: Conferir a compilacao oficial e inserir somente se autorizado
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
