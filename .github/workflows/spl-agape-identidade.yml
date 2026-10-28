@@ -1,13 +1,6 @@
 name: SPL AGAPE - identity regression (scripts only)
 
 on:
-  push:
-    branches:
-      - fix/spl-agape-fecho-identidade-1967
-    paths:
-      - scripts/estados/spl_agape.py
-      - scripts/estados/test_spl_agape_identidade.py
-      - .github/workflows/spl-agape-identidade.yml
   pull_request:
     paths:
       - scripts/estados/spl_agape.py
@@ -24,7 +17,8 @@ jobs:
     steps:
       - name: Retrieve five scripts at the exact Git commit (no git checkout or corpus)
         env:
-          SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          SOURCE_SHA: ${{ github.event.pull_request.head.sha }}
+          SOURCE_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
         run: |
           python - <<'PY'
           import os
@@ -33,6 +27,9 @@ jobs:
           from urllib.request import urlopen
 
           sha = os.environ["SOURCE_SHA"]
+          repo = os.environ["SOURCE_REPOSITORY"]
+          if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
+              raise SystemExit("invalid source repository")
           if not re.fullmatch(r"[0-9a-f]{40}", sha):
               raise SystemExit("invalid source SHA")
           files = (
@@ -43,7 +40,7 @@ jobs:
               "scripts/html2md.py",
           )
           for relative in files:
-              url = f"https://raw.githubusercontent.com/Shadowjct/leis/{sha}/{relative}"
+              url = f"https://raw.githubusercontent.com/{repo}/{sha}/{relative}"
               with urlopen(url, timeout=30) as stream:
                   source = stream.read()
               out = Path(relative)
