@@ -7,6 +7,17 @@ import ingestao_ba_alba as alba
 
 
 class IngestaoBahiaAlbaTest(unittest.TestCase):
+    def test_dia_sem_edicao_nao_e_erro_de_ingestao(self):
+        mensagem = '{"erro": true, "msg": "Edição não existente!", "itens": []}'
+        with patch.object(alba, "official", return_value=mensagem.encode("utf-8")):
+            self.assertEqual(alba.read_edition(dt.date(2026, 2, 2)), [])
+
+    def test_falha_real_da_api_continua_bloqueando(self):
+        mensagem = '{"erro": true, "msg": "Serviço temporariamente indisponível!"}'
+        with patch.object(alba, "official", return_value=mensagem.encode("utf-8")):
+            with self.assertRaisesRegex(RuntimeError, "API EGBA"):
+                alba.read_edition(dt.date(2026, 2, 2))
+
     def test_sumario_identifica_materia_sem_inferir_numero(self):
         html = '''<ul><li><a class="linkMateria" identificador="1241249">
           #1149166 - LEI 15.117_2026</a></li>
