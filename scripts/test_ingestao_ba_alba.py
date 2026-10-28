@@ -45,7 +45,7 @@ class IngestaoBahiaAlbaTest(unittest.TestCase):
         <p>LEI Nº 15.117, DE 28 DE JANEIRO DE 2026</p>
         <p>Institui medidas oficiais para garantia do direito de acesso à informação.</p>
         <p>A PRESIDENTE DA ASSEMBLEIA LEGISLATIVA DO ESTADO DA BAHIA promulga:</p>
-        <p>Art. 1º - Fica criado um mecanismo para garantir publicidade dos atos.</p>
+        <p>Art. 1º - Fica criado um mecanismo para garantir publicidade dos atos. O Poder Público manterá atendimento acessível, publicação tempestiva, confirmação dos registros administrativos, preservação da documentação e informação transparente aos interessados, mediante protocolos oficiais que permitam a fiscalização e o exercício do direito de acesso.</p>
         <p>§ 1º O órgão competente providenciará os dados necessários.</p>
         <p>Art. 2° - Esta Lei entra em vigor na data da publicação.</p>
         <p>GABINETE DA PRESIDÊNCIA DA ASSEMBLEIA LEGISLATIVA DO ESTADO DA BAHIA.</p>
