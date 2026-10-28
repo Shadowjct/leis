@@ -60,6 +60,29 @@ rede = Rede(rps=3)
 DDL = "ctl00$ContentPlaceHolder1$ddl_ItensExibidos"
 
 
+def divergencia_ano_fecho(corpo, ano):
+    """Sinaliza conflito inequívoco entre ano cadastrado e ano no fecho da norma.
+
+    Não tenta inferir datas quando o fecho não é reconhecível. A diferença de
+    até um ano é tolerada porque cadastro e publicação podem cruzar o ano.
+    """
+    try:
+        alvo = int(ano)
+    except (TypeError, ValueError):
+        return None
+    if not 1800 <= alvo <= 2099:
+        return None
+    for linha in reversed(corpo[-2400:].splitlines()):
+        simples = re.sub(r"[*_#`]", "", linha).strip()
+        if not re.match(r"^(?:Vit[oó]ria|Aracaju|Pal[aá]cio\s+Anchieta)\s*[,:\-]", simples, re.I):
+            continue
+        anos = re.findall(r"\b(?:18|19|20)\d{2}\b", simples)
+        if len(anos) == 1 and abs(int(anos[0]) - alvo) > 1:
+            return f"ano do fecho ({anos[0]}) incompatível com ano do cadastro ({ano})"
+        return None
+    return None
+
+
 def ocultos(html):
     return {n: htmllib.unescape(v) for n, v in re.findall(r'<input type="hidden" name="([^"]+)" id="[^"]*" value="([^"]*)"', html)}
 
@@ -154,6 +177,9 @@ def processar(it):
     if not bruto:
         return "sem_texto", {"cod": it["cod"], "norma": f"{nome} {numero}/{ano}", "motivo": "texto não encontrado"}
     corpo = html_para_md(decodificar(bruto, ctype))
+    divergencia = divergencia_ano_fecho(corpo, ano)
+    if divergencia:
+        return "sem_texto", {"cod": it["cod"], "url": url, "motivo": divergencia}
     if len(re.sub(r"\W", "", corpo)) < 40:
         return "sem_texto", {"cod": it["cod"], "url": url, "motivo": "texto vazio"}
     situacao = next((v for k, v in it.items() if k.startswith("Situa")), "")
