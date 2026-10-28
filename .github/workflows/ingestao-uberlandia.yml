@@ -124,7 +124,7 @@ jobs:
                   details = ex.read().decode("utf-8", "replace")[:400]
                   raise RuntimeError(f"GitHub API {method} falhou HTTP {ex.code}: {details}") from ex
 
-          novos = existentes = 0
+          novos = existentes = retidos = 0
           for file in paths:
               rel = file.as_posix()
               content = file.read_text(encoding="utf-8")
@@ -135,6 +135,23 @@ jobs:
                       and re.search(r'^sha256_texto: "[0-9a-f]{64}"$', content, re.M)
                       and rel.startswith("municipais/MG/uberlandia/")):
                   raise SystemExit(f"Documento sem procedencia verificavel: {rel}")
+              title = re.search(r'^titulo: "([^"\n]+)"$', content, re.M)
+              kind = re.search(r'^tipo: "([^"\n]+)"$', content, re.M)
+              if not title or not kind:
+                  raise SystemExit(f"Identidade da norma ausente: {rel}")
+              title_text, kind_text = title.group(1), kind.group(1)
+              patterns = {
+                  "Decreto": r"^DECRETO\b",
+                  "Lei Ordinária": r"^LEI(?:\s+ORDINÁRIA)?\b(?!\s+(?:COMPLEMENTAR|DELEGADA|ORGÂNICA)\b)",
+                  "Lei Complementar": r"^LEI COMPLEMENTAR\b",
+              }
+              if (kind_text not in patterns
+                      or not re.match(patterns[kind_text], title_text, re.I)
+                      or re.search(r"\b(?:RETIFICAÇÃO|RETIFICACAO|ERRATA|REPUBLICAÇÃO|REPUBLICACAO)\b",
+                                   title_text, re.I)):
+                  retidos += 1
+                  print("RETIDO: documento nao e norma integral da categoria:", rel, title_text)
+                  continue
               status, existing = github_api("GET", rel)
               if status == 200:
                   existentes += 1
@@ -160,7 +177,7 @@ jobs:
                       raise SystemExit(f"Leitura de persistencia falhou: {rel}")
                   print("PUBLICADO e verificado:", rel, result["commit"]["sha"])
               novos += 1
-          resumo = f"Uberlandia | modo={'simulacao' if dry_run else 'publicacao'} | gerados={len(paths)} | existentes={existentes} | novos={novos} | limite={max_novas}"
+          resumo = f"Uberlandia | modo={'simulacao' if dry_run else 'publicacao'} | gerados={len(paths)} | existentes={existentes} | novos={novos} | retidos={retidos} | limite={max_novas}"
           print(resumo)
           summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
           if summary_file:
