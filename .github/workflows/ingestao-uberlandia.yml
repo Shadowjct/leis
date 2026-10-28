@@ -135,83 +135,19 @@ jobs:
                       and re.search(r'^sha256_texto: "[0-9a-f]{64}"$', content, re.M)
                       and rel.startswith("municipais/MG/uberlandia/")):
                   raise SystemExit(f"Documento sem procedencia verificavel: {rel}")
-              title = re.search(r'^titulo: "([^"\\n]+)"
-              if status == 200:
-                  existentes += 1
-                  continue
-              if status != 404:
-                  raise SystemExit(f"Status inesperado ao consultar {rel}: {status}")
-              if novos >= max_novas:
-                  continue
-              if dry_run:
-                  print("SIMULACAO novo:", rel)
-              else:
-                  payload = {
-                      "message": "feat(uberlandia): incluir norma do DOM " + file.stem,
-                      "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
-                      "branch": "main",
-                  }
-                  status_put, result = github_api("PUT", rel, payload)
-                  if status_put != 201:
-                      raise SystemExit(f"Criacao nao confirmada {rel}: {status_put}")
-                  sha_new = result["content"]["sha"]
-                  status_check, check = github_api("GET", rel)
-                  if status_check != 200 or check.get("sha") != sha_new:
-                      raise SystemExit(f"Leitura de persistencia falhou: {rel}")
-                  print("PUBLICADO e verificado:", rel, result["commit"]["sha"])
-              novos += 1
-          resumo = f"Uberlandia | modo={'simulacao' if dry_run else 'publicacao'} | gerados={len(paths)} | existentes={existentes} | novos={novos} | retidos={retidos} | limite={max_novas}"
-          print(resumo)
-          summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
-          if summary_file:
-              with open(summary_file, "a", encoding="utf-8") as f:
-                  f.write("## Ingestão oficial incremental\n\n" + resumo + "\n")
-          PY
-, content, re.M)
-              kind = re.search(r'^tipo: "([^"\\n]+)"
-              if status == 200:
-                  existentes += 1
-                  continue
-              if status != 404:
-                  raise SystemExit(f"Status inesperado ao consultar {rel}: {status}")
-              if novos >= max_novas:
-                  continue
-              if dry_run:
-                  print("SIMULACAO novo:", rel)
-              else:
-                  payload = {
-                      "message": "feat(uberlandia): incluir norma do DOM " + file.stem,
-                      "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
-                      "branch": "main",
-                  }
-                  status_put, result = github_api("PUT", rel, payload)
-                  if status_put != 201:
-                      raise SystemExit(f"Criacao nao confirmada {rel}: {status_put}")
-                  sha_new = result["content"]["sha"]
-                  status_check, check = github_api("GET", rel)
-                  if status_check != 200 or check.get("sha") != sha_new:
-                      raise SystemExit(f"Leitura de persistencia falhou: {rel}")
-                  print("PUBLICADO e verificado:", rel, result["commit"]["sha"])
-              novos += 1
-          resumo = f"Uberlandia | modo={'simulacao' if dry_run else 'publicacao'} | gerados={len(paths)} | existentes={existentes} | novos={novos} | limite={max_novas}"
-          print(resumo)
-          summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
-          if summary_file:
-              with open(summary_file, "a", encoding="utf-8") as f:
-                  f.write("## Ingestão oficial incremental\n\n" + resumo + "\n")
-          PY
-, content, re.M)
+              title = re.search(r'^titulo: "([^"\n]+)"$', content, re.M)
+              kind = re.search(r'^tipo: "([^"\n]+)"$', content, re.M)
               if not title or not kind:
                   raise SystemExit(f"Identidade da norma ausente: {rel}")
               title_text, kind_text = title.group(1), kind.group(1)
               patterns = {
-                  "Decreto": r"^DECRETO\\b",
-                  "Lei Ordinária": r"^LEI(?:\\s+ORDINÁRIA)?\\b",
-                  "Lei Complementar": r"^LEI COMPLEMENTAR\\b",
+                  "Decreto": r"^DECRETO\b",
+                  "Lei Ordinária": r"^LEI(?:\s+ORDINÁRIA)?\b",
+                  "Lei Complementar": r"^LEI COMPLEMENTAR\b",
               }
               if (kind_text not in patterns
                       or not re.match(patterns[kind_text], title_text, re.I)
-                      or re.search(r"\\b(?:RETIFICAÇÃO|RETIFICACAO|ERRATA|REPUBLICAÇÃO|REPUBLICACAO)\\b",
+                      or re.search(r"\b(?:RETIFICAÇÃO|RETIFICACAO|ERRATA|REPUBLICAÇÃO|REPUBLICACAO)\b",
                                    title_text, re.I)):
                   retidos += 1
                   print("RETIDO: documento nao e norma integral da categoria:", rel, title_text)
@@ -241,7 +177,7 @@ jobs:
                       raise SystemExit(f"Leitura de persistencia falhou: {rel}")
                   print("PUBLICADO e verificado:", rel, result["commit"]["sha"])
               novos += 1
-          resumo = f"Uberlandia | modo={'simulacao' if dry_run else 'publicacao'} | gerados={len(paths)} | existentes={existentes} | novos={novos} | limite={max_novas}"
+          resumo = f"Uberlandia | modo={'simulacao' if dry_run else 'publicacao'} | gerados={len(paths)} | existentes={existentes} | novos={novos} | retidos={retidos} | limite={max_novas}"
           print(resumo)
           summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
           if summary_file:
