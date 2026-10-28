@@ -1,0 +1,63 @@
+name: Ingestao Lei BA 11.174 de 2008 (SECTI PDF)
+
+on:
+  workflow_dispatch:
+    inputs:
+      simular:
+        description: Validar PDF e artigos sem modificar a main
+        type: boolean
+        default: true
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingestao-ba-lei-11174
+  cancel-in-progress: false
+
+jobs:
+  importar:
+    if: github.repository == 'Shadowjct/leis' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Ler somente script no SHA do evento (sem checkout)
+        env:
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          import re
+          from urllib.request import Request, urlopen
+          repo, sha = os.environ["REPO"], os.environ["SHA"]
+          if repo != "Shadowjct/leis" or not re.fullmatch(r"[a-f0-9]{40}", sha):
+              raise SystemExit("Fonte do script fora do fork")
+          url = f"https://raw.githubusercontent.com/{repo}/{sha}/scripts/ingestao_ba_lei_11174_2008.py"
+          with urlopen(Request(url, headers={"User-Agent":"leis-ba-secti/1.0"}), timeout=40) as response:
+              data = response.read(80000)
+          p = Path("scripts/ingestao_ba_lei_11174_2008.py")
+          p.parent.mkdir(exist_ok=True)
+          p.write_bytes(data)
+          PY
+      - name: Extrair PDF original com Poppler
+        run: |
+          if ! command -v pdftotext >/dev/null || ! command -v pdfinfo >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+          python -m py_compile scripts/ingestao_ba_lei_11174_2008.py
+      - name: Validar e opcionalmente publicar
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: refs/heads/main
+          SIMULAR: ${{ inputs.simular }}
+        run: |
+          if [ "$SIMULAR" = "true" ]; then
+            python -I scripts/ingestao_ba_lei_11174_2008.py --simular
+          else
+            python -I scripts/ingestao_ba_lei_11174_2008.py
+          fi
