@@ -64,8 +64,8 @@ def pdf_to_pages(source):
         raise RuntimeError("Artigo 1 ausente nas primeiras paginas da lei")
     if "ATO DAS DISPOSI" not in txt.upper():
         raise RuntimeError("Disposicoes transitorias nao encontradas")
-    if "ANEXO" not in "\n".join(pages[-12:]).upper():
-        raise RuntimeError("Anexos finais nao encontrados")
+    if not re.search(r"Art\.\s*36\b", pages[-1], re.I):
+        raise RuntimeError("Art. 36 das disposicoes transitorias nao encontrado na ultima pagina")
     if sum(len(x) for x in pages) < 140_000:
         raise RuntimeError("Texto insuficiente para 89 paginas")
     return pages
@@ -82,7 +82,8 @@ def as_markdown(pages):
         "numero": "",
         "data": "",
         "ano_norma_original": "1990",
-        "versao_texto": "edicao institucional consolidada pela Camara Municipal de Salvador ate a Emenda 41; publicada em 2024; nao certifica emendas posteriores nem vigencia atual",
+        "versao_texto": "edicao oficial da Camara de 2024 consolidada ate a Emenda 41; PDF com 89 paginas disponiveis e disposicoes transitorias ate Art. 36; sumario anuncia anexo nao incluido no PDF; nao certifica emendas posteriores nem vigencia atual",
+        "observacao_anexo": "O sumario oficial menciona anexo na pagina 90, mas o PDF institucional distribuido encerra na pagina impressa 88 e nao inclui esse anexo; nenhum material foi inventado",
         "fonte": PAGE_URL,
         "fonte_texto": PDF_URL,
         "sha256_fonte": EXPECTED_PDF_SHA256,
