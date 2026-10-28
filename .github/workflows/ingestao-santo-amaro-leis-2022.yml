@@ -1,0 +1,63 @@
+name: Ingestao Santo Amaro Leis 2255 e 2256 (2022)
+
+on:
+  workflow_dispatch:
+    inputs:
+      simular:
+        description: Validar as fontes sem criar commits
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingestao-santo-amaro-2022
+  cancel-in-progress: false
+
+jobs:
+  inserir:
+    if: github.repository == 'Shadowjct/leis' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Recuperar somente o script da main por SHA (sem checkout)
+        env:
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os, re
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          repo, sha = os.environ["REPO"], os.environ["SHA"]
+          if repo != "Shadowjct/leis" or not re.fullmatch(r"[0-9a-f]{40}", sha):
+              raise SystemExit("Repo ou SHA inesperado")
+          url = f"https://raw.githubusercontent.com/{repo}/{sha}/scripts/ingestao_santo_amaro_leis_2022.py"
+          with urlopen(Request(url, headers={"User-Agent":"leis-santo-amaro/1.0"}), timeout=35) as r:
+              code = r.read()
+          p = Path("scripts/ingestao_santo_amaro_leis_2022.py")
+          p.parent.mkdir(parents=True, exist_ok=True)
+          p.write_bytes(code)
+          PY
+      - name: Prover o extrator PDF
+        run: |
+          if ! command -v pdftotext >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+          pdftotext -v
+      - name: Validar e publicar somente se simulação desativada
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: refs/heads/main
+          SIMULAR: ${{ inputs.simular }}
+        run: |
+          python -m py_compile scripts/ingestao_santo_amaro_leis_2022.py
+          if [ "$SIMULAR" = "true" ]; then
+            python -I scripts/ingestao_santo_amaro_leis_2022.py --simular
+          else
+            python -I scripts/ingestao_santo_amaro_leis_2022.py
+          fi
