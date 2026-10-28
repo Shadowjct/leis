@@ -1,5 +1,8 @@
 """Regressões de identidade do texto vinculado ao cadastro SPL/AGAPE."""
 import unittest
+from unittest import mock
+
+import spl_agape
 
 from spl_agape import divergencia_ano_fecho
 
@@ -24,6 +27,44 @@ class IdentidadeFechoTest(unittest.TestCase):
         self.assertIsNone(divergencia_ano_fecho("Vitória, 31 de dezembro de 1968.", "1967"))
         self.assertIsNone(divergencia_ano_fecho("Art. 1º ...", "1967"))
         self.assertIsNone(divergencia_ano_fecho("Vitória, 15 de outubro de 1947.", "sem-ano"))
+
+
+    def test_rejeita_sem_gravar_texto_historico_trocado(self):
+        item = {"tipo": "8", "Numero": "4", "Ano": "1967", "cod": "24455", "Data": "13/10/1967"}
+        corpo = ("ESTADO DO ESPÍRITO SANTO\n**LEI Nº 4**\n"
+                 "Art. 1º As sessões da Assembleia Legislativa principiarão às 14 horas.\n"
+                 "Vitória, em 15 de outubro de 1947.\n")
+        with (
+            mock.patch.object(spl_agape.os.path, "exists", return_value=False),
+            mock.patch.object(spl_agape, "caminhos", return_value=("falso.md", "fonte.html")),
+            mock.patch.object(spl_agape, "localizar_texto",
+                              return_value=("https://exemplo.invalid/LO0004.html", b"html", "text/html")),
+            mock.patch.object(spl_agape, "html_para_md", return_value=corpo),
+            mock.patch.object(spl_agape, "gravar") as gravar,
+        ):
+            status, detalhe = spl_agape.processar(item)
+        self.assertEqual(status, "sem_texto")
+        self.assertEqual(detalhe["cod"], "24455")
+        self.assertIn("1947", detalhe["motivo"])
+        gravar.assert_not_called()
+
+    def test_grava_texto_com_fecho_compativel(self):
+        item = {"tipo": "8", "Numero": "4", "Ano": "1967", "cod": "24455", "Data": "13/10/1967"}
+        corpo = ("ESTADO DO ESPÍRITO SANTO\n**LEI DELEGADA Nº 4**\n"
+                 "Art. 1º Estabelece a estrutura e define a competência dos órgãos estaduais.\n"
+                 "Vitória, em 13 de outubro de 1967.\n")
+        with (
+            mock.patch.object(spl_agape.os.path, "exists", return_value=False),
+            mock.patch.object(spl_agape, "caminhos", return_value=("falso.md", "fonte.html")),
+            mock.patch.object(spl_agape, "localizar_texto",
+                              return_value=("https://exemplo.invalid/LD41967.html", b"html", "text/html")),
+            mock.patch.object(spl_agape, "html_para_md", return_value=corpo),
+            mock.patch.object(spl_agape, "gravar") as gravar,
+        ):
+            status, detalhe = spl_agape.processar(item)
+        self.assertEqual(status, "ok")
+        self.assertIsNone(detalhe)
+        gravar.assert_called_once()
 
 
 if __name__ == "__main__":

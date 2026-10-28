@@ -1,0 +1,55 @@
+name: SPL AGAPE - identity regression (scripts only)
+
+on:
+  push:
+    branches:
+      - fix/spl-agape-fecho-identidade-1967
+    paths:
+      - scripts/estados/spl_agape.py
+      - scripts/estados/test_spl_agape_identidade.py
+      - .github/workflows/spl-agape-identidade.yml
+  pull_request:
+    paths:
+      - scripts/estados/spl_agape.py
+      - scripts/estados/test_spl_agape_identidade.py
+      - .github/workflows/spl-agape-identidade.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Retrieve five scripts at the exact Git commit (no git checkout or corpus)
+        env:
+          SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          from urllib.request import urlopen
+
+          sha = os.environ["SOURCE_SHA"]
+          if not re.fullmatch(r"[0-9a-f]{40}", sha):
+              raise SystemExit("invalid source SHA")
+          files = (
+              "scripts/estados/spl_agape.py",
+              "scripts/estados/test_spl_agape_identidade.py",
+              "scripts/comum.py",
+              "scripts/datas.py",
+              "scripts/html2md.py",
+          )
+          for relative in files:
+              url = f"https://raw.githubusercontent.com/Shadowjct/leis/{sha}/{relative}"
+              with urlopen(url, timeout=30) as stream:
+                  source = stream.read()
+              out = Path(relative)
+              out.parent.mkdir(parents=True, exist_ok=True)
+              out.write_bytes(source)
+              print(f"Fetched only source file: {relative} ({len(source)} bytes)")
+          PY
+      - name: Run only SPL AGAPE regression tests
+        run: python -m unittest discover -s scripts/estados -p 'test_spl_agape_identidade.py' -v
