@@ -51,17 +51,19 @@ jobs:
           sha = os.environ["SHA"]
           if repo != "Shadowjct/leis" or not re.fullmatch(r"[0-9a-f]{40}", sha):
               raise SystemExit("Repositorio ou revisao inesperada")
-          url = f"https://raw.githubusercontent.com/{repo}/{sha}/scripts/ingestao_ba_alba.py"
-          with urlopen(Request(url, headers={"User-Agent":"leis-bahia-alba/1.0"}), timeout=35) as response:
-              script = response.read()
-          p = Path("scripts/ingestao_ba_alba.py")
-          p.parent.mkdir(parents=True, exist_ok=True)
-          p.write_bytes(script)
-          print("Script obtido:", len(script), "bytes")
+          for name in ("ingestao_ba_alba.py", "test_ingestao_ba_alba.py"):
+              url = f"https://raw.githubusercontent.com/{repo}/{sha}/scripts/{name}"
+              with urlopen(Request(url, headers={"User-Agent":"leis-bahia-alba/1.0"}), timeout=35) as response:
+                  script = response.read()
+              p = Path("scripts") / name
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_bytes(script)
+              print("Script obtido:", name, len(script), "bytes")
           PY
       - name: Conferir sintaxe e testes embutidos do coletor
         run: |
-          python -m py_compile scripts/ingestao_ba_alba.py
+          python -m py_compile scripts/ingestao_ba_alba.py scripts/test_ingestao_ba_alba.py
+          python -m unittest discover -s scripts -p 'test_ingestao_ba_alba.py' -v
       - name: Consultar ALBA e publicar somente leis novas
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
