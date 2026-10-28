@@ -1841,7 +1841,7 @@ b) com os dispositivos do texto do projeto de lei. \* Novo Artigo dado pela Emen
 
 emendas individuais do Legislativo Municipal em Lei Orçamentária Anual.
 
-**§1°** - As emendas individuais ao projeto de lei orçamentária serão aprovadas no limite de 1,2% (um inteiro e dois décimos por cento) da receita corrente líquida prevista no projeto encaminhado pelo Poder Executivo, sendo que a metade deste percentual será destinada a ações e serviços públicos de saúde. EMENDA A LEI ORGÂNICA Nº 01 DE 26 DE JUNHO DE 2023.
+~~**§1°** - As emendas individuais ao projeto de lei orçamentária serão aprovadas no limite de 1,2% (um inteiro e dois décimos por cento) da receita corrente líquida prevista no projeto encaminhado pelo Poder Executivo, sendo que a metade deste percentual será destinada a ações e serviços públicos de saúde.~~ EMENDA A LEI ORGÂNICA Nº 01 DE 26 DE JUNHO DE 2023.
 
 **§1°** - As emendas individuais ao projeto de lei orçamentária serão aprovadas no limite de 2% (dois por cento) da receita corrente líquida prevista no projeto encaminhado pelo Poder Executivo, sendo que a metade deste percentual será destinada a ações e serviços.
 
@@ -2061,17 +2061,17 @@ Parágrafo Único – A contabilidade da Câmara Municipal encaminhará as suas 
 
 ##### Seção X Das Contas Municipais
 
-**Art. 188** – Até 60 (sessenta) dias após o início da sessão legislativa de cada ano, o Prefeito Municipal encaminhará ao Tribunal de Contas do Estado ou órgão equivalente as contas do Município, que se comporão de:
+~~**Art. 188** – Até 60 (sessenta) dias após o início da sessão legislativa de cada ano, o Prefeito Municipal encaminhará ao Tribunal de Contas do Estado ou órgão equivalente as contas do Município, que se comporão de:~~
 
-I – demonstrações contábeis, orçamentárias e financeiras da administração direta e indireta, inclusive dos fundos especiais e das fundações instituídos e mantidos pelo Poder Público;
+~~I – demonstrações contábeis, orçamentárias e financeiras da administração direta e indireta, inclusive dos fundos especiais e das fundações instituídos e mantidos pelo Poder Público;~~
 
-II – demonstrações contábeis, orçamentárias e financeiras consolidadas dos órgãos da Administração direta com as dos fundos especiais, das fundações e das autarquias, instituídos e mantidos pelo Poder Público Municipal;
+~~II – demonstrações contábeis, orçamentárias e financeiras consolidadas dos órgãos da Administração direta com as dos fundos especiais, das fundações e das autarquias, instituídos e mantidos pelo Poder Público Municipal;~~
 
-III – demonstrações contábeis, orçamentárias e financeiras consolidadas dasenpresas municipais;
+~~III – demonstrações contábeis, orçamentárias e financeiras consolidadas dasenpresas municipais;~~
 
-IV – notas explicativas às demonstrações de que trata este artigo;
+~~IV – notas explicativas às demonstrações de que trata este artigo;~~
 
-V – relatório circunstanciado da gestão dos recursos públicos municipais no exercício demonstrado. REDAÇÃO PELA EMENDA À LEI OPRGÂNICA Nº 005 DE 24 DE DEZEMBRO DE 2007
+~~V – relatório circunstanciado da gestão dos recursos públicos municipais no exercício demonstrado.~~ REDAÇÃO PELA EMENDA À LEI OPRGÂNICA Nº 005 DE 24 DE DEZEMBRO DE 2007
 
 **Art. 188** -Até 120 (cento e vinte) dias após o início da sessão legislativa de cada ano, o Prefeito Municipal encaminhará ao Tribuna de Contas do Estado ou órgão equivalente as contas do Município, que se comporão de:
 
