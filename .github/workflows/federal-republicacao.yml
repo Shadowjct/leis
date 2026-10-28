@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 6
     steps:
-      - name: Fetch only seven scripts at PR head SHA (never checkout legislative corpus)
+      - name: Fetch only nine scripts at PR head SHA (never checkout legislative corpus)
         env:
           SHA: ${{ github.event.pull_request.head.sha }}
           REPO: ${{ github.event.pull_request.head.repo.full_name }}
@@ -40,6 +40,8 @@ jobs:
               "scripts/integridade_html_federal.py",
               "scripts/integridade_anexos_decreto.py",
               "scripts/identidade_decreto.py",
+              "scripts/preparar_lote_decretos_cache.py",
+              "scripts/auditar.py",
           )
           for path in paths:
               url = f"https://raw.githubusercontent.com/{repo}/{sha}/{path}"
