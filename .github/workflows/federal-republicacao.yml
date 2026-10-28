@@ -1,0 +1,56 @@
+name: Federal legislation republication regression (scripts only)
+
+on:
+  pull_request:
+    paths:
+      - scripts/baixar_federal.py
+      - scripts/test_texto_integral_federal.py
+      - .github/workflows/federal-republicacao.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Fetch only nine scripts at PR head SHA (never checkout legislative corpus)
+        env:
+          SHA: ${{ github.event.pull_request.head.sha }}
+          REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          from urllib.request import urlopen
+
+          sha = os.environ["SHA"]
+          repo = os.environ["REPO"]
+          if not re.fullmatch(r"[0-9a-f]{40}", sha):
+              raise SystemExit("Unexpected SHA")
+          if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
+              raise SystemExit("Unexpected repository identifier")
+          paths = (
+              "scripts/baixar_federal.py",
+              "scripts/test_texto_integral_federal.py",
+              "scripts/comum.py",
+              "scripts/html2md.py",
+              "scripts/integridade_html_federal.py",
+              "scripts/integridade_anexos_decreto.py",
+              "scripts/identidade_decreto.py",
+              "scripts/preparar_lote_decretos_cache.py",
+              "scripts/auditar.py",
+          )
+          for path in paths:
+              url = f"https://raw.githubusercontent.com/{repo}/{sha}/{path}"
+              with urlopen(url, timeout=30) as response:
+                  data = response.read()
+              out = Path(path)
+              out.parent.mkdir(parents=True, exist_ok=True)
+              out.write_bytes(data)
+              print(f"Retrieved script only: {path} ({len(data)} bytes)")
+          PY
+      - name: Run federal text-integrity tests
+        run: python -m unittest discover -s scripts -p 'test_texto_integral_federal.py' -v
