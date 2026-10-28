@@ -189,7 +189,7 @@ def extract_law(raw, number, edition_date):
     if not any("presidente" in fold(line) for line in lines[-5:]):
         raise ValueError("Assinatura da Presidencia ausente")
     articles = [int(m.group(1)) for line in lines
-                if (m := re.match(r"^Art\.\s*(\d{1,3})\b", line, re.I))]
+                if (m := re.match(r"^Art\.\s*(\d{1,3})(?:[º°o]|\s|[.-])", line, re.I))]
     if not articles or articles != list(range(1, len(articles) + 1)):
         raise ValueError("Artigos nao consecutivos ou artigo 1 ausente")
     if len("\n".join(lines)) < 500:
