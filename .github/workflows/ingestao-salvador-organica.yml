@@ -1,0 +1,59 @@
+name: Inserir Lei Organica de Salvador — Camara oficial
+
+on:
+  workflow_dispatch:
+    inputs:
+      simular:
+        description: "Somente verificar a extracao, sem publicar"
+        type: boolean
+        default: true
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingestao-salvador-lei-organica-main
+  cancel-in-progress: false
+
+jobs:
+  importar:
+    if: github.repository == 'Shadowjct/leis' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Recuperar somente o script de insercao no SHA da main
+        env:
+          REPOSITORY: ${{ github.repository }}
+          REF: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          sha = os.environ["REF"]
+          if os.environ["REPOSITORY"] != "Shadowjct/leis" or not re.fullmatch(r"[0-9a-f]{40}", sha):
+              raise SystemExit("SHA ou repositorio inesperado")
+          url = f"https://raw.githubusercontent.com/Shadowjct/leis/{sha}/scripts/ingestao_salvador_organica.py"
+          with urlopen(Request(url, headers={"User-Agent": "leis-salvador-official/1.0"}), timeout=35) as r:
+              data = r.read()
+          dest = Path("scripts/ingestao_salvador_organica.py")
+          dest.parent.mkdir(parents=True, exist_ok=True)
+          dest.write_bytes(data)
+          print("Script unico:", len(data), "bytes")
+          PY
+      - name: Confirmar disponibilidade do extrator PDF
+        run: command -v pdftotext && pdftotext -v
+      - name: Conferir a compilacao oficial e inserir somente se autorizado
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: refs/heads/main
+          SIMULAR: ${{ inputs.simular }}
+        run: |
+          if [ "$SIMULAR" = "true" ]; then
+            python -I scripts/ingestao_salvador_organica.py --simular
+          else
+            python -I scripts/ingestao_salvador_organica.py
+          fi
